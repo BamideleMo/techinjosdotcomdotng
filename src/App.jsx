@@ -239,11 +239,14 @@ function App() {
               </div>
               <div class="bg-white p-2 md:p-6">
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-slate-300 p-1">Support TechINJos</span>
+                  <span class="bg-orange-300 p-1">Support TechINJos</span>
+                </h2>
+                <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
+                Don't keep us a secret
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
-                    <b>Don't keep us a secret.</b> Tell your friends about
+                    Tell your friends about
                     TechINJos and share this post using the share buttons below.
                   </p>
                   <ShareButtons />
@@ -292,7 +295,7 @@ function App() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              viewBox="0 0 24 24"
+              viewBox="0 0 40 40"
               strokeWidth={1.5}
               stroke="currentColor"
               className="size-6"
