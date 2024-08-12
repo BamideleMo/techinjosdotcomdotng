@@ -20,7 +20,7 @@ function Header() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="inline size-10 cursor-pointer hover:opacity-60"
+                className="inline size-12 cursor-pointer hover:opacity-60"
               >
                 <path
                   strokeLinecap="round"
@@ -53,7 +53,7 @@ function Header() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-10 cursor-pointer hover:opacity-60"
+              className="size-12 cursor-pointer hover:opacity-60"
             >
               <path
                 strokeLinecap="round"
