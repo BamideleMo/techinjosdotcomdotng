@@ -268,14 +268,6 @@ function App() {
                       techinjosnewsletter@gmail.com
                     </a>
                   </p>
-                  <div>
-                    <div
-                      class="fb-comments"
-                      data-href="https://techinjos.netlify.app/"
-                      data-width="100%"
-                      data-numposts="7"
-                    ></div>
-                  </div>
                 </div>
               </div>
               <div class="mt-6 py-8 md:mt-20 md:p-20 md:pb-0 text-center text-sm space-y-4">
