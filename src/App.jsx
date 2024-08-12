@@ -47,7 +47,7 @@ function App() {
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-green-300 p-1">Quick Question</span>
                 </h2>
-                <h2 class="my-2 text-xl md:text-2xl leading-tight">
+                <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   Is There Even a Tech Ecosystem in Jos?
                 </h2>
                 <div class="space-y-6 text-base">
@@ -87,7 +87,7 @@ function App() {
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-yellow-300 p-1">Advertisement</span>
                 </h2>
-                <h2 class="my-2 text-xl md:text-2xl leading-tight">
+                <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   Is There Even a Tech Ecosystem in Jos?
                 </h2>
                 <div class="space-y-6 text-base">
@@ -127,7 +127,7 @@ function App() {
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-purple-300 p-1">Feature</span>
                 </h2>
-                <h2 class="my-2 text-xl md:text-2xl leading-tight">
+                <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   How Nengee Transport has successfully won online booking
                 </h2>
                 <div class="space-y-6 text-base">
@@ -167,7 +167,7 @@ function App() {
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-teal-300 p-1">FYI</span>
                 </h2>
-                <h2 class="my-2 text-xl md:text-2xl leading-tight">
+                <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   Tech News Titbits from within Jos
                 </h2>
                 <div class="space-y-6 text-base">
@@ -209,7 +209,7 @@ function App() {
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-fuchsia-300 p-1">Etcetera</span>
                 </h2>
-                <h2 class="my-2 text-xl md:text-2xl leading-tight">
+                <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   More Tech Reads Across Nigeria & Beyound
                 </h2>
                 <div class="space-y-6 text-base">
@@ -247,6 +247,14 @@ function App() {
                     TechINJos and share this post using the share buttons below.
                   </p>
                   <ShareButtons />
+                </div>
+              </div>
+
+              <div class="bg-white p-2 md:p-6">
+                <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
+                  <span class="bg-orange-300 p-1">Want to Say Something?</span>
+                </h2>
+                <div class="space-y-6 text-base">
                   <p>
                     Add your voice to the conversation and share your thoughts
                     using the comment box below.
