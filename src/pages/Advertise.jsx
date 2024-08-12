@@ -21,7 +21,7 @@ function Advertise() {
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-fuchsia-300 p-1">Advertise</span>
                 </h2>
-                <h2 class="my-2 text-xl md:text-2xl leading-tight">
+                <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   Reach the Heart of Jos' Tech Scene
                 </h2>
                 <div class="space-y-6 text-base">
