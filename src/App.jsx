@@ -255,15 +255,18 @@ function App() {
 
               <div class="bg-white p-2 md:p-6">
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-slate-300 p-1">Want to Say Something?</span>
+                  <span class="bg-slate-300 p-1">Send us your Feedback</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                  Add your voice to the conversation
+                  It is invaluable.
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
-                    Share your thoughts and feedback using the comment box
-                    below.
+                    Whether you have a suggestion, a comment, or a concern, we
+                    want to hear from you. Send a mail to:{" "}
+                    <a href="mailto:techinjosnewsletter@gmail.com">
+                      techinjosnewsletter@gmail.com
+                    </a>
                   </p>
                   <div>
                     <div
