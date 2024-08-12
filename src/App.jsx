@@ -248,15 +248,14 @@ function App() {
                   </p>
                   <ShareButtons />
                   <p>
-                    <b>Support our team</b> by{" "}
-                    <a href="/advertise">advertising with</a> us for as little
-                    as 20K Naira per month.
+                    Add your voice to the conversation and share your thoughts
+                    using the comment box below.
                   </p>
                   <div>
                     <div
                       class="fb-comments"
                       data-href="https://techinjos.netlify.app/"
-                      data-width=""
+                      data-width="100%"
                       data-numposts="7"
                     ></div>
                   </div>
