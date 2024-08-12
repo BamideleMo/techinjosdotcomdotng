@@ -53,7 +53,7 @@ function Header() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-12 cursor-pointer hover:opacity-60"
+              className="size-12 cursor-pointer hover:opacity-60 -mr-2"
             >
               <path
                 strokeLinecap="round"
