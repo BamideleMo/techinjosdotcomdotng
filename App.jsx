@@ -253,14 +253,7 @@ function App() {
                     <b>Support our team</b> by advertising in this newsletter
                     for just <a href="/">20K Naira per month</a>.
                   </p>
-                  <div>
-                    <div
-                      class="fb-comments"
-                      data-href="https://techinjos.netlify.app/"
-                      data-width=""
-                      data-numposts="7"
-                    ></div>
-                  </div>
+                  <div>FB comment</div>
                 </div>
               </div>
               <div class="mt-6 py-8 md:mt-20 md:p-20 md:pb-0 text-center text-sm space-y-4">
