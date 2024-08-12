@@ -6,8 +6,8 @@ import Footer from "../components/Footer";
 function Advertise() {
   return (
     <MetaProvider>
-      <Title>Advertise with TechInJos Newsletter - www.techinjos.com.ng</Title>
-      <Link rel="canonical" href="https://techinjos.com.ng/" />
+      <Title>Advertise with TechINJos Newsletter - www.techinjos.com.ng</Title>
+      <Link rel="canonical" href="https://TechINJos.com.ng/" />
       <Meta
         name="description"
         content="Advertise with the #1 Weekly and Quick Brief for Jos' Tech Ecosystem!"
@@ -24,7 +24,7 @@ function Advertise() {
                 <h2 class="my-2 text-xl md:text-2xl leading-tight">
                   Reach the Heart of Jos' Tech Scene
                 </h2>
-                <div class="space-y-6 text-sm">
+                <div class="space-y-6 text-base">
                   <p>
                     Advertise with TechINJos and connect with the innovators,
                     entrepreneurs, learners, tech enthusiast and professionals
@@ -50,8 +50,8 @@ function Advertise() {
                   </p>
                   <p>
                     Ready to reach the heart of Jos' tech scene? Contact us at{" "}
-                    <a href="mailto:techinjosnewsletter@gmail.com">
-                      techinjosnewsletter@gmail.com
+                    <a href="mailto:TechINJosnewsletter@gmail.com">
+                      TechINJosnewsletter@gmail.com
                     </a>{" "}
                     to discuss your advertising needs and create a customized
                     campaign.

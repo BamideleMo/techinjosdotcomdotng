@@ -4,6 +4,7 @@ import facebook from "../src/assets/facebook.png";
 import twitter from "../src/assets/twitterx.png";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ShareButtons from "./components/ShareButtons";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
                     #1 Weekly and Quick Brief for Jos' Tech Ecosystem!
                   </div>
                 </div>
-                <div class="mt-8 text-sm space-y-4">
+                <div class="mt-8 space-y-6 text-base">
                   <p>
                     <b>Good morning. It's another Thursday, July 20</b>, and
                     we're covering widespread disruption from a tech outage,
@@ -49,7 +50,7 @@ function App() {
                 <h2 class="my-2 text-xl md:text-2xl leading-tight">
                   Is There Even a Tech Ecosystem in Jos?
                 </h2>
-                <div class="space-y-6 text-sm">
+                <div class="space-y-6 text-base">
                   <p>
                     As we eagerly discuss the growth and potential of Jos' tech
                     scene, a nagging question lingers: Do we actually have a
@@ -89,7 +90,7 @@ function App() {
                 <h2 class="my-2 text-xl md:text-2xl leading-tight">
                   Is There Even a Tech Ecosystem in Jos?
                 </h2>
-                <div class="space-y-6 text-sm">
+                <div class="space-y-6 text-base">
                   <p>
                     As we eagerly discuss the growth and potential of Jos' tech
                     scene, a nagging question lingers: Do we actually have a
@@ -129,7 +130,7 @@ function App() {
                 <h2 class="my-2 text-xl md:text-2xl leading-tight">
                   How Nengee Transport has successfully won online booking
                 </h2>
-                <div class="space-y-6 text-sm">
+                <div class="space-y-6 text-base">
                   <p>
                     As we eagerly discuss the growth and potential of Jos' tech
                     scene, a nagging question lingers: Do we actually have a
@@ -169,7 +170,7 @@ function App() {
                 <h2 class="my-2 text-xl md:text-2xl leading-tight">
                   Tech News Titbits from within Jos
                 </h2>
-                <div class="space-y-6 text-sm">
+                <div class="space-y-6 text-base">
                   <ul>
                     <li>
                       As we eagerly discuss the growth and potential of Jos'
@@ -211,7 +212,7 @@ function App() {
                 <h2 class="my-2 text-xl md:text-2xl leading-tight">
                   More Tech Reads Across Nigeria & Beyound
                 </h2>
-                <div class="space-y-6 text-sm">
+                <div class="space-y-6 text-base">
                   <ul>
                     <li>
                       A true ecosystem implies interconnectedness,
@@ -238,20 +239,18 @@ function App() {
               </div>
               <div class="bg-white p-2 md:p-6">
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-slate-300 p-1">-:)</span>
+                  <span class="bg-slate-300 p-1">Support TechINJos</span>
                 </h2>
-                <h2 class="my-2 text-xl md:text-2xl leading-tight">
-                  Support TechInJos & Share your Thoughts
-                </h2>
-                <div class="space-y-6 text-sm">
+                <div class="space-y-6 text-base">
                   <p>
-                    <b>Don't keep us a secret:</b>{" "}
-                    <a href="/">Share this newsletter</a> with friends (copy URL{" "}
-                    <a href="/">here</a>)
+                    <b>Don't keep us a secret.</b> Tell your friends about
+                    TechINJos and share this post using the share buttons below.
                   </p>
+                  <ShareButtons />
                   <p>
-                    <b>Support our team</b> by advertising in this newsletter
-                    for just <a href="/">20K Naira per month</a>.
+                    <b>Support our team</b> by{" "}
+                    <a href="/advertise">advertising with</a> us for as little
+                    as 20K Naira per month.
                   </p>
                   <div>
                     <div

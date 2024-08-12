@@ -6,8 +6,8 @@ import Footer from "../components/Footer";
 function About() {
   return (
     <MetaProvider>
-      <Title>About TechInJos Newsletter - www.techinjos.com.ng</Title>
-      <Link rel="canonical" href="https://techinjos.com.ng/" />
+      <Title>About TechINJos Newsletter - www.techinjos.com.ng</Title>
+      <Link rel="canonical" href="https://TechINJos.com.ng/" />
       <Meta
         name="description"
         content="About TechINJos, the #1 Weekly and Quick Brief for Jos' Tech Ecosystem!"
@@ -24,7 +24,7 @@ function About() {
                 <h2 class="my-2 text-xl md:text-2xl leading-tight">
                   #1 Weekly and Quick Brief for Jos' Tech Ecosystem!
                 </h2>
-                <div class="space-y-6 text-sm">
+                <div class="space-y-6 text-base">
                   <p>
                     Get the latest news, insights, and updates from Jos' growing
                     tech ecosystem with TechINJos weekly newsletter (

@@ -11,14 +11,23 @@ function Header() {
           <div class="grow">&nbsp;</div>
           <div class="w-80 bg-white">
             <div class="border-b border-black py-4 px-6 md:px-12 text-right">
-              <span
+              <svg
                 onClick={() => {
                   setMenu(false);
                 }}
-                class="text-4xl cursor-pointer hover:opacity-60 mr-1"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="inline size-10 cursor-pointer hover:opacity-60"
               >
-                x
-              </span>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
             </div>
             <Menu />
           </div>
@@ -34,15 +43,24 @@ function Header() {
           <div class="hidden lg:block">
             <Menu />
           </div>
-          <div class="lg:hidden -mt-2">
-            <span
+          <div class="lg:hidden">
+            <svg
               onClick={() => {
                 setMenu(true);
               }}
-              class="text-4xl cursor-pointer hover:opacity-60"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-10 cursor-pointer hover:opacity-60"
             >
-              +
-            </span>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
           </div>
         </div>
       </div>
