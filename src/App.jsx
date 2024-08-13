@@ -21,8 +21,8 @@ function App() {
           <div class="w-full md:w-11/12 mx-auto backgound-color md:p-12 lg:p-12">
             <div class="content md:w-10/12 lg:w-6/12 mx-auto space-y-5">
               <div class="bg-white p-2 md:p-6">
-                <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-slate-300 p-1">Issue #1</span>
+                <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
+                  <span class="bg-purple-300 p-1">Issue #1</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   Good morning. It's another Thursday, July 20
@@ -41,7 +41,7 @@ function App() {
                 </div>
               </div>
               <div class="bg-white p-2 md:p-6">
-                <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
+                <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-green-300 p-1">Quick Question</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
@@ -81,7 +81,7 @@ function App() {
                 </div>
               </div>
               <div class="bg-white p-2 md:p-6">
-                <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
+                <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-yellow-300 p-1">Advertisement</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
@@ -121,8 +121,8 @@ function App() {
                 </div>
               </div>
               <div class="bg-white p-2 md:p-6">
-                <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-purple-300 p-1">Feature</span>
+                <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
+                  <span class="bg-cyan-300 p-1">Feature</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   How Nengee Transport has successfully won online booking
@@ -161,7 +161,7 @@ function App() {
                 </div>
               </div>
               <div class="bg-white p-2 md:p-6">
-                <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
+                <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-teal-300 p-1">FYI</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
@@ -203,7 +203,7 @@ function App() {
                 </div>
               </div>
               <div class="bg-white p-2 md:p-6">
-                <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
+                <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-fuchsia-300 p-1">Etcetera</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
@@ -235,7 +235,7 @@ function App() {
                 </div>
               </div>
               <div class="bg-white p-2 md:p-6">
-                <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
+                <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-orange-300 p-1">Support TechINJos</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
@@ -251,7 +251,7 @@ function App() {
               </div>
 
               <div class="bg-white p-2 md:p-6">
-                <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
+                <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-slate-300 p-1">Send us your Feedback</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
