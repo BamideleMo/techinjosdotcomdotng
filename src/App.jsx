@@ -19,20 +19,17 @@ function App() {
         <Header />
         <div class="pt-24 md:pt-28">
           <div class="w-full md:w-11/12 mx-auto backgound-color md:p-12 lg:p-12">
-            <div class="content md:w-10/12 lg:w-6/12 mx-auto space-y-3">
+            <div class="content md:w-10/12 lg:w-6/12 mx-auto space-y-5">
               <div class="bg-white p-2 md:p-6">
-                <div class="text-center border-b-2 border-black pb-4">
-                  <h1 class="text-4xl md:text-5xl font-semibold">
-                    Tech<span class="text-gray-400">IN</span>Jos
-                  </h1>
-                  <div class="text-base md:text-base text-black mt-1 leading-tight">
-                    #1 Weekly and Quick Brief for Jos' Tech Ecosystem!
-                  </div>
-                </div>
-                <div class="mt-8 space-y-6 text-base">
+                <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
+                  <span class="bg-slate-300 p-1">Issue #1</span>
+                </h2>
+                <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
+                  Good morning. It's another Thursday, July 20
+                </h2>
+                <div class="space-y-6 text-base">
                   <p>
-                    <b>Good morning. It's another Thursday, July 20</b>, and
-                    we're covering widespread disruption from a tech outage,
+                    We're covering widespread disruption from a tech outage,
                     nationwide unrest in Bangladesh, and much more. First time
                     reading? Join over 3.5 million readers.{" "}
                     <a href="/">Sign up here</a>.

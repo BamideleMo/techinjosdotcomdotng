@@ -37,7 +37,7 @@ function Header() {
         <div class="w-full md:w-11/12 mx-auto px-2 md:px-0 py-1 lg:py-4 flex justify-between border-b border-black">
           <div class="text-2xl lg:text-4xl font-bold pt-1.5 lg:pt-0">
             <A href="/">
-              Tech<span class="text-gray-400">IN</span>Jos
+              Tech<span class="text-red-600">IN</span>Jos
             </A>
           </div>
           <div class="hidden lg:block">
