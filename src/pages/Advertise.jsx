@@ -32,21 +32,22 @@ function Advertise() {
                   </p>
                   <h3>Why Advertise with Us?</h3>
                   <p>
-                    <b>Targeted Audience:</b> Reach a highly engaged audience of
-                    tech enthusiasts, startups, and industry leaders in Jos.
+                    <b>
+                      #1.
+                      <br />
+                      Targeted Audience:
+                    </b>
+                    Reach a highly engaged audience of tech enthusiasts,
+                    startups, and industry leaders in Jos.
                   </p>
                   <p>
-                    <b>Credibility:</b> Associate your brand with the most
-                    trusted source of tech news and insights in Jos.
-                  </p>
-                  <h3>Advertising Options</h3>
-                  <p>
-                    <b>Display Ads:</b> Showcase your brand through eye-catching
-                    banner ads on our website.
-                  </p>
-                  <p>
-                    <b>Sponsored Content:</b> Partner with us to create
-                    engaging, native content that resonates with our audience.
+                    <b>
+                      #2.
+                      <br />
+                      Credibility:
+                    </b>
+                    Associate your brand with the most trusted source of tech
+                    news and insights in Jos.
                   </p>
                   <p>
                     Ready to reach the heart of Jos' tech scene? Contact us at{" "}

@@ -32,6 +32,7 @@ function About() {
                     reporting about tech, startups and entrepreneurship for and
                     about the Tech Ecosystem, in Jos - Plateau state.
                   </p>
+
                   <p>
                     <b>Every Thursday</b> techINJos cuts through the noise,
                     delivering only the most relevant and impactful information
