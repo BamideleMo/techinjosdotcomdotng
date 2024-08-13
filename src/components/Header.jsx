@@ -10,7 +10,7 @@ function Header() {
         <div class="z-50 fixed top-0 bottom-0 left-0 right-0 w-screen h-screen bg-black bg-opacity-90 flex">
           <div class="grow">&nbsp;</div>
           <div class="w-80 bg-white">
-            <div class="border-b border-black py-4 px-6 md:px-12 text-right">
+            <div class="border-b border-black py-1 px-2 md:px-10 text-right">
               <svg
                 onClick={() => {
                   setMenu(false);
@@ -53,7 +53,7 @@ function Header() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-12 cursor-pointer hover:opacity-60 -mr-2"
+              className="size-12 cursor-pointer hover:opacity-60 -mr-1"
             >
               <path
                 strokeLinecap="round"

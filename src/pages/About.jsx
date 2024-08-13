@@ -22,16 +22,15 @@ function About() {
                   <span class="bg-violet-300 p-1">About</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                  #1 Weekly and Quick Brief for Jos' Tech Ecosystem!
+                  Your #1 Weekly Brief For and About Jos' Tech Ecosystem!
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
-                    Get the latest news, insights, and updates from Jos' growing
-                    tech ecosystem with TechINJos weekly newsletter (
-                    <a href="https://www.techinjos.com.ng">
-                      www.techinjos.com.ng
-                    </a>
-                    ).
+                    <b>TechINJos</b> (
+                    <A href="https://techinjos.com.ng">www.techinjos.com.ng</A>)
+                    is an independent online newsletter delivering impressive
+                    reporting about tech, startups and entrepreneurship for and
+                    about the Tech Ecosystem, in Jos - Plateau state.
                   </p>
                   <p>
                     <b>Every Thursday</b> TechINJos cuts through the noise,
@@ -40,15 +39,9 @@ function About() {
                     innovation.
                   </p>
                   <p>
-                    Our mission is to provide the Jos tech community with a
-                    reliable, concise, and actionable source of information.
-                  </p>
-                  <h3>Get Involved</h3>
-                  <p>
-                    Will you like to contribut to TechINJos? We'd love to hear
-                    from you! Whether you're a writer, designer, or industry
-                    expert, we invite you to join us in contributing to the
-                    future of Jos' tech scene.
+                    Our mission is to provide the Jos Tech Community with a
+                    reliable, concise, and actionable reporting and source of
+                    information.
                   </p>
                   <p>
                     Follow us on X:{" "}
@@ -56,8 +49,9 @@ function About() {
                     Facebook: <a href="/">@TechINJos</a>
                   </p>
                   <p>
-                    Join our WhatsApp Channel for Weekly reminders so you never
-                    get to miss any of our publication:{" "}
+                    Join our WhatsApp Channel for weekly reminders to checkout
+                    each newsletter so you never get to miss any of our
+                    publication:{" "}
                     <a href="https://whatsapp.com/channel/0029VaEVLBHBfxoG5GZxz72v">
                       TechINJos WhatsApp Channel
                     </a>

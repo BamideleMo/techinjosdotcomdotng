@@ -267,7 +267,7 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div class="mt-6 py-8 md:mt-20 md:p-20 md:pb-0 text-center text-sm space-y-4">
+              <div class="py-16 md:py-20 md:px-12 md:pb-10 text-center text-sm space-y-4">
                 <div class="flex justify-center space-x-6">
                   <a href="https://www.facebook.com/TechINJos">
                     <img src={facebook} class="rounded-full h-10" />
@@ -277,9 +277,10 @@ function App() {
                   </a>
                 </div>
                 <div class="p-4">
-                  <A href="/">TechInJos Newsletter</A> is an Independent media
-                  publication delivering impressive reporting about tech,
-                  startups and entrepreneurship in Jos, Plateau state, Nigeria.
+                  <A href="https://techinjos.com.ng">TechINJos</A> is an
+                  independent online newsletter delivering impressive reporting
+                  about tech, startups and entrepreneurship for and about the
+                  Tech Ecosystem, in Jos - Plateau state.
                 </div>
               </div>
             </div>

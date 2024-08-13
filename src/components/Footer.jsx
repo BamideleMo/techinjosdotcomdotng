@@ -8,7 +8,10 @@ function Footer() {
         <b>.</b>
         <A href="/advertise">Advertise with us</A>
       </div>
-      <div>&copy; TechINJos, Media - 2024. All rights reserved.</div>
+      <div>
+        &copy; TechINJos, Media - 2024. <br class="md:hidden" />
+        All rights reserved.
+      </div>
     </div>
   );
 }

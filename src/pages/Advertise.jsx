@@ -51,7 +51,7 @@ function Advertise() {
                   <p>
                     Ready to reach the heart of Jos' tech scene? Contact us at{" "}
                     <a href="mailto:techinjosnewsletter@gmail.com">
-                      TechINJosnewsletter@gmail.com
+                      techinjosnewsletter@gmail.com
                     </a>{" "}
                     to discuss your advertising needs and create a customized
                     campaign.
