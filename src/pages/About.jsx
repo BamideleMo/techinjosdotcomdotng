@@ -6,11 +6,11 @@ import Footer from "../components/Footer";
 function About() {
   return (
     <MetaProvider>
-      <Title>About TechINJos Newsletter - www.techinjos.com.ng</Title>
-      <Link rel="canonical" href="https://TechINJos.com.ng/" />
+      <Title>About techINJos Newsletter - www.techinjos.com.ng</Title>
+      <Link rel="canonical" href="https://techinjos.com.ng/" />
       <Meta
         name="description"
-        content="About TechINJos, the #1 Weekly and Quick Brief for Jos' Tech Ecosystem!"
+        content="About techINJos, the #1 Weekly and Quick Brief for Jos' Tech Ecosystem!"
       />
       <div>
         <Header />
@@ -26,14 +26,14 @@ function About() {
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
-                    <b>TechINJos</b> (
+                    <b>techINJos</b> (
                     <A href="https://techinjos.com.ng">www.techinjos.com.ng</A>)
                     is an independent online newsletter delivering impressive
                     reporting about tech, startups and entrepreneurship for and
                     about the Tech Ecosystem, in Jos - Plateau state.
                   </p>
                   <p>
-                    <b>Every Thursday</b> TechINJos cuts through the noise,
+                    <b>Every Thursday</b> techINJos cuts through the noise,
                     delivering only the most relevant and impactful information
                     to help readers stay informed, stay competitive and drive
                     innovation.
@@ -45,15 +45,15 @@ function About() {
                   </p>
                   <p>
                     Follow us on X:{" "}
-                    <a href="https://x.com/TechINJos">@TechINJos</a> and on
-                    Facebook: <a href="/">@TechINJos</a>
+                    <a href="https://x.com/TechINJos">@techINJos</a> and on
+                    Facebook: <a href="/">@techINJos</a>
                   </p>
                   <p>
                     Join our WhatsApp Channel for weekly reminders to checkout
                     each newsletter so you never get to miss any of our
                     publication:{" "}
                     <a href="https://whatsapp.com/channel/0029VaEVLBHBfxoG5GZxz72v">
-                      TechINJos WhatsApp Channel
+                      techINJos WhatsApp Channel
                     </a>
                     .
                   </p>

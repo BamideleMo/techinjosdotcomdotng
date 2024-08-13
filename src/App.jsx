@@ -162,7 +162,7 @@ function App() {
               </div>
               <div class="bg-white p-2 md:p-6">
                 <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-teal-300 p-1">FYI</span>
+                  <span class="bg-pink-400 p-1">FYI</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   Tech News Titbits from within Jos
