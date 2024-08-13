@@ -25,7 +25,7 @@ function App() {
                   <span class="bg-purple-300 p-1">Issue #1</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                  Good morning. It's another Thursday, July 20
+                  Good morning. It's another Thursday, July 20, 2024
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
