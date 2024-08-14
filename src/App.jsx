@@ -167,7 +167,7 @@ function App() {
               </div>
               <div class="bg-white p-2 md:p-6">
                 <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-pink-400 p-1">FYI</span>
+                  <span class="bg-pink-400 p-1">Bytes Within</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   Tech News Titbits from within Jos
@@ -175,9 +175,10 @@ function App() {
                 <div class="space-y-6 text-base">
                   <ul>
                     <li>
-                      As we eagerly discuss the growth and potential of Jos'
-                      tech scene, a nagging question lingers: Do we actually
-                      have a tech ecosystem in Jos?
+                      <b>Share Your Story, Shape the Narrative:</b> As we
+                      eagerly discuss the growth and potential of Jos' tech
+                      scene, a nagging question lingers: Do we actually have a
+                      tech ecosystem in Jos?
                     </li>
                     <li>
                       Or are we just a collection of isolated individuals and

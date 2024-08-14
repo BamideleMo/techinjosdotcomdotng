@@ -5,8 +5,17 @@ import Logo from "./Logo";
 
 function Header() {
   const [menu, setMenu] = createSignal(false);
+  const [block, setBlock] = createSignal(true);
   return (
     <>
+      <Show when={block()}>
+        <div class="z-50 fixed top-0 bottom-0 left-0 right-0 w-screen h-screen bg-white bg-opacity-100 flex items-center">
+          <div class="bg-black bg-opacity-90 w-80 mx-auto p-4 lg:p-6 rounded-md text-white text-center">
+            <Logo />
+            <div>Launching Thursday 15, Aug 2024</div>
+          </div>
+        </div>
+      </Show>
       <Show when={menu()}>
         <div class="z-50 fixed top-0 bottom-0 left-0 right-0 w-screen h-screen bg-black bg-opacity-90 flex">
           <div class="grow">&nbsp;</div>
