@@ -25,18 +25,20 @@ function App() {
                   <span class="bg-purple-300 p-1">Issue #1</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                  Good morning. It's another Thursday, July 20, 2024
+                  Good morning. It's another Thursday, Aug. 15, 2024.
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
-                    We're covering widespread disruption from a tech outage,
-                    nationwide unrest in Bangladesh, and much more. First time
-                    reading? Join over 3.5 million readers.{" "}
-                    <a href="/">Sign up here</a>.
+                    We’re asking about Jos’ tech ecosystem, reporting the
+                    outcome of our quick survey, covering the Musk-Trump X
+                    interview “flop” plus what it means for tech creators and
+                    much more. First time reading? Join our WhatsApp channel so
+                    you never get to miss any other issue.{" "}
+                    <a href="/">Join here</a>.
                   </p>
                   <p>
                     You share. We listen. As always, send us feedback at{" "}
-                    <a href="/">hello@join1440.com</a>.
+                    <a href="/">techinjosnewsletter@gmail.com</a>.
                   </p>
                 </div>
               </div>
