@@ -85,14 +85,19 @@ function App() {
                   <span class="bg-yellow-300 p-1">Advertisement</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                  Is There Even a Tech Ecosystem in Jos?
+                  Are you tired of fake or low-quality smartwatches?
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
-                    As we eagerly discuss the growth and potential of Jos' tech
-                    scene, a nagging question lingers: Do we actually have a
-                    tech ecosystem in Jos?
+                    Stop wearing counterfeit smartwatches that compromise on
+                    quality and functionality!
                   </p>
+                  <p>
+                    At "<b>Original Smartwatch Plug, Jos</b>", we offer a wide
+                    range of genuine smartwatches from top brands, ensuring you
+                    get the best value for your money.
+                  </p>
+                  <img src="/test.png" />
                   <p>
                     Or are we just a collection of isolated individuals and
                     startups struggling to find common ground and shared
