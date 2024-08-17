@@ -244,7 +244,7 @@ function App() {
               </div>
               <div class="bg-white p-2 md:p-6">
                 <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-orange-300 p-1">Support TechINJos</span>
+                  <span class="bg-orange-300 p-1">Support techINJos</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
                   Don't keep us a secret
@@ -285,7 +285,7 @@ function App() {
                   </a>
                 </div>
                 <div class="p-4">
-                  <A href="https://techinjos.com.ng">TechINJos</A> is an
+                  <A href="https://techinjos.com.ng">techINJos</A> is an
                   independent online newsletter delivering impressive reporting
                   about tech, startups and entrepreneurship for and about the
                   Tech Ecosystem, in Jos - Plateau state.

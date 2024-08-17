@@ -34,7 +34,7 @@ function About() {
                   </p>
 
                   <p>
-                    <b>Every Thursday</b> techINJos cuts through the noise,
+                    <b>Every Saturday</b> techINJos cuts through the noise,
                     delivering only the most relevant and impactful information
                     to help readers stay informed, stay competitive and drive
                     innovation.
