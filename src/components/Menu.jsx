@@ -25,11 +25,6 @@ function Menu() {
           WhatsApp Channel
         </a>
       </li>
-      <li>
-        <A href="/a/login" class="hover:opacity-60">
-          Login
-        </A>
-      </li>
     </ul>
   );
 }
