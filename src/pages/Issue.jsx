@@ -108,7 +108,10 @@ function Issue() {
                           Whether you have news you'd like us to publish in our
                           next issue, a suggestion, a comment, or a concern, we
                           want to hear from you. Send a mail to:{" "}
-                          <a href="mailto:techinjosnewsletter@gmail.com">
+                          <a
+                            href="mailto:techinjosnewsletter@gmail.com"
+                            class="name"
+                          >
                             techinjosnewsletter@gmail.com
                           </a>
                         </p>
@@ -147,7 +150,7 @@ function Issue() {
           </div>
         </div>
         <div class="w-11/12 mx-auto my-10 py-4 flex justify-between border-t border-black">
-          <A href="/" class="flex space-x-1">
+          <A href="#" class="flex space-x-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -165,7 +168,7 @@ function Issue() {
 
             <span>PREVIOUS</span>
           </A>
-          <A href="/" class="flex space-x-1">
+          <A href="#" class="flex space-x-1">
             <span>NEXT</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
