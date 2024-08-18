@@ -9,7 +9,7 @@ import ShareButtons from "./components/ShareButtons";
 function App() {
   return (
     <MetaProvider>
-      <Title>TechInJos Newsletter - www.techinjos.com.ng</Title>
+      <Title>techInJos Newsletter - www.techinjos.com.ng</Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
       <Meta
         name="description"
@@ -25,7 +25,7 @@ function App() {
                   <span class="bg-purple-300 p-1">Issue #1</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                  Good morning. It's another Thursday, Aug. 15, 2024.
+                  Good afternoon. It's another Sunday, Aug. 18, 2024.
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
@@ -273,14 +273,19 @@ function App() {
                       techinjosnewsletter@gmail.com
                     </a>
                   </p>
+                  <p>
+                    <b>Don't forget:</b>
+                    <br /> We publish a fresh issue{" "}
+                    <b>every Sunday afternoon</b>. See you again.
+                  </p>
                 </div>
               </div>
               <div class="py-16 md:py-20 md:px-12 md:pb-10 text-center text-sm space-y-4">
                 <div class="flex justify-center space-x-6">
-                  <a href="https://www.facebook.com/TechINJos">
+                  <a href="https://www.facebook.com/techINJos">
                     <img src={facebook} class="rounded-full h-10" />
                   </a>
-                  <a href="https://www.x.com/TechINJos">
+                  <a href="https://www.x.com/techINJos">
                     <img src={twitter} class="rounded-full h-10" />
                   </a>
                 </div>

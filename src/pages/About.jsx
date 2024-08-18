@@ -34,10 +34,10 @@ function About() {
                   </p>
 
                   <p>
-                    <b>Every Saturday</b> techINJos cuts through the noise,
-                    delivering only the most relevant and impactful information
-                    to help readers stay informed, stay competitive and drive
-                    innovation.
+                    <b>Every Sunday</b> afternoon techINJos cuts through the
+                    noise, delivering only the most relevant and impactful
+                    information to help readers stay informed, stay competitive
+                    and drive innovation.
                   </p>
                   <p>
                     Our mission is to provide the Jos Tech Community with a
