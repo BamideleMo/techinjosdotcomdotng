@@ -58,6 +58,7 @@ function Issue() {
               <Show
                 when={resource.loading}
                 fallback={
+                  <>
                   <For each={resource().issue}>
                     {(post, i) => (
                       <div class="bg-white p-2 md:p-6">
@@ -76,11 +77,7 @@ function Issue() {
                       </div>
                     )}
                   </For>
-                }
-              >
-                <Loading />
-              </Show>
-              {/* fetched ends here */}
+
               <div class="bg-white p-2 md:p-6">
                 <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-orange-300 p-1">Support techINJos</span>
@@ -120,6 +117,12 @@ function Issue() {
                   </p>
                 </div>
               </div>
+                  </>
+                }
+              >
+                <Loading />
+              </Show>
+              {/* fetched ends here */}
               <div class="py-16 md:py-20 md:px-12 md:pb-10 text-center text-sm space-y-4">
                 <div class="flex justify-center space-x-6">
                   <a href="https://www.facebook.com/techINJos">
