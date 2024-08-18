@@ -59,64 +59,66 @@ function Issue() {
                 when={resource.loading}
                 fallback={
                   <>
-                  <For each={resource().issue}>
-                    {(post, i) => (
-                      <div class="bg-white p-2 md:p-6">
-                        <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
-                          <span class={post.post_bg + " " + "p-1"}>
-                            {post.post_highlight}
-                          </span>
-                        </h2>
-                        <h1 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                          {post.post_topic}
-                        </h1>
-                        <div
-                          class="space-y-6 text-base"
-                          innerHTML={post.conversation_text}
-                        ></div>
+                    <For each={resource().issue}>
+                      {(post, i) => (
+                        <div class="bg-white p-2 md:p-6">
+                          <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
+                            <span class={post.post_bg + " " + "p-1"}>
+                              {post.post_highlight}
+                            </span>
+                          </h2>
+                          <h1 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
+                            {post.post_topic}
+                          </h1>
+                          <div
+                            class="space-y-6 text-base"
+                            innerHTML={post.conversation_text}
+                          ></div>
+                        </div>
+                      )}
+                    </For>
+
+                    <div class="bg-white p-2 md:p-6">
+                      <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
+                        <span class="bg-orange-300 p-1">Support techINJos</span>
+                      </h2>
+                      <h1 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
+                        Don't keep us a secret
+                      </h1>
+                      <div class="space-y-6 text-base">
+                        <p>
+                          Tell your friends about TechINJos and share this post
+                          using the share buttons below.
+                        </p>
+                        <ShareButtons />
                       </div>
-                    )}
-                  </For>
+                    </div>
 
-              <div class="bg-white p-2 md:p-6">
-                <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-orange-300 p-1">Support techINJos</span>
-                </h2>
-                <h1 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                  Don't keep us a secret
-                </h1>
-                <div class="space-y-6 text-base">
-                  <p>
-                    Tell your friends about TechINJos and share this post using
-                    the share buttons below.
-                  </p>
-                  <ShareButtons />
-                </div>
-              </div>
-
-              <div class="bg-white p-2 md:p-6">
-                <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-slate-300 p-1">Send us your Feedback</span>
-                </h2>
-                <h1 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                  It is invaluable.
-                </h1>
-                <div class="space-y-6 text-base">
-                  <p>
-                    Whether you have news you'd like us to publish in our next
-                    issue, a suggestion, a comment, or a concern, we want to
-                    hear from you. Send a mail to:{" "}
-                    <a href="mailto:techinjosnewsletter@gmail.com">
-                      techinjosnewsletter@gmail.com
-                    </a>
-                  </p>
-                  <p>
-                    <b>Don't forget:</b>
-                    <br /> We publish a fresh issue{" "}
-                    <b>every Sunday afternoon</b>. See you again.
-                  </p>
-                </div>
-              </div>
+                    <div class="bg-white p-2 md:p-6">
+                      <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
+                        <span class="bg-slate-300 p-1">
+                          Send us your Feedback
+                        </span>
+                      </h2>
+                      <h1 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
+                        It is invaluable.
+                      </h1>
+                      <div class="space-y-6 text-base">
+                        <p>
+                          Whether you have news you'd like us to publish in our
+                          next issue, a suggestion, a comment, or a concern, we
+                          want to hear from you. Send a mail to:{" "}
+                          <a href="mailto:techinjosnewsletter@gmail.com">
+                            techinjosnewsletter@gmail.com
+                          </a>
+                        </p>
+                        <p>
+                          <b>Don't forget:</b>
+                          <br /> We publish a fresh issue{" "}
+                          <b>every Sunday afternoon</b>. See you again.
+                        </p>
+                      </div>
+                    </div>
                   </>
                 }
               >
@@ -133,10 +135,12 @@ function Issue() {
                   </a>
                 </div>
                 <div class="p-4">
-                  <A href="https://techinjos.com.ng">techINJos</A> is an
-                  independent online newsletter delivering impressive reporting
-                  about tech, startups and entrepreneurship for and about the
-                  Tech Ecosystem, in Jos - Plateau state.
+                  <A href="https://techinjos.com.ng" class="name">
+                    techINJos
+                  </A>{" "}
+                  is an independent online newsletter delivering impressive
+                  reporting about tech, startups and entrepreneurship for and
+                  about the Tech Ecosystem, in Jos - Plateau state.
                 </div>
               </div>
             </div>
