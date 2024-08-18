@@ -6,6 +6,9 @@ import "./index.css";
 import App from "./App";
 import About from "./pages/About";
 import Advertise from "./pages/Advertise";
+import Login from "./pages/admin/Login";
+import Post from "./pages/admin/Post";
+import Issue from "./pages/Issue";
 
 const root = document.getElementById("root");
 
@@ -21,6 +24,9 @@ render(
       <Route path="/" component={App} />
       <Route path="/about" component={About} />
       <Route path="/advertise" component={Advertise} />
+      <Route path="/issue/:issueNumber" component={Issue} />
+      <Route path="/a/login" component={Login} />
+      <Route path="/a/post" component={Post} />
     </Router>
   ),
   root

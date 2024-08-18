@@ -6,8 +6,28 @@ body {
   margin: 0;
   padding: 0;
 }
-.content a{
-  color: #ff0000;
+.content p a span, .content li a span{
+  color: #0786e8 !important;
+  border-bottom: #ff0000 dotted 1px;
+}
+
+.content .green{
+  background-color: #86efac !important;
+}
+.content .purple{
+  background-color: #d8b4fe !important;
+}
+.content .yellow{
+  background-color: #fde047 !important;
+}
+.content .cyan{
+  background-color: #67e8f9 !important;
+}
+.content .pink{
+  background-color: #f472b5 !important;
+}
+.content .fuchsia{
+  background-color: #f0abfc !important;
 }
 
 .content ul{
@@ -27,4 +47,15 @@ body {
 }
 .backgound-color{
   background-color: #F2F2F2;
+}
+.cke_inner{
+  height: 500px !important;
+  background-color: red !important;
+}
+.cke_contents{
+  height: 396px !important;
+}
+
+.ck-editor__main,.ck-content{
+  height: 396px !important;
 }

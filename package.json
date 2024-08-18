@@ -22,6 +22,7 @@
     "@solidjs/meta": "^0.29.3",
     "@solidjs/router": "^0.10.10",
     "solid-form-handler": "^1.2.1",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "ckeditor5": "^42.0.1"
   }
 }
