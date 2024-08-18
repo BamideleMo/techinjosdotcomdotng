@@ -12,7 +12,7 @@ function Header() {
         <div class="z-50 fixed top-0 bottom-0 left-0 right-0 w-screen h-screen bg-white bg-opacity-100 flex items-center">
           <div class="bg-black bg-opacity-90 w-80 mx-auto p-4 lg:p-6 rounded-md text-white text-center">
             <Logo />
-            <div>Launching Saturday 17, Aug 2024</div>
+            <div>Launching Sunday 18, Aug 2024</div>
           </div>
         </div>
       </Show>
