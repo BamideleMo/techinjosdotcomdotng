@@ -14,7 +14,7 @@ function Footer() {
         <div class="text-gray-400 -mt-1">www.techinjos.com.ng</div>
       </div>
       <div>
-        &copy; TechINJos, Media - 2024. <br class="md:hidden" />
+        &copy; techINJos, Media - 2024. <br class="md:hidden" />
         All rights reserved.
       </div>
     </div>
