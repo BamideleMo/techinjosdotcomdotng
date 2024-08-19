@@ -87,7 +87,7 @@ function Issue() {
                       </h1>
                       <div class="space-y-6 text-base">
                         <p>
-                          Tell your friends about TechINJos and share this post
+                          Tell your friends about techINJos and share this post
                           using the share buttons below.
                         </p>
                         <ShareButtons />
