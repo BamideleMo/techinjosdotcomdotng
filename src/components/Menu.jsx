@@ -7,13 +7,13 @@ function Menu() {
     lg:py-0 lg:text-left lg:space-y-0 lg:mx-0 lg:flex-row lg:space-x-6 lg:text-sm mt-3"
     >
       <li>
-        <A href="/advertise" class="hover:opacity-60">
-          Advertise
+        <A href="/about" class="hover:opacity-60">
+          About
         </A>
       </li>
       <li>
-        <A href="/about" class="hover:opacity-60">
-          About
+        <A href="/advertise" class="hover:opacity-60">
+          Advertise
         </A>
       </li>
       <li class="pt-3 lg:pt-0">
