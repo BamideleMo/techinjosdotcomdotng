@@ -47,7 +47,7 @@ function App() {
           {/* loading */}
           <div class="grid grid-cols-2 gap-2">
             <div
-              class="skeleton skeleton-rect"
+              class="skeleton skeleton-rect mx-auto !w-full"
               style="--rect-h: 150px; --lines: 20;"
             ></div>
             <div
