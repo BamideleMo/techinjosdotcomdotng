@@ -44,18 +44,22 @@ function App() {
       <div>
         <Header />
         <div class="pt-20 md:pt-24">
-          {/* loading */}
-          <div class="grid grid-cols-2 gap-2">
-            <div
-              class="skeleton skeleton-rect mx-auto !w-full"
-              style="--rect-h: 150px; --lines: 20;"
-            ></div>
-            <div
-              class="skeleton skeleton-rect"
-              style="--rect-h: 150px; --lines: 20;"
-            ></div>
+          <div class="w-full md:w-11/12 mx-auto backgound-color md:p-12 lg:p-12">
+            <div class="content md:w-10/12 lg:w-6/12 mx-auto space-y-5">
+              {/* loading */}
+              <div class="grid grid-cols-2 gap-2">
+                <div
+                  class="skeleton skeleton-rect mx-auto !w-full"
+                  style="--rect-h: 150px; --lines: 20;"
+                ></div>
+                <div
+                  class="skeleton skeleton-rect"
+                  style="--rect-h: 150px; --lines: 20;"
+                ></div>
+              </div>
+              {/* loading */}
+            </div>
           </div>
-          {/* loading */}
         </div>
       </div>
       <Footer />
