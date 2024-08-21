@@ -126,13 +126,13 @@ function Issue() {
                 }
               >
                 {/* loading */}
-                <div class="grid grid-cols-2 gap-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                   <div
                     class="skeleton skeleton-rect mx-auto !w-full"
                     style="--rect-h: 150px; --lines: 20;"
                   ></div>
                   <div
-                    class="skeleton skeleton-rect"
+                    class="skeleton skeleton-rect hidden md:block"
                     style="--rect-h: 150px; --lines: 20;"
                   ></div>
                 </div>
