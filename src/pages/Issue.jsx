@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ShareButtons from "../components/ShareButtons";
 import Loading from "../components/Loading";
+import "css-skeletons";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -125,7 +126,18 @@ function Issue() {
                   </>
                 }
               >
-                <Loading />
+                {/* loading */}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <div
+                    class="skeleton skeleton-rect"
+                    style="--rect-h: 150px; --lines: 20;"
+                  ></div>
+                  <div
+                    class="skeleton skeleton-rect hidden md:block"
+                    style="--rect-h: 150px; --lines: 20;"
+                  ></div>
+                </div>
+                {/* loading */}
               </Show>
               {/* fetched ends here */}
               <div class="py-16 md:py-20 md:px-12 md:pb-10 text-center text-sm space-y-4">
