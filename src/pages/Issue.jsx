@@ -7,7 +7,6 @@ import twitter from "../../src/assets/twitterx.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ShareButtons from "../components/ShareButtons";
-import Loading from "../components/Loading";
 import "css-skeletons";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];

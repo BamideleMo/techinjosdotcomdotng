@@ -3,7 +3,7 @@ import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import { createSignal, createEffect, createResource } from "solid-js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Loading from "./components/Loading";
+import "css-skeletons";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -44,7 +44,18 @@ function App() {
       <div>
         <Header />
         <div class="pt-20 md:pt-24">
-          <Loading />
+          {/* loading */}
+          <div class="grid grid-cols-2 gap-2">
+            <div
+              class="skeleton skeleton-rect"
+              style="--rect-h: 150px; --lines: 20;"
+            ></div>
+            <div
+              class="skeleton skeleton-rect"
+              style="--rect-h: 150px; --lines: 20;"
+            ></div>
+          </div>
+          {/* loading */}
         </div>
       </div>
       <Footer />
