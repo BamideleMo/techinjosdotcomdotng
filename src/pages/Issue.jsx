@@ -96,7 +96,7 @@ function Issue() {
                   <>
                     <h2 class="text-center text-3xl md:text-5xl uppercase mb-4 font-bold">
                       <span class="block">Tech Newsletter</span>
-                      <span class="block">for & from Jos</span>
+                      <span class="block">for & from Jos<b class="text-red-600">.</b></span>
                     </h2>
                     <For each={resource().issue}>
                       {(post, i) => (
