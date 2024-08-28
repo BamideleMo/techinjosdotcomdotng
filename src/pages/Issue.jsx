@@ -31,7 +31,8 @@ function Issue() {
     );
     const result = await response.json();
     if (result.success) {
-      console.log(result.response[1]);
+      await getPrevIssue();
+      await getNextIssue();
       setIssueNumber(result.response[0].issue_number);
       setIssueMeta(result.response[1].post_topic);
       setIssue(result.response);
@@ -40,6 +41,40 @@ function Issue() {
     return {
       issue,
     };
+  };
+
+  const [nextIssue, setNextIssue] = createSignal(false);
+  const getNextIssue = async () => {
+    var v = parseInt(params.issueNumber) + 1;
+    const response = await fetch(VITE_API_URL + "/open/issue/" + v, {
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      method: "GET",
+    });
+    const result = await response.json();
+    if (result.response.length > 0) {
+      setNextIssue(true);
+    }
+  };
+
+  const [prevIssue, setPrevIssue] = createSignal(false);
+  const getPrevIssue = async () => {
+    var v = parseInt(params.issueNumber) - 1;
+    const response = await fetch(VITE_API_URL + "/open/issue/" + v, {
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      method: "GET",
+    });
+    const result = await response.json();
+    if (result.response.length > 0) {
+      setPrevIssue(true);
+    }
   };
 
   const [resource] = createResource(issueDetails);
@@ -155,41 +190,100 @@ function Issue() {
           </div>
         </div>
         <div class="w-11/12 mx-auto my-10 py-4 flex justify-between border-t border-black">
-          <A href="#" class="flex space-x-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
+          <Show
+            when={prevIssue()}
+            fallback={
+              <span class="flex space-x-1 cursor-not-allowed text-gray-100">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+                <span>PREVIOUS</span>
+              </span>
+            }
+          >
+            <span
+              onClick={() => {
+                window.location.replace(
+                  "/issue/" + (parseInt(params.issueNumber) - 1)
+                );
+              }}
+              class="flex space-x-1 cursor-pointer hover:text-red-600"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              />
-            </svg>
-
-            <span>PREVIOUS</span>
-          </A>
-          <A href="#" class="flex space-x-1">
-            <span>NEXT</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+              <span>PREVIOUS</span>
+            </span>
+          </Show>
+          <Show
+            when={nextIssue()}
+            fallback={
+              <span class="flex space-x-1 cursor-not-allowed text-gray-100">
+                <span>NEXT</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+              </span>
+            }
+          >
+            <span
+              onClick={() => {
+                window.location.replace(
+                  "/issue/" + (parseInt(params.issueNumber) + 1)
+                );
+              }}
+              class="flex space-x-1 cursor-pointer hover:text-red-600"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              />
-            </svg>
-          </A>
+              <span>NEXT</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </span>
+          </Show>
         </div>
       </div>
       <Footer />
