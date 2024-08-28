@@ -54,7 +54,7 @@ function Issue() {
         <Header />
         <div class="pt-20 md:pt-24">
           <div class="w-full md:w-11/12 mx-auto backgound-color md:p-12 lg:p-12">
-            <div class="content md:w-10/12 lg:w-6/12 mx-auto space-y-5">
+            <div class="content md:w-10/12 lg:w-6/12 2xl:w-5/12 mx-auto space-y-5">
               <Show
                 when={resource.loading}
                 fallback={
@@ -126,16 +126,10 @@ function Issue() {
                 }
               >
                 {/* loading */}
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  <div
-                    class="skeleton skeleton-rect mx-auto !w-full"
-                    style="--rect-h: 150px; --lines: 20;"
-                  ></div>
-                  <div
-                    class="skeleton skeleton-rect hidden md:block"
-                    style="--rect-h: 150px; --lines: 20;"
-                  ></div>
-                </div>
+                <div
+                  class="skeleton skeleton-rect mx-auto"
+                  style="--rect-h: 150px; --c-w: 100%; --lines: 20;"
+                ></div>
                 {/* loading */}
               </Show>
               {/* fetched ends here */}

@@ -48,6 +48,9 @@ body {
 .backgound-color{
   background-color: #F2F2F2;
 }
+.custom-width{
+  width: 300px;
+}
 .cke_inner{
   height: 500px !important;
   background-color: red !important;

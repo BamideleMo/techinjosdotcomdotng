@@ -47,16 +47,10 @@ function App() {
           <div class="w-full md:w-11/12 mx-auto backgound-color md:p-12 lg:p-12">
             <div class="content md:w-10/12 lg:w-6/12 mx-auto space-y-5">
               {/* loading */}
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-                <div
-                  class="skeleton skeleton-rect mx-auto !w-full"
-                  style="--rect-h: 150px; --lines: 20;"
-                ></div>
-                <div
-                  class="skeleton skeleton-rect hidden md:block"
-                  style="--rect-h: 150px; --lines: 20;"
-                ></div>
-              </div>
+              <div
+                class="skeleton skeleton-rect mx-auto"
+                style="--rect-h: 150px; --c-w: 100%; --lines: 20;"
+              ></div>
               {/* loading */}
             </div>
           </div>
