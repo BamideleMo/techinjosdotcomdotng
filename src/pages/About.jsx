@@ -22,37 +22,36 @@ function About() {
                   <span class="bg-violet-300 p-1">About</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                  Your #1 Weekly Brief For and About Jos' Tech Ecosystem!
+                  Your #1 Weekly Brief For and From Jos' Tech Ecosystem!
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
                     <b>techINJos</b> (
                     <A href="https://techinjos.com.ng">www.techinjos.com.ng</A>)
                     is an independent online newsletter delivering impressive
-                    reporting about tech, startups and entrepreneurship for and
-                    about the Tech Ecosystem, in Jos - Plateau state.
+                    reporting about tech, startups and tech-driven
+                    entrepreneurship for and from the Tech Ecosystem, in Jos -
+                    Plateau state.
                   </p>
-
                   <p>
                     <b>Every Sunday</b> afternoon techINJos cuts through the
                     noise, delivering only the most relevant and impactful
-                    information to help readers stay informed, stay competitive
-                    and drive innovation.
+                    information to help readers stay informed, and embrace tech.
                   </p>
                   <p>
-                    Our mission is to provide the Jos Tech Community with a
-                    reliable, concise, and actionable reporting and source of
-                    information.
+                    Our mission is to amplify stories for and from Jos Tech
+                    Community showcasing the varying experiences and
+                    perspectives.
                   </p>
                   <p>
                     Follow us on X:{" "}
-                    <a href="https://x.com/TechINJos">@techINJos</a> and on
-                    Facebook: <a href="/">@techINJos</a>
+                    <a href="https://x.com/techINJos">@techINJos</a> and on
+                    Facebook:{" "}
+                    <a href="https://facebook.com/techINJos">@techINJos</a>
                   </p>
                   <p>
                     Join our WhatsApp Channel for weekly reminders to checkout
-                    each newsletter so you never get to miss any of our
-                    publication:{" "}
+                    each new issues so you never get to miss any:{" "}
                     <a href="https://whatsapp.com/channel/0029VaEVLBHBfxoG5GZxz72v">
                       techINJos WhatsApp Channel
                     </a>
