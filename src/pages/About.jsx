@@ -2,6 +2,7 @@ import { A } from "@solidjs/router";
 import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import techINJos from "../assets/about-techINJos.png";
 
 function About() {
   return (
@@ -37,6 +38,9 @@ function About() {
                     <b>Every Sunday</b> afternoon techINJos cuts through the
                     noise, delivering only the most relevant and impactful
                     information to help readers stay informed, and embrace tech.
+                  </p>
+                  <p>
+                    <img src={techINJos} alt="About techINJos" />
                   </p>
                   <p>
                     Our mission is to amplify stories for and from Jos Tech
