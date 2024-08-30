@@ -100,7 +100,7 @@ function Issue() {
                     <h2 class="text-center text-2xl md:text-5xl uppercase mb-4 font-bold">
                       <span class="block">Tech Newsletter</span>
                       <span class="block -mt-1.5">
-                        for & from Jos<b class="text-red-600">.</b>
+                        for + About Jos<b class="text-red-600">.</b>
                       </span>
                     </h2>
                     <For each={resource().issue}>
