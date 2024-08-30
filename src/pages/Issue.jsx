@@ -111,7 +111,7 @@ function Issue() {
                               {post.post_highlight}
                             </span>
                           </h2>
-                          <h1 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
+                          <h1 class="my-2 text-xl md:text-2xl leading-tight font-bold">
                             {post.post_topic}
                           </h1>
                           <div
