@@ -50,11 +50,10 @@ function Advertise() {
                     news and insights in Jos.
                   </p>
                   <p>
-                    Ready to reach the heart of Jos' tech scene? Contact us at{" "}
-                    <a href="mailto:techinjosnewsletter@gmail.com">
-                      techinjosnewsletter@gmail.com
-                    </a>{" "}
-                    to discuss your advertising needs and create a customized
+                    Ready to reach the heart of Jos' tech scene? Contact me via
+                    WhatsApp{" "}
+                    <a href="https://wa.me/23407036935026">07036935026</a> to
+                    discuss your advertising needs and create a customized
                     campaign.
                   </p>
                 </div>
