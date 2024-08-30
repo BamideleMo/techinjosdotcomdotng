@@ -82,8 +82,8 @@ function Issue() {
     <MetaProvider>
       <Title>
         {issueNumber()
-          ? "Issue #" + issueNumber() + " - techInJos Newsletter"
-          : "techInJos Newsletter"}
+          ? "Issue #" + issueNumber() + " - techInJos Newsletter "
+          : "techInJos Newsletter "}
         | www.techinjos.com.ng
       </Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
