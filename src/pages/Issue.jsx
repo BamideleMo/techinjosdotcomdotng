@@ -129,11 +129,11 @@ function Issue() {
                       class="bg-white px-2 py-6 md:p-6 flex justify-between 
                     space-x-4 md:space-x-6"
                     >
-                      <div class="text-sm flex space-x-1 w-80">
+                      <div class="text-base md:text-base flex space-x-1 w-80">
                         <div class="w-16 md:w-16">
                           <img src={clap} class="w-full" />
                         </div>
-                        <div class="leading-tight pt-0.5 md:pt-1">
+                        <div class="leading-tight pt-0.5 md:pt-0.5">
                           Big thanks to{" "}
                           <a
                             target="_blank"
