@@ -10,6 +10,7 @@ import ShareButtons from "../components/ShareButtons";
 import "css-skeletons";
 import ShareButtons2 from "../components/ShareButtons2";
 import clap from "../assets/clap.png";
+import aboutImg from "../assets/about-techINJos.png"
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -144,7 +145,7 @@ function Issue() {
       <Meta property="og:description" content={metaDesc()} />
       <Meta property="og:url" content={window.location.href} />
       <Meta property="og:site_name" content="techINJos" />
-      <Meta property="og:image" content={metaImg()} />
+      <Meta property="og:image" content={metaImg()?metaImg():aboutImg} />
       <Meta property="og:image:width" content="1920" />
       <Meta property="og:image:height" content="1080" />
       <Meta property="og:image:type" content="image/png" />
