@@ -133,7 +133,7 @@ function Issue() {
                         <div class="w-16 md:w-16">
                           <img src={clap} class="w-full" />
                         </div>
-                        <div class="leading-tight pt-1">
+                        <div class="leading-tight pt-2 md:pt-1">
                           Big thanks to{" "}
                           <a
                             target="_blank"
