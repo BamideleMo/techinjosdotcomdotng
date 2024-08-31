@@ -31,7 +31,7 @@ function About() {
                     <A href="https://techinjos.com.ng">www.techinjos.com.ng</A>)
                     is an independent weekly online newsletter reporting tech,
                     digital transformation, & tech-driven entrepreneurship for,
-                    from & about Jos - Plateau state.
+                    from & about <b>Jos</b> - <b>Plateau state</b>.
                   </p>
                   <p>
                     <b>Every Sunday</b> afternoon we cut through the noise,

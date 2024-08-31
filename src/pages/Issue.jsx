@@ -241,7 +241,7 @@ function Issue() {
                   </A>{" "}
                   is an independent weekly online newsletter reporting tech,
                   digital transformation, & tech-driven entrepreneurship for,
-                  from & about Jos - Plateau state.
+                  from & about <b>Jos</b> - <b>Plateau state</b>.
                 </div>
               </div>
             </div>
