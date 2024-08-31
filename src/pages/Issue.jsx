@@ -133,7 +133,7 @@ function Issue() {
                         <div class="w-16 md:w-16">
                           <img src={clap} class="w-full" />
                         </div>
-                        <div class="leading-tight pt-2 md:pt-1">
+                        <div class="leading-tight pt-1">
                           Big thanks to{" "}
                           <a
                             target="_blank"
@@ -145,7 +145,7 @@ function Issue() {
                           for making this issue possible.
                         </div>
                       </div>
-                      <div class="pt-0">
+                      <div class="pt-2 md:pt-0">
                         <ShareButtons2 />
                       </div>
                     </div>
