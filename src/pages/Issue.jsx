@@ -119,8 +119,8 @@ function Issue() {
                 when={resource.loading}
                 fallback={
                   <>
-                    <h2 class="text-center text-2xl md:text-5xl uppercase mb-4 font-bold">
-                      <span class="block">Tech Newsletter</span>
+                    <h2 class="text-center text-2xl md:text-3xl uppercase mb-4 font-bold">
+                      <span class="block">Weekly Tech Newsletter</span>
                       <span class="block -mt-2 md:-mt-1.5">
                         For + About Jos<b class="text-red-600">.</b>
                       </span>
@@ -239,9 +239,9 @@ function Issue() {
                   <A href="https://techinjos.com.ng" class="name">
                     techINJos
                   </A>{" "}
-                  is an independent online newsletter reporting tech, digital
-                  transformation, & tech-driven entrepreneurship for, about &
-                  from Jos - Plateau state.
+                  is an independent weekly online newsletter reporting tech,
+                  digital transformation, & tech-driven entrepreneurship for,
+                  from & about Jos - Plateau state.
                 </div>
               </div>
             </div>
