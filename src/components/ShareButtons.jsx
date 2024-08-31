@@ -25,7 +25,7 @@ function ShareButtons(props) {
         <span>
           <img src={facebook} class="w-7 md:w-7" />
         </span>
-        <span class="mt-1.5 md:mt-2 lg:mt-1">Share to Facebook</span>
+        <span class="mt-1.5 md:mt-2 lg:mt-1">Share on Facebook</span>
       </span>
       <span
         onClick={() => {
@@ -36,7 +36,7 @@ function ShareButtons(props) {
         <span>
           <img src={whatsapp} class="w-7 md:w-7" />
         </span>
-        <span class="mt-1.5 md:mt-2 lg:mt-1">Share to WhatsApp</span>
+        <span class="mt-1.5 md:mt-2 lg:mt-1">Share on WhatsApp</span>
       </span>
     </div>
   );

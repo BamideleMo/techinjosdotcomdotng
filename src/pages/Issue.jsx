@@ -2,8 +2,8 @@ import { A, useParams } from "@solidjs/router";
 import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import { createSignal, createEffect, createResource } from "solid-js";
 import { createStore } from "solid-js/store";
-import facebook from "../../src/assets/facebook.png";
-import twitter from "../../src/assets/twitterx.png";
+import facebook from "../../src/assets/techINJos-facebook.png";
+import twitter from "../../src/assets/techINJos-x.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ShareButtons from "../components/ShareButtons";
@@ -18,6 +18,8 @@ function Issue() {
   const [issue, setIssue] = createStore([]);
   const [issueNumber, setIssueNumber] = createSignal();
   const [issueMeta, setIssueMeta] = createSignal();
+  const [createdAt, setCreatedAt] = createSignal();
+  const [updatedAt, setUpdatedAt] = createSignal();
 
   const issueDetails = async () => {
     const response = await fetch(
@@ -36,8 +38,11 @@ function Issue() {
       await getPrevIssue();
       await getNextIssue();
       await getThank();
+      // console.log(result.response)
       setIssueNumber(result.response[0].issue_number);
       setIssueMeta(result.response[1].post_topic);
+      setCreatedAt(result.response[0].created_at);
+      setUpdatedAt(result.response[0].updated_at);
       setIssue(result.response);
     }
 
@@ -104,12 +109,47 @@ function Issue() {
     <MetaProvider>
       <Title>
         {issueNumber()
-          ? "Issue #" + issueNumber() + " - techInJos Newsletter "
-          : "techInJos Newsletter "}
+          ? "Issue #" + issueNumber() + " - techINJos Newsletter "
+          : "techINJos Newsletter "}
         | www.techinjos.com.ng
       </Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
       <Meta name="description" content={issueMeta()} />
+      <Meta property="og:locale" content="en_US" />
+      <Meta property="og:type" content="article" />
+      <Meta
+        property="og:title"
+        content={"Issue #" + issueNumber() + " - techINJos Newsletter"}
+      />
+      <Meta property="og:description" content={issueMeta()} />
+      <Meta property="og:url" content={window.location.href} />
+      <Meta property="og:site_name" content="techINJos" />
+      <Meta
+        property="article:publisher"
+        content="https://www.facebook.com/techINJos"
+      />
+      <Meta property="article:published_time" content={createdAt()} />
+      <Meta property="article:modified_time" content={updatedAt()} />
+      <Meta
+        property="og:image"
+        content="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/08/Tap-to-view-Story-Template-66.jpg"
+      />
+      <Meta property="og:image:width" content="1920" />
+      <Meta property="og:image:height" content="1080" />
+      <Meta property="og:image:type" content="image/jpeg" />
+      <Meta name="author" content="Bamidele Moses" />
+      <Meta name="twitter:card" content="summary_large_image" />
+      <Meta
+        name="twitter:image"
+        content="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/08/Tap-to-view-Story-Template-66-1.jpg"
+      />
+      <Meta name="twitter:creator" content="@techINJos" />
+      <Meta name="twitter:site" content="@techINJos" />
+      <Meta name="twitter:label1" content="Written by" />
+      <Meta name="twitter:data1" content="Bamidele Moses" />
+      <Meta name="twitter:label2" content="Est. reading time" />
+      <Meta name="twitter:data2" content="10 minutes" />
+
       <div>
         <Header />
         <div class="pt-20 md:pt-24">
@@ -177,10 +217,10 @@ function Issue() {
                       </h1>
                       <div class="space-y-6 text-base">
                         <p>
-                          Share it on Facebook and WhatsApp. Click these share
-                          buttons below:
+                          Share it on Facebook and WhatsApp. Click on a share
+                          button below:
                         </p>
-                        <ShareButtons />
+                        <ShareButtons text={"ooo"} />
                       </div>
                     </div>
 
@@ -224,15 +264,24 @@ function Issue() {
               </Show>
               {/* fetched ends here */}
               <div
-                class="py-16 md:py-20 md:px-14 lg:px-10 md:pb-10 text-center text-sm 
+                class="py-16 md:py-20 md:px-14 lg:px-10 md:pb-10 text-center 
+                text-sm md:text-base 
               space-y-4"
               >
                 <div class="flex justify-center space-x-6">
-                  <a href="https://www.facebook.com/techINJos">
-                    <img src={facebook} class="rounded-full h-10" />
+                  <a
+                    href="https://www.facebook.com/techINJos"
+                    class="hover:opacity-60"
+                    target="_blank"
+                  >
+                    <img src={facebook} class="rounded-full h-12" />
                   </a>
-                  <a href="https://www.x.com/techINJos">
-                    <img src={twitter} class="rounded-full h-10" />
+                  <a
+                    href="https://www.x.com/techINJos"
+                    class="hover:opacity-60"
+                    target="_blank"
+                  >
+                    <img src={twitter} class="rounded-full h-12" />
                   </a>
                 </div>
                 <div class="p-4">
@@ -240,8 +289,8 @@ function Issue() {
                     techINJos
                   </A>{" "}
                   is an independent weekly online newsletter reporting tech,
-                  digital transformation, & tech-driven entrepreneurship for,
-                  from & about <b>Jos</b> - <b>Plateau state</b>.
+                  digital transformation, and tech-driven entrepreneurship for,
+                  from and about <b>Jos</b> - <b>Plateau state</b>.
                 </div>
               </div>
             </div>

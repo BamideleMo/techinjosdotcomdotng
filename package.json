@@ -20,8 +20,11 @@
   "dependencies": {
     "@solidjs/meta": "^0.29.3",
     "@solidjs/router": "^0.10.10",
+    "@suid/material": "^0.16.0",
+    "axios": "^1.7.6",
     "ckeditor5": "^42.0.1",
     "css-skeletons": "^1.0.7",
+    "shortid": "^2.2.16",
     "solid-form-handler": "^1.2.1",
     "solid-js": "^1.8.11",
     "zod": "^3.22.4"
