@@ -10,7 +10,7 @@ import ShareButtons from "../components/ShareButtons";
 import "css-skeletons";
 import ShareButtons2 from "../components/ShareButtons2";
 import clap from "../assets/clap.png";
-import aboutImg from "../assets/about-techINJos.png"
+import aboutImg from "../assets/about-techINJos.png";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -42,7 +42,6 @@ function Issue() {
       await getMeta();
       // console.log(result.response)
       setIssueNumber(result.response[0].issue_number);
-      setIssueMeta(result.response[1].post_topic);
       setCreatedAt(result.response[0].created_at);
       setUpdatedAt(result.response[0].updated_at);
       setIssue(result.response);
@@ -135,17 +134,17 @@ function Issue() {
         | www.techinjos.com.ng
       </Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
-      <Meta name="description" content={metaDesc()} />
+      <Meta name="description" content="pppppp" />
       <Meta property="og:locale" content="en_US" />
       <Meta property="og:type" content="article" />
       <Meta
         property="og:title"
         content={"Issue #" + issueNumber() + " - techINJos Newsletter"}
       />
-      <Meta property="og:description" content={metaDesc()} />
+      <Meta property="og:description" content="oooooo" />
       <Meta property="og:url" content={window.location.href} />
       <Meta property="og:site_name" content="techINJos" />
-      <Meta property="og:image" content={metaImg()?metaImg():aboutImg} />
+      <Meta property="og:image" content="/test.png" />
       <Meta property="og:image:width" content="1920" />
       <Meta property="og:image:height" content="1080" />
       <Meta property="og:image:type" content="image/png" />
