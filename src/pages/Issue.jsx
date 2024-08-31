@@ -38,6 +38,7 @@ function Issue() {
       await getPrevIssue();
       await getNextIssue();
       await getThank();
+      await getMeta();
       // console.log(result.response)
       setIssueNumber(result.response[0].issue_number);
       setIssueMeta(result.response[1].post_topic);
@@ -68,6 +69,26 @@ function Issue() {
     const result = await response.json();
     setThankCompany(result.response.company);
     setThankURL(result.response.url);
+  };
+
+  const [metaImg, setMetaImg] = createSignal(false);
+  const [metaDesc, setMetaDesc] = createSignal(false);
+  const getMeta = async () => {
+    const response = await fetch(
+      VITE_API_URL + "/open/meta/" + params.issueNumber,
+      {
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        method: "GET",
+      }
+    );
+    const result = await response.json();
+    console.log(result);
+    // setMetaImg(result.response.company);
+    // setMetaDesc(result.response.url);
   };
 
   const [nextIssue, setNextIssue] = createSignal(false);
