@@ -119,7 +119,7 @@ function Issue() {
                 when={resource.loading}
                 fallback={
                   <>
-                    <h2 class="text-center text-2xl md:text-3xl uppercase mb-4 font-bold">
+                    <h2 class="text-center text-2xl md:text-4xl uppercase mb-4 font-bold">
                       <span class="block">Weekly Tech Newsletter</span>
                       <span class="block -mt-2 md:-mt-1.5">
                         For + About Jos<b class="text-red-600">.</b>
