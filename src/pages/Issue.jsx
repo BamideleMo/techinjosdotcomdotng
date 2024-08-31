@@ -144,7 +144,12 @@ function Issue() {
       <Meta property="og:description" content={metaDesc()} />
       <Meta property="og:url" content={window.location.href} />
       <Meta property="og:site_name" content="techINJos" />
-      <Meta property="og:image" content={metaImg()} />
+      <Meta
+        property="og:image"
+        content={
+          "https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/08/Eli-Hini-1024x683.jpg"
+        }
+      />
       <Meta property="og:image:width" content="1920" />
       <Meta property="og:image:height" content="1080" />
       <Meta property="og:image:type" content="image/jpeg" />
