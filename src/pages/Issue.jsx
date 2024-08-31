@@ -8,6 +8,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ShareButtons from "../components/ShareButtons";
 import "css-skeletons";
+import ShareButtons2 from "../components/ShareButtons2";
+import clap from "../assets/clap.png";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -33,6 +35,7 @@ function Issue() {
     if (result.success) {
       await getPrevIssue();
       await getNextIssue();
+      await getThank();
       setIssueNumber(result.response[0].issue_number);
       setIssueMeta(result.response[1].post_topic);
       setIssue(result.response);
@@ -41,6 +44,25 @@ function Issue() {
     return {
       issue,
     };
+  };
+
+  const [thankCompany, setThankCompany] = createSignal(false);
+  const [thankURL, setThankURL] = createSignal(false);
+  const getThank = async () => {
+    const response = await fetch(
+      VITE_API_URL + "/open/thank/" + params.issueNumber,
+      {
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        method: "GET",
+      }
+    );
+    const result = await response.json();
+    setThankCompany(result.response.company);
+    setThankURL(result.response.url);
   };
 
   const [nextIssue, setNextIssue] = createSignal(false);
@@ -92,26 +114,50 @@ function Issue() {
         <Header />
         <div class="pt-20 md:pt-24">
           <div class="w-full md:w-11/12 mx-auto backgound-color pt-4 md:p-12 lg:p-12">
-            <div class="content md:w-10/12 lg:w-6/12 2xl:w-5/12 mx-auto space-y-5">
+            <div class="content md:w-10/12 lg:w-6/12 2xl:w-5/12 mx-auto">
               <Show
                 when={resource.loading}
                 fallback={
                   <>
                     <h2 class="text-center text-2xl md:text-5xl uppercase mb-4 font-bold">
                       <span class="block">Tech Newsletter</span>
-                      <span class="block -mt-1.5">
+                      <span class="block -mt-2 md:-mt-1.5">
                         For + About Jos<b class="text-red-600">.</b>
                       </span>
                     </h2>
+                    <div
+                      class="bg-white px-2 py-6 md:p-6 flex justify-between 
+                    space-x-4 md:space-x-6"
+                    >
+                      <div class="text-sm flex space-x-1 w-80">
+                        <div class="w-24 md:w-16">
+                          <img src={clap} class="w-full" />
+                        </div>
+                        <div class="leading-tight pt-1">
+                          Big thanks to{" "}
+                          <a
+                            target="_blank"
+                            href={thankURL()}
+                            class="text-red-600 font-semibold hover:border-b border-dashed border-gray-300"
+                          >
+                            {thankCompany()}
+                          </a>{" "}
+                          for making this issue possible.
+                        </div>
+                      </div>
+                      <div class="pt-0">
+                        <ShareButtons2 />
+                      </div>
+                    </div>
                     <For each={resource().issue}>
                       {(post, i) => (
-                        <div class="bg-white p-2 md:p-6">
+                        <div class="mb-8 bg-white p-2 md:p-6">
                           <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                             <span class={post.post_bg + " " + "p-1"}>
                               {post.post_highlight}
                             </span>
                           </h2>
-                          <h1 class="my-2 text-xl md:text-2xl leading-tight font-bold">
+                          <h1 class="my-4 text-xl md:text-2xl !leading-tight font-bold">
                             {post.post_topic}
                           </h1>
                           <div
@@ -124,15 +170,15 @@ function Issue() {
 
                     <div class="bg-white p-2 md:p-6">
                       <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
-                        <span class="bg-orange-300 p-1">Support techINJos</span>
+                        <span class="bg-orange-300 p-1">Share this Issue</span>
                       </h2>
-                      <h1 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                        Don't keep us a secret
+                      <h1 class="my-2 text-xl md:text-2xl leading-tight font-bold">
+                        Like this issue?
                       </h1>
                       <div class="space-y-6 text-base">
                         <p>
-                          Tell your friends about techINJos and share this post
-                          using the share buttons below.
+                          Share it on Facebook and WhatsApp. Click these share
+                          buttons below:
                         </p>
                         <ShareButtons />
                       </div>
@@ -140,18 +186,18 @@ function Issue() {
 
                     <div class="bg-white p-2 md:p-6">
                       <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
-                        <span class="bg-slate-300 p-1">
+                        <span class="bg-blue-300 p-1">
                           Send us your Feedback
                         </span>
                       </h2>
-                      <h1 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
+                      <h1 class="my-2 text-xl md:text-2xl leading-tight font-bold">
                         It is invaluable.
                       </h1>
                       <div class="space-y-6 text-base">
                         <p>
-                          Whether you have news you'd like us to publish in our
+                          Whether you have news you'd like us to publish in the
                           next issue, a suggestion, a comment, or a concern, we
-                          want to hear from you. Send a mail to:{" "}
+                          want to hear from you. Send email now to:{" "}
                           <a
                             href="mailto:techinjosnewsletter@gmail.com"
                             class="name"
@@ -160,9 +206,9 @@ function Issue() {
                           </a>
                         </p>
                         <p>
-                          <b>Don't forget:</b>
-                          <br /> We publish a fresh issue{" "}
-                          <b>every Sunday afternoon</b>. See you again.
+                          <b>Remember:</b>
+                          <br /> We'll publish another issue{" "}
+                          <b>next Sunday afternoon</b>. See you then!
                         </p>
                       </div>
                     </div>
@@ -190,9 +236,9 @@ function Issue() {
                   <A href="https://techinjos.com.ng" class="name">
                     techINJos
                   </A>{" "}
-                  is an independent online newsletter delivering impressive
-                  reporting about tech, startups and entrepreneurship for and
-                  about the Tech Ecosystem, in Jos - Plateau state.
+                  is an independent online newsletter reporting about tech,
+                  digital transformation, and tech-driven entrepreneurship for
+                  and about Jos - Plateau state.
                 </div>
               </div>
             </div>

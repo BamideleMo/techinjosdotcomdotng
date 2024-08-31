@@ -7,7 +7,7 @@ import techINJos from "../assets/about-techINJos.png";
 function About() {
   return (
     <MetaProvider>
-      <Title>About techINJos Newsletter - www.techinjos.com.ng</Title>
+      <Title>About techINJos Newsletter | www.techinjos.com.ng</Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
       <Meta
         name="description"
@@ -22,30 +22,31 @@ function About() {
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-violet-300 p-1">About</span>
                 </h2>
-                <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
-                  Your #1 Weekly Brief For and From Jos' Tech Ecosystem!
+                <h2 class="my-2 text-xl md:text-2xl leading-tight font-bold">
+                  Your #1 Weekly Brief For and About Jos' Tech Ecosystem!
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
                     <b>techINJos</b> (
                     <A href="https://techinjos.com.ng">www.techinjos.com.ng</A>)
-                    is an independent online newsletter delivering impressive
-                    reporting about tech, startups and tech-driven
-                    entrepreneurship for and from the Tech Ecosystem, in Jos -
-                    Plateau state.
+                    is an independent online newsletter reporting about tech,
+                    digital transformation, and tech-driven entrepreneurship for
+                    and about Jos - Plateau state.
                   </p>
                   <p>
-                    <b>Every Sunday</b> afternoon techINJos cuts through the
-                    noise, delivering only the most relevant and impactful
-                    information to help readers stay informed, and embrace tech.
+                    <b>Every Sunday</b> afternoon we cut through the noise,
+                    delivering only relevant and impactful information to help
+                    readers stay informed, and embrace the thriving tech scene
+                    in Jos.
                   </p>
                   <p>
                     <img src={techINJos} alt="About techINJos" />
                   </p>
                   <p>
-                    Our mission is to amplify stories for and from Jos Tech
-                    Community showcasing the varying experiences and
-                    perspectives.
+                    Our mission is to inspire love for the growing tech
+                    ecosystem in Jos by amplifing stories for and about Jos tech
+                    community, showcasing the diverse perspectives, and
+                    celebrating the community's wins.
                   </p>
                   <p>
                     Follow us on X:{" "}

@@ -1,6 +1,6 @@
 import { A } from "@solidjs/router";
 import facebook from "../../src/assets/facebook.png";
-import whatsapp from "../../src/assets/whatsapp.webp";
+import whatsapp from "../../src/assets/whatsapp.png";
 
 function ShareButtons(props) {
   const fbShare = () => {
@@ -20,23 +20,23 @@ function ShareButtons(props) {
         onClick={() => {
           fbShare();
         }}
-        class="flex space-x-1 cursor-pointer md::space-x-2 w-fit border border-black p-1 lg:p-2 hover:opacity-60"
+        class="bg-gray-50 flex space-x-1 cursor-pointer md::space-x-2 w-fit border border-black p-1 lg:p-2 hover:opacity-60"
       >
         <span>
-          <img src={facebook} class="w-7 md:w-8" />
+          <img src={facebook} class="w-7 md:w-7" />
         </span>
-        <span class="mt-1.5 md:mt-2 lg:mt-1.5">Share to Facebook</span>
+        <span class="mt-1.5 md:mt-2 lg:mt-1">Share to Facebook</span>
       </span>
       <span
         onClick={() => {
           waShare();
         }}
-        class="flex space-x-1 cursor-pointer md:space-x-2 w-fit border border-black p-1 lg:p-2 hover:opacity-60"
+        class="bg-gray-50 flex space-x-1 cursor-pointer md:space-x-2 w-fit border border-black p-1 lg:p-2 hover:opacity-60"
       >
         <span>
-          <img src={whatsapp} class="w-7 md:w-8" />
+          <img src={whatsapp} class="w-7 md:w-7" />
         </span>
-        <span class="mt-1.5 md:mt-2 lg:mt-1.5">Share to WhatsApp</span>
+        <span class="mt-1.5 md:mt-2 lg:mt-1">Share to WhatsApp</span>
       </span>
     </div>
   );

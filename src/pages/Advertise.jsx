@@ -21,7 +21,7 @@ function Advertise() {
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
                   <span class="bg-fuchsia-300 p-1">Advertise</span>
                 </h2>
-                <h2 class="my-2 text-xl md:text-2xl leading-tight font-semibold">
+                <h2 class="my-2 text-xl md:text-2xl leading-tight font-bold">
                   Reach the Heart of Jos' Tech Scene
                 </h2>
                 <div class="space-y-6 text-base">
@@ -30,22 +30,16 @@ function Advertise() {
                     entrepreneurs, learners, tech enthusiast and professionals
                     driving Jos' thriving tech ecosystem.
                   </p>
-                  <h3>Why Advertise with Us?</h3>
+                  <p>2 reasons why you should advertise with us:</p>
                   <p>
-                    <b>
-                      #1.
-                      <br />
-                      Targeted Audience:
-                    </b>
+                    <b>#1. Targeted Audience:</b>
+                    <br />
                     Reach a highly engaged audience of tech enthusiasts,
                     startups, and industry leaders in Jos.
                   </p>
                   <p>
-                    <b>
-                      #2.
-                      <br />
-                      Credibility:
-                    </b>
+                    <b>#2. Credibility:</b>
+                    <br />
                     Associate your brand with the most trusted source of tech
                     news and insights in Jos.
                   </p>
