@@ -21,7 +21,9 @@ function App() {
       });
       const result = await response.json();
       if (result.success) {
-        navigate("/issue/" + result.response[0].issue_number, {
+        var str = result.response[3].post_topic;
+        str = str.replace(/\W+/g, "-").toLowerCase();
+        navigate("/issue/" + result.response[0].issue_number + "/" + str, {
           replace: true,
         });
       }

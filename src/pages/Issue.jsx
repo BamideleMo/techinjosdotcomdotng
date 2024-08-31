@@ -343,7 +343,10 @@ function Issue() {
             <span
               onClick={() => {
                 window.location.replace(
-                  "/issue/" + (parseInt(params.issueNumber) - 1)
+                  "/issue/" +
+                    (parseInt(params.issueNumber) - 1) +
+                    "/" +
+                    params.more
                 );
               }}
               class="flex space-x-1 cursor-pointer hover:text-red-600"
@@ -390,7 +393,10 @@ function Issue() {
             <span
               onClick={() => {
                 window.location.replace(
-                  "/issue/" + (parseInt(params.issueNumber) + 1)
+                  "/issue/" +
+                    (parseInt(params.issueNumber) + 1) +
+                    "/" +
+                    params.more
                 );
               }}
               class="flex space-x-1 cursor-pointer hover:text-red-600"
