@@ -74,12 +74,14 @@ function PostMetaImage() {
               <div class="text-center space-y-4 my-4">
                 <p>Advert was published successfully.</p>
                 <p>
-                  <A
-                    href="/a/post"
+                  <span
+                    onClick={() => {
+                      window.location.reload();
+                    }}
                     class="bg-blue-950 text-white p-2 rounded-lg hover:opacity-60"
                   >
                     Okay
-                  </A>
+                  </span>
                 </p>
               </div>
             </div>
@@ -201,7 +203,10 @@ function PostMetaImage() {
                                   variant="contained"
                                   color="success"
                                   onClick={() => {
-                                    handleImageUpload(formData().issue_number,formData().description);
+                                    handleImageUpload(
+                                      formData().issue_number,
+                                      formData().description
+                                    );
                                   }}
                                 >
                                   Upload

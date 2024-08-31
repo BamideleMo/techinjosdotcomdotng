@@ -86,9 +86,8 @@ function Issue() {
       }
     );
     const result = await response.json();
-    console.log(result);
-    // setMetaImg(result.response.company);
-    // setMetaDesc(result.response.url);
+    setMetaImg(result.response.url);
+    setMetaDesc(result.response.description);
   };
 
   const [nextIssue, setNextIssue] = createSignal(false);
@@ -135,14 +134,14 @@ function Issue() {
         | www.techinjos.com.ng
       </Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
-      <Meta name="description" content={issueMeta()} />
+      <Meta name="description" content={metaDesc()} />
       <Meta property="og:locale" content="en_US" />
       <Meta property="og:type" content="article" />
       <Meta
         property="og:title"
         content={"Issue #" + issueNumber() + " - techINJos Newsletter"}
       />
-      <Meta property="og:description" content={issueMeta()} />
+      <Meta property="og:description" content={metaDesc()} />
       <Meta property="og:url" content={window.location.href} />
       <Meta property="og:site_name" content="techINJos" />
       <Meta
@@ -151,19 +150,13 @@ function Issue() {
       />
       <Meta property="article:published_time" content={createdAt()} />
       <Meta property="article:modified_time" content={updatedAt()} />
-      <Meta
-        property="og:image"
-        content="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/08/Tap-to-view-Story-Template-66.jpg"
-      />
+      <Meta property="og:image" content={metaImg()} />
       <Meta property="og:image:width" content="1920" />
       <Meta property="og:image:height" content="1080" />
       <Meta property="og:image:type" content="image/jpeg" />
       <Meta name="author" content="Bamidele Moses" />
       <Meta name="twitter:card" content="summary_large_image" />
-      <Meta
-        name="twitter:image"
-        content="https://c76c7bbc41.mjedge.net/wp-content/uploads/tc/2024/08/Tap-to-view-Story-Template-66-1.jpg"
-      />
+      <Meta name="twitter:image" content={metaImg()} />
       <Meta name="twitter:creator" content="@techINJos" />
       <Meta name="twitter:site" content="@techINJos" />
       <Meta name="twitter:label1" content="Written by" />
