@@ -224,7 +224,7 @@ function Issue() {
               </Show>
               {/* fetched ends here */}
               <div
-                class="py-16 md:py-20 md:px-12 md:pb-10 text-center text-sm 
+                class="py-16 md:py-20 md:px-14 lg:px-10 md:pb-10 text-center text-sm 
               space-y-4"
               >
                 <div class="flex justify-center space-x-6">
