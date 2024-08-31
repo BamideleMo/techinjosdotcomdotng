@@ -29,9 +29,9 @@ function About() {
                   <p>
                     <b>techINJos</b> (
                     <A href="https://techinjos.com.ng">www.techinjos.com.ng</A>)
-                    is an independent online newsletter reporting about tech,
-                    digital transformation, and tech-driven entrepreneurship for
-                    and about Jos - Plateau state.
+                    is an independent online newsletter reporting tech, digital
+                    transformation, & tech-driven entrepreneurship for, about &
+                    from Jos - Plateau state.
                   </p>
                   <p>
                     <b>Every Sunday</b> afternoon we cut through the noise,

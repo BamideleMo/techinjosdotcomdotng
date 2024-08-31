@@ -223,8 +223,10 @@ function Issue() {
                 {/* loading */}
               </Show>
               {/* fetched ends here */}
-              <div class="py-14 md:py-20 md:px-12 md:pb-10 text-center text-sm 
-              space-y-4">
+              <div
+                class="py-16 md:py-20 md:px-12 md:pb-10 text-center text-sm 
+              space-y-4"
+              >
                 <div class="flex justify-center space-x-6">
                   <a href="https://www.facebook.com/techINJos">
                     <img src={facebook} class="rounded-full h-10" />
@@ -237,9 +239,9 @@ function Issue() {
                   <A href="https://techinjos.com.ng" class="name">
                     techINJos
                   </A>{" "}
-                  is an independent online newsletter reporting about tech,
-                  digital transformation, and tech-driven entrepreneurship for
-                  and about Jos - Plateau state.
+                  is an independent online newsletter reporting tech, digital
+                  transformation, & tech-driven entrepreneurship for, about &
+                  from Jos - Plateau state.
                 </div>
               </div>
             </div>
