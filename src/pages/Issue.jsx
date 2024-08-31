@@ -133,7 +133,7 @@ function Issue() {
                         <div class="w-16 md:w-16">
                           <img src={clap} class="w-full" />
                         </div>
-                        <div class="leading-tight pt-1">
+                        <div class="leading-tight pt-0.5 md:pt-1">
                           Big thanks to{" "}
                           <a
                             target="_blank"
@@ -223,7 +223,8 @@ function Issue() {
                 {/* loading */}
               </Show>
               {/* fetched ends here */}
-              <div class="py-16 md:py-20 md:px-12 md:pb-10 text-center text-sm space-y-4">
+              <div class="py-14 md:py-20 md:px-12 md:pb-10 text-center text-sm 
+              space-y-4">
                 <div class="flex justify-center space-x-6">
                   <a href="https://www.facebook.com/techINJos">
                     <img src={facebook} class="rounded-full h-10" />
