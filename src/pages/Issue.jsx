@@ -130,7 +130,7 @@ function Issue() {
                     space-x-4 md:space-x-6"
                     >
                       <div class="text-sm flex space-x-1 w-80">
-                        <div class="w-24 md:w-16">
+                        <div class="w-16 md:w-16">
                           <img src={clap} class="w-full" />
                         </div>
                         <div class="leading-tight pt-1">

@@ -22,7 +22,7 @@ function ShareButtons2(props) {
         }}
         class="opacity-60 cursor-pointer"
       >
-        <img src={facebook} class="w-12 md:w-8" />
+        <img src={facebook} class="w-8 md:w-8" />
       </span>
       <span
         onClick={() => {
@@ -30,7 +30,7 @@ function ShareButtons2(props) {
         }}
         class="opacity-60 cursor-pointer"
       >
-        <img src={whatsapp} class="w-12 md:w-8" />
+        <img src={whatsapp} class="w-8 md:w-8" />
       </span>
     </div>
   );
