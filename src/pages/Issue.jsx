@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import clap from "../assets/clap.png";
 import Skeleton from "../components/Skeleton";
+import ShareButton from "../components/ShareButton";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -18,9 +19,6 @@ function Issue() {
   const [issueMeta, setIssueMeta] = createSignal();
   const [createdAt, setCreatedAt] = createSignal();
   const [updatedAt, setUpdatedAt] = createSignal();
-  const [shareUs, setShareUs] = createSignal(
-    "I've been reading techINJos, and I think you'd enjoy it as well. It's an online tech newsletter for, from and about Jos - Plateau state. Check it out: https://techinjos.com.ng"
-  );
 
   const issueDetails = async () => {
     const response = await fetch(
@@ -195,7 +193,10 @@ function Issue() {
                       class="bg-white px-2 py-6 md:p-6 flex justify-between 
                     space-x-4 md:space-x-6"
                     >
-                      <div class="text-base md:text-base flex space-x-1 w-80">
+                      <div
+                        class="text-base md:text-base flex space-x-1 
+                      w-64 md:w-80"
+                      >
                         <div class="w-16 md:w-16">
                           <img src={clap} class="w-full" />
                         </div>
@@ -211,7 +212,9 @@ function Issue() {
                           for making this issue possible.
                         </div>
                       </div>
-                      <div class="pt-2 md:pt-0">&nbsp;</div>
+                      <div class="pt-2 md:pt-3 flex space-x-1">
+                        <ShareButton />
+                      </div>
                     </div>
                     <For each={resource().issue}>
                       {(post, i) => (
@@ -245,7 +248,12 @@ function Issue() {
                           them a WhatsApp message today!{" "}
                           <a
                             target="_blank"
-                            href={"https://wa.me/?text=" + encodeURI(shareUs())}
+                            href={
+                              "https://wa.me/?text=" +
+                              encodeURI(
+                                "I've been reading techINJos Newsletter, and I think you'd also enjoy it. It's an online tech newsletter focused on the tech ecosystem in Jos-Plateau state. Check it out: https://techinjos.com.ng"
+                              )
+                            }
                           >
                             Click here
                           </a>
@@ -286,15 +294,11 @@ function Issue() {
                 }
               >
                 {/* loading */}
-                <Skeleton/>
+                <Skeleton />
                 {/* loading */}
               </Show>
               {/* fetched ends here */}
-              <div
-                class="py-16 md:py-20 md:px-14 lg:px-10 md:pb-10 text-center 
-                text-sm md:text-base 
-              space-y-4"
-              >
+              <div class="py-16 md:py-20 md:px-14 lg:px-10 md:pb-10 text-center space-y-4">
                 <div class="flex justify-center space-x-6">
                   <a
                     href="https://www.facebook.com/techINJos"
@@ -311,13 +315,12 @@ function Issue() {
                     <img src={twitter} class="rounded-full h-12" />
                   </a>
                 </div>
-                <div class="p-4">
+                <div class="p-4 text-base">
                   <A href="https://techinjos.com.ng" class="name">
                     techINJos
                   </A>{" "}
-                  is an independent weekly online newsletter reporting tech,
-                  digital transformation, and tech-driven entrepreneurship for,
-                  from and about <b>Jos</b> - <b>Plateau state</b>.
+                  is an independent weekly online newsletter focused on the tech
+                  ecosystem in <b>Jos</b> - <b>Plateau state</b>.
                 </div>
               </div>
             </div>
