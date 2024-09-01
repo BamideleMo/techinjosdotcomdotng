@@ -145,35 +145,35 @@ function Issue() {
         name="robots"
         content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
       />
-      <Meta name="description" content="description text 1" />
-      <Meta property="og:locale" content="en_US" />
-      <Meta property="og:type" content="article" />
-      <Meta property="og:title" content="techINJos Newsletter" />
-      <Meta property="og:description" content="driscription text 2" />
-      <Meta property="og:url" content={window.location.href} />
-      <Meta property="og:site_name" content="techINJos" />
+      <Meta name="description" content="description text 1"></Meta>
+      <Meta property="og:locale" content="en_US"></Meta>
+      <Meta property="og:type" content="article"></Meta>
+      <Meta property="og:title" content="techINJos Newsletter"></Meta>
+      <Meta property="og:description" content="driscription text 2"></Meta>
+      <Meta property="og:url" content={window.location.href}></Meta>
+      <Meta property="og:site_name" content="techINJos"></Meta>
       <Meta
         property="og:image"
         content="https://indiepa.ge/api/og?username=dan"
-      />
+      ></Meta>
       <Meta
         property="article:publisher"
         content="https://www.facebook.com/techINJos"
-      />
-      <Meta property="article:published_time" content={createdAt()} />
-      <Meta property="article:modified_time" content={updatedAt()} />
-      <Meta name="author" content="Bamidele Moses" />
-      <Meta name="twitter:card" content="summary_large_image" />
+      ></Meta>
+      <Meta property="article:published_time" content={createdAt()}></Meta>
+      <Meta property="article:modified_time" content={updatedAt()}></Meta>
+      <Meta name="author" content="Bamidele Moses"></Meta>
+      <Meta name="twitter:card" content="summary_large_image"></Meta>
       <Meta
         name="twitter:image"
         content="https://indiepa.ge/api/og?username=dan"
-      />
-      <Meta name="twitter:creator" content="@techINJos" />
-      <Meta name="twitter:site" content="@techINJos" />
-      <Meta name="twitter:label1" content="Written by" />
-      <Meta name="twitter:data1" content="Bamidele Moses" />
-      <Meta name="twitter:label2" content="Est. reading time" />
-      <Meta name="twitter:data2" content="10 minutes" />
+      ></Meta>
+      <Meta name="twitter:creator" content="@techINJos"></Meta>
+      <Meta name="twitter:site" content="@techINJos"></Meta>
+      <Meta name="twitter:label1" content="Written by"></Meta>
+      <Meta name="twitter:data1" content="Bamidele Moses"></Meta>
+      <Meta name="twitter:label2" content="Est. reading time"></Meta>
+      <Meta name="twitter:data2" content="10 minutes"></Meta>
 
       <div>
         <Header />
