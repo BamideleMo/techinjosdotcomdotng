@@ -220,9 +220,10 @@ function Issue() {
                         <span class="bg-orange-300 p-1">Share techINJos</span>
                       </h2>
                       <div class="mt-2 space-y-6 text-base">
+                        <p> 🙏🏾 Please. Help us grow.</p>{" "}
                         <p>
-                          Help us grow: Let a friend know about techINJos - send
-                          them a WhatsApp message today!{" "}
+                          Tell a friend about techINJos Newsletter - send
+                          him/her a WhatsApp message now!{" "}
                           <a
                             target="_blank"
                             href={
@@ -234,7 +235,27 @@ function Issue() {
                           >
                             Click here
                           </a>
-                          . 🙏🏾
+                          .
+                        </p>
+                        <p>
+                          Share techINJos Newsletter on Facebook.{" "}
+                          <a
+                            target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftechinjos.com.ng%2F&amp;src=sdkpreparse"
+                            class="fb-xfbml-parse-ignore"
+                          >
+                            Share
+                          </a>
+                        </p>
+                        <p>
+                          Post techINJos on your X (formerly Twitter):{" "}
+                          <a
+                            target="_blank"
+                            href="https://twitter.com/intent/tweet?text=Check%20out%20techINJos%20Newsletter%20for%20%relevant%20tech%20updates%20focused%20on%20Jos.%20%F0%9F%98%8D&url=https%3A%2F%2Ftechinjos.com.ng"
+                          >
+                            Click here
+                          </a>
+                          .
                         </p>
                       </div>
                     </div>
