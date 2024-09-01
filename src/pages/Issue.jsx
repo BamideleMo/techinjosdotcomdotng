@@ -6,11 +6,8 @@ import facebook from "../../src/assets/techINJos-facebook.png";
 import twitter from "../../src/assets/techINJos-x.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ShareButtons from "../components/ShareButtons";
-import "css-skeletons";
-import ShareButtons2 from "../components/ShareButtons2";
 import clap from "../assets/clap.png";
-import aboutImg from "../assets/about-techINJos.png";
+import Skeleton from "../components/Skeleton";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -194,12 +191,6 @@ function Issue() {
                 when={resource.loading}
                 fallback={
                   <>
-                    {/* <h2 class="text-center text-2xl md:text-4xl uppercase mb-4 font-bold">
-                      <span class="block">Weekly Tech Newsletter</span>
-                      <span class="block -mt-2 md:-mt-1.5">
-                        For + About Jos<b class="text-red-600">.</b>
-                      </span>
-                    </h2> */}
                     <div
                       class="bg-white px-2 py-6 md:p-6 flex justify-between 
                     space-x-4 md:space-x-6"
@@ -295,10 +286,7 @@ function Issue() {
                 }
               >
                 {/* loading */}
-                <div
-                  class="skeleton skeleton-rect mx-auto"
-                  style="--rect-h: 150px; --c-w: 100%; --lines: 20;"
-                ></div>
+                <Skeleton/>
                 {/* loading */}
               </Show>
               {/* fetched ends here */}

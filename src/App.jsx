@@ -3,10 +3,9 @@ import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import { createSignal, createEffect, createResource } from "solid-js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "css-skeletons";
+import Skeleton from "./components/Skeleton";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
-
 
 function App() {
   const navigate = useNavigate();
@@ -50,10 +49,7 @@ function App() {
           <div class="w-full md:w-11/12 mx-auto backgound-color pt-4 md:p-12 lg:p-12">
             <div class="content md:w-10/12 lg:w-6/12 2xl:w-5/12 mx-auto space-y-5">
               {/* loading */}
-              <div
-                class="skeleton skeleton-rect mx-auto"
-                style="--rect-h: 150px; --c-w: 100%; --lines: 20;"
-              ></div>
+              <Skeleton />
               {/* loading */}
             </div>
           </div>
