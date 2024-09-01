@@ -23,12 +23,26 @@
       type="image/ico"
       href="/src/assets/favicon.ico"
     >
-    <title data-sm="">techINJos Newsletter | www.techinjos.com.ng</title>
+    <title>techINJos Newsletter | www.techinjos.com.ng</title>
+    <meta property="og:title" content="Your eye-catching title here" />
+    <meta property="og:url" content="http://www.yourdomain.com" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="here heree goes" />
+    <meta property="og:image" content="https://indiepa.ge/api/og?username=dan" />
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
     <script src="/src/index.jsx" type="module"></script>
+    <script type="">
+      const queryString = window.location.search;
+      console.log(queryString);
+      const urlParams = new URLSearchParams(queryString);
+      const color = urlParams.get('color')
+      console.log(color);
+      document.title = color;
+    </script>
   </body>
 </html>
