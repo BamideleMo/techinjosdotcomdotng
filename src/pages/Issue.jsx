@@ -251,7 +251,12 @@ function Issue() {
                           Post techINJos on your X (formerly Twitter):{" "}
                           <a
                             target="_blank"
-                            href="https://twitter.com/intent/tweet?text=Check%20out%20techINJos%20Newsletter%20for%20%relevant%20tech%20updates%20focused%20on%20Jos.%20%F0%9F%98%8D&url=https%3A%2F%2Ftechinjos.com.ng"
+                            href={
+                              "https://twitter.com/intent/tweet?text=" +
+                              encodeURI(
+                                "Check out the techINJos Newsletter @techINJos for relevant updates on tech focused on Jos-Plateau state. 😍 https://techinjos.com.ng"
+                              )
+                            }
                           >
                             Click here
                           </a>
