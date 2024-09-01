@@ -157,10 +157,13 @@ function Issue() {
         property="og:title"
         content={"Issue #" + issueNumber() + " - techINJos Newsletter"}
       />
-      <Meta property="og:description" content={metaDesc()} />
+      <Meta property="og:description" content="og driscription" />
       <Meta property="og:url" content={window.location.href} />
       <Meta property="og:site_name" content="techINJos" />
-      <Meta property="og:image" content={metaImg()} />
+      <Meta
+        property="og:image"
+        content="https://indiepa.ge/api/og?username=dan"
+      />
       <Meta property="og:image:width" content="1920" />
       <Meta property="og:image:height" content="1080" />
       <Meta property="og:image:type" content="image/png" />
@@ -172,7 +175,10 @@ function Issue() {
       <Meta property="article:modified_time" content={updatedAt()} />
       <Meta name="author" content="Bamidele Moses" />
       <Meta name="twitter:card" content="summary_large_image" />
-      <Meta name="twitter:image" content={metaImg()} />
+      <Meta
+        name="twitter:image"
+        content="https://indiepa.ge/api/og?username=dan"
+      />
       <Meta name="twitter:creator" content="@techINJos" />
       <Meta name="twitter:site" content="@techINJos" />
       <Meta name="twitter:label1" content="Written by" />
