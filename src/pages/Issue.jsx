@@ -71,8 +71,8 @@ function Issue() {
     setThankURL(result.response.url);
   };
 
-  const [metaImg, setMetaImg] = createSignal(false);
-  const [metaDesc, setMetaDesc] = createSignal(false);
+  const [metaImg, setMetaImg] = createSignal(".");
+  const [metaDesc, setMetaDesc] = createSignal(".");
   const getMeta = async () => {
     const response = await fetch(
       VITE_API_URL + "/open/meta/" + params.issueNumber,
