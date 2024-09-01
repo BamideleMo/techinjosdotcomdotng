@@ -3,7 +3,7 @@ import { A } from "@solidjs/router";
 function Menu() {
   return (
     <ul
-      class="flex flex-col mx-12 py-6 text-xl text-center space-y-8 
+      class="flex flex-col mx-6 py-6 text-xl text-center space-y-8 
     lg:py-0 lg:text-left lg:space-y-0 lg:mx-0 lg:flex-row lg:space-x-6 lg:text-sm mt-3"
     >
       <li>

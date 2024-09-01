@@ -189,7 +189,7 @@ function Issue() {
                 when={resource.loading}
                 fallback={
                   <>
-                    <div
+                    {/* <div
                       class="bg-white px-2 py-6 md:p-6 flex justify-between 
                     space-x-4 md:space-x-6"
                     >
@@ -215,7 +215,7 @@ function Issue() {
                       <div class="pt-2 md:pt-3 flex space-x-1">
                         <ShareButton />
                       </div>
-                    </div>
+                    </div> */}
                     <For each={resource().issue}>
                       {(post, i) => (
                         <div class="mb-8 bg-white p-2 md:p-6">
