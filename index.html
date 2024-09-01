@@ -23,8 +23,11 @@
       type="image/ico"
       href="/src/assets/favicon.ico"
     >
-    <meta property="og:type" content="article" />
-    <title>techINJos Newsletter | www.techinjos.com.ng</title>
+    <meta data-sm="" property="og:type" content="article" />
+    <meta data-sm="" property="og:title" content="Read the latest techINJos Newsletter." />
+    <meta data-sm="" property="og:url" content="https://techinjos.com.ng" />
+    <meta property="og:image" content="https://ahrefs.com/blog/wp-content/uploads/2020/01/fb-open-graph-1.jpg" />
+    <title data-sm="">techINJos Newsletter | www.techinjos.com.ng</title>
     
   </head>
   <body>
@@ -32,41 +35,5 @@
     <div id="root"></div>
 
     <script src="/src/index.jsx" type="module"></script>
-    <script>
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-
-
-      const useIssueNo = urlParams.get('issue')
-      const useTitle = urlParams.get('title')
-      const useUrl = window.location.href;
-      const useDesc = urlParams.get('title') + "and more stories.";
-      const useImg = urlParams.get('img')
-
-      console.log(useUrl)
-
-      document.title = useTitle;
-      
-      var ogTitle = document.createElement('meta');
-      ogTitle.setAttribute('property', 'og:title');
-      ogTitle.content = useTitle
-      document.getElementsByTagName('head')[0].appendChild(ogTitle);
-      
-      var ogUrl = document.createElement('meta');
-      ogUrl.setAttribute('property', 'og:url');
-      ogUrl.content = useUrl
-      document.getElementsByTagName('head')[0].appendChild(ogUrl);
-      
-      var ogDesc = document.createElement('meta');
-      ogDesc.setAttribute('property', 'og:description');
-      ogDesc.content = useDesc
-      document.getElementsByTagName('head')[0].appendChild(ogDesc);
-      
-      var ogImg = document.createElement('meta');
-      ogImg.setAttribute('property', 'og:image');
-      ogImg.content = useImg
-      document.getElementsByTagName('head')[0].appendChild(ogImg);
-
-    </script>
   </body>
 </html>

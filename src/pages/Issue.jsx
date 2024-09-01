@@ -4,11 +4,10 @@ import { createSignal, createEffect, createResource } from "solid-js";
 import { createStore } from "solid-js/store";
 import facebook from "../../src/assets/techINJos-facebook.png";
 import twitter from "../../src/assets/techINJos-x.png";
+import whatsapp from "../../src/assets/whatsapp.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import clap from "../assets/clap.png";
 import Skeleton from "../components/Skeleton";
-import ShareButton from "../components/ShareButton";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -17,13 +16,10 @@ function Issue() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [issue, setIssue] = createStore([]);
   const [issueNumber, setIssueNumber] = createSignal();
-  const [issueMeta, setIssueMeta] = createSignal();
-  const [createdAt, setCreatedAt] = createSignal();
-  const [updatedAt, setUpdatedAt] = createSignal();
 
   const issueDetails = async () => {
     const response = await fetch(
-      VITE_API_URL + "/open/issue/" + searchParams.issue,
+      VITE_API_URL + "/open/issue/" + params.issueNumber,
       {
         mode: "cors",
         headers: {
@@ -38,12 +34,7 @@ function Issue() {
       await getPrevIssue();
       await getNextIssue();
       await getThank();
-      await getMeta();
-      await getIP();
-      // console.log(result.response)
       setIssueNumber(result.response[0].issue_number);
-      setCreatedAt(result.response[0].created_at);
-      setUpdatedAt(result.response[0].updated_at);
       setIssue(result.response);
     }
 
@@ -56,7 +47,7 @@ function Issue() {
   const [thankURL, setThankURL] = createSignal(false);
   const getThank = async () => {
     const response = await fetch(
-      VITE_API_URL + "/open/thank/" + searchParams.issue,
+      VITE_API_URL + "/open/thank/" + params.issueNumber,
       {
         mode: "cors",
         headers: {
@@ -75,7 +66,7 @@ function Issue() {
   const [metaDesc, setMetaDesc] = createSignal(".");
   const getMeta = async () => {
     const response = await fetch(
-      VITE_API_URL + "/open/meta/" + searchParams.issue,
+      VITE_API_URL + "/open/meta/" + params.issueNumber,
       {
         mode: "cors",
         headers: {
@@ -92,7 +83,7 @@ function Issue() {
 
   const [nextIssue, setNextIssue] = createSignal(false);
   const getNextIssue = async () => {
-    var v = parseInt(searchParams.issue) + 1;
+    var v = parseInt(params.issueNumber) + 1;
     const response = await fetch(VITE_API_URL + "/open/issue/" + v, {
       mode: "cors",
       headers: {
@@ -109,7 +100,7 @@ function Issue() {
 
   const [prevIssue, setPrevIssue] = createSignal(false);
   const getPrevIssue = async () => {
-    var v = parseInt(searchParams.issue) - 1;
+    var v = parseInt(params.issueNumber) - 1;
     const response = await fetch(VITE_API_URL + "/open/issue/" + v, {
       mode: "cors",
       headers: {
@@ -178,20 +169,45 @@ function Issue() {
                     </div> */}
                     <For each={resource().issue}>
                       {(post, i) => (
-                        <div class="mb-8 bg-white p-2 md:p-6">
-                          <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
-                            <span class={post.post_bg + " " + "p-1"}>
-                              {post.post_highlight}
-                            </span>
-                          </h2>
-                          <h1 class="my-4 text-xl md:text-2xl !leading-tight font-bold">
-                            {post.post_topic}
-                          </h1>
-                          <div
-                            class="space-y-6 text-base"
-                            innerHTML={post.conversation_text}
-                          ></div>
-                        </div>
+                        <>
+                          <div class=" bg-white p-2 md:p-6">
+                            <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
+                              <span class={post.post_bg + " " + "p-1"}>
+                                {post.post_highlight}
+                              </span>
+                            </h2>
+                            <h1 class="my-4 text-xl md:text-2xl !leading-tight font-bold">
+                              {post.post_topic}
+                            </h1>
+                            <div
+                              class="space-y-6 text-base"
+                              innerHTML={post.conversation_text}
+                            ></div>
+                          </div>
+                          <div class="mb-8 border-t border-gray-100 bg-white px-6 py-3 text-xs flex justify-between">
+                            <div></div>
+                            <div class="flex space-x-3">
+                              <a
+                                href="/"
+                                class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
+                              >
+                                <div>
+                                  <img src={twitter} class="w-7" />
+                                </div>
+                                <div class="pt-1.5">Share on X</div>
+                              </a>
+                              <a
+                                href="/"
+                                class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
+                              >
+                                <div class="pt-0.5">
+                                  <img src={whatsapp} class="w-6" />
+                                </div>
+                                <div class="pt-1.5">Share on WhatsApp</div>
+                              </a>
+                            </div>
+                          </div>
+                        </>
                       )}
                     </For>
 
@@ -309,10 +325,7 @@ function Issue() {
             <span
               onClick={() => {
                 window.location.replace(
-                  "/issue/" +
-                    (parseInt(searchParams.issue) - 1) +
-                    "/" +
-                    params.more
+                  "/issue/" + (parseInt(params.issueNumber) - 1)
                 );
               }}
               class="flex space-x-1 cursor-pointer hover:text-red-600"
@@ -359,10 +372,7 @@ function Issue() {
             <span
               onClick={() => {
                 window.location.replace(
-                  "/issue/" +
-                    (parseInt(params.issueNumber) + 1) +
-                    "/" +
-                    params.more
+                  "/issue/" + (parseInt(params.issueNumber) + 1)
                 );
               }}
               class="flex space-x-1 cursor-pointer hover:text-red-600"
