@@ -134,6 +134,9 @@ function Issue() {
         | www.techinjos.com.ng
       </Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
+      <Meta charset="UTF-8"/>
+      <Meta name="viewport" content="width=device-width"/>
+      <Meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
       <Meta name="description" content="pppppp" />
       <Meta property="og:locale" content="en_US" />
       <Meta property="og:type" content="article" />
@@ -141,10 +144,10 @@ function Issue() {
         property="og:title"
         content={"Issue #" + issueNumber() + " - techINJos Newsletter"}
       />
-      <Meta property="og:description" content="oooooo" />
+      <Meta property="og:description" content={metaDesc} />
       <Meta property="og:url" content={window.location.href} />
       <Meta property="og:site_name" content="techINJos" />
-      <Meta property="og:image" content="/test.png" />
+      <Meta property="og:image" content={metaImg} />
       <Meta property="og:image:width" content="1920" />
       <Meta property="og:image:height" content="1080" />
       <Meta property="og:image:type" content="image/png" />
@@ -222,7 +225,7 @@ function Issue() {
                       )}
                     </For>
 
-                    <div class="bg-white p-2 md:p-6">
+                    {/* <div class="bg-white p-2 md:p-6">
                       <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                         <span class="bg-orange-300 p-1">Share this Issue</span>
                       </h2>
@@ -236,7 +239,7 @@ function Issue() {
                         </p>
                         <ShareButtons text={"ooo"} />
                       </div>
-                    </div>
+                    </div> */}
 
                     <div class="bg-white p-2 md:p-6">
                       <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
