@@ -139,7 +139,9 @@ function Issue() {
   const [resource] = createResource(issueDetails);
   return (
     <MetaProvider>
-      <Title data-sm="">My title</Title>
+      <Title data-sm="" sm="">
+        My title
+      </Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
       <Meta
         name="robots"
