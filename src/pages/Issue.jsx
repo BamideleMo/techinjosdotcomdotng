@@ -21,6 +21,9 @@ function Issue() {
   const [issueMeta, setIssueMeta] = createSignal();
   const [createdAt, setCreatedAt] = createSignal();
   const [updatedAt, setUpdatedAt] = createSignal();
+  const [shareUs, setShareUs] = createSignal(
+    "I've been reading techINJos, and I think you'd enjoy it as well. It's an online tech newsletter for, from and about Jos - Plateau state. Check it out: https://techinjos.com.ng"
+  );
 
   const issueDetails = async () => {
     const response = await fetch(
@@ -40,6 +43,7 @@ function Issue() {
       await getNextIssue();
       await getThank();
       await getMeta();
+      await getIP();
       // console.log(result.response)
       setIssueNumber(result.response[0].issue_number);
       setCreatedAt(result.response[0].created_at);
@@ -124,6 +128,19 @@ function Issue() {
     }
   };
 
+  const getIP = async () => {
+    fetch("https://api.ipify.org?format=json")
+      .then((response) => response.json())
+      .then((data) => {
+        // Display the IP address on the screen
+        // document.getElementById("ip-address").textContent = data.ip;
+        console.log(data.ip);
+      })
+      .catch((error) => {
+        console.error("Error fetching IP address:", error);
+      });
+  };
+
   const [resource] = createResource(issueDetails);
   return (
     <MetaProvider>
@@ -177,18 +194,18 @@ function Issue() {
                 when={resource.loading}
                 fallback={
                   <>
-                    <h2 class="text-center text-2xl md:text-4xl uppercase mb-4 font-bold">
+                    {/* <h2 class="text-center text-2xl md:text-4xl uppercase mb-4 font-bold">
                       <span class="block">Weekly Tech Newsletter</span>
                       <span class="block -mt-2 md:-mt-1.5">
                         For + About Jos<b class="text-red-600">.</b>
                       </span>
-                    </h2>
+                    </h2> */}
                     <div
                       class="bg-white px-2 py-6 md:p-6 flex justify-between 
                     space-x-4 md:space-x-6"
                     >
-                      <div class="text-base md:text-base flex space-x-1 w-80">
-                        <div class="w-20 md:w-16">
+                      <div class="text-sm md:text-base flex space-x-1 w-80">
+                        <div class="w-16 md:w-16">
                           <img src={clap} class="w-full" />
                         </div>
                         <div class="leading-tight pt-0.5 md:pt-0.5">
@@ -203,9 +220,7 @@ function Issue() {
                           for making this issue possible.
                         </div>
                       </div>
-                      <div class="pt-2 md:pt-0">
-                        <ShareButtons2 />
-                      </div>
+                      <div class="pt-2 md:pt-0">&nbsp;</div>
                     </div>
                     <For each={resource().issue}>
                       {(post, i) => (
@@ -226,21 +241,27 @@ function Issue() {
                       )}
                     </For>
 
-                    {/* <div class="bg-white p-2 md:p-6">
+                    <div class="mb-8 bg-white p-2 md:p-6">
                       <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
-                        <span class="bg-orange-300 p-1">Share this Issue</span>
+                        <span class="bg-orange-300 p-1">Share techINJos</span>
                       </h2>
                       <h1 class="my-2 text-xl md:text-2xl leading-tight font-bold">
-                        Like this issue?
+                        Like what we do?
                       </h1>
                       <div class="space-y-6 text-base">
                         <p>
-                          Share it on Facebook and WhatsApp. Click on a share
-                          button below:
+                          Help us grow: Let a friend know about techINJos - send
+                          them a WhatsApp message today!{" "}
+                          <a
+                            target="_blank"
+                            href={"https://wa.me/?text=" + encodeURI(shareUs())}
+                          >
+                            Click here
+                          </a>
+                          . 🙏🏾
                         </p>
-                        <ShareButtons text={"ooo"} />
                       </div>
-                    </div> */}
+                    </div>
 
                     <div class="bg-white p-2 md:p-6">
                       <h2 class="text-base md:text-xl border-b-2 border-black pb-2">

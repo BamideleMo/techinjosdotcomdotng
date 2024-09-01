@@ -7,6 +7,7 @@ import "css-skeletons";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
+
 function App() {
   const navigate = useNavigate();
   const latestIssue = async () => {
