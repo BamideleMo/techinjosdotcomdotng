@@ -134,20 +134,21 @@ function Issue() {
         | www.techinjos.com.ng
       </Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
-      <Meta charset="UTF-8"/>
-      <Meta name="viewport" content="width=device-width"/>
-      <Meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
-      <Meta name="description" content="pppppp" />
+      <Meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+      />
+      <Meta name="description" content={metaDesc()} />
       <Meta property="og:locale" content="en_US" />
       <Meta property="og:type" content="article" />
       <Meta
         property="og:title"
         content={"Issue #" + issueNumber() + " - techINJos Newsletter"}
       />
-      <Meta property="og:description" content={metaDesc} />
+      <Meta property="og:description" content={metaDesc()} />
       <Meta property="og:url" content={window.location.href} />
       <Meta property="og:site_name" content="techINJos" />
-      <Meta property="og:image" content={metaImg} />
+      <Meta property="og:image" content={metaImg()} />
       <Meta property="og:image:width" content="1920" />
       <Meta property="og:image:height" content="1080" />
       <Meta property="og:image:type" content="image/png" />
