@@ -131,6 +131,10 @@ function Issue() {
   const [resource] = createResource(issueDetails);
   return (
     <MetaProvider>
+      <Title>
+        {params.issueNumber ? "Issue #" + params.issueNumber + " -" : "Read "}{" "}
+        techINJos Newsletter
+      </Title>
       <div>
         <Header />
         <div class="pt-20 md:pt-24">
