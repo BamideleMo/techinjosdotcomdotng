@@ -38,11 +38,11 @@ function App() {
   return (
     <MetaProvider>
       <Title>techInJos Newsletter - www.techinjos.com.ng</Title>
-      <Link rel="canonical" href="https://techinjos.com.ng/" />
+      <Link rel="canonical" href="https://techinjos.com.ng/"></Link>
       <Meta
         name="description"
         content="Your Weekly and Quick Brief of Jos' Tech Ecosystem!"
-      />
+      ></Meta>
       <div>
         <Header />
         <div class="pt-20 md:pt-24">
