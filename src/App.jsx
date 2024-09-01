@@ -21,11 +21,37 @@ function App() {
       });
       const result = await response.json();
       if (result.success) {
-        var str = result.response[3].post_topic;
-        str = str.replace(/\W+/g, "-").toLowerCase();
-        navigate("/issue/" + result.response[0].issue_number + "/" + str, {
-          replace: true,
-        });
+        const response = await fetch(
+          VITE_API_URL + "/open/meta/" + result.response[0].issue_number,
+          {
+            mode: "cors",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            method: "GET",
+          }
+        );
+        const result2 = await response.json();
+        console.log(result2.response);
+
+        var issue = result2.response.issue_number;
+        var title = result.response[3].post_topic;
+        var url = window.location.href;
+        var desc = result2.response.description;
+        var img = result2.response.url;
+
+        navigate(
+          "/issue?issue=" +
+            issue +
+            "&title=" +
+            title +
+            "&img=" +
+            img,
+          {
+            replace: true,
+          }
+        );
       }
     } catch (error) {
       console.error(error);

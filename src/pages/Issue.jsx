@@ -1,4 +1,4 @@
-import { A, useParams } from "@solidjs/router";
+import { A, useParams, useSearchParams } from "@solidjs/router";
 import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import { createSignal, createEffect, createResource } from "solid-js";
 import { createStore } from "solid-js/store";
@@ -14,6 +14,7 @@ const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
 function Issue() {
   const params = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [issue, setIssue] = createStore([]);
   const [issueNumber, setIssueNumber] = createSignal();
   const [issueMeta, setIssueMeta] = createSignal();
@@ -22,7 +23,7 @@ function Issue() {
 
   const issueDetails = async () => {
     const response = await fetch(
-      VITE_API_URL + "/open/issue/" + params.issueNumber,
+      VITE_API_URL + "/open/issue/" + searchParams.issue,
       {
         mode: "cors",
         headers: {
@@ -55,7 +56,7 @@ function Issue() {
   const [thankURL, setThankURL] = createSignal(false);
   const getThank = async () => {
     const response = await fetch(
-      VITE_API_URL + "/open/thank/" + params.issueNumber,
+      VITE_API_URL + "/open/thank/" + searchParams.issue,
       {
         mode: "cors",
         headers: {
@@ -74,7 +75,7 @@ function Issue() {
   const [metaDesc, setMetaDesc] = createSignal(".");
   const getMeta = async () => {
     const response = await fetch(
-      VITE_API_URL + "/open/meta/" + params.issueNumber,
+      VITE_API_URL + "/open/meta/" + searchParams.issue,
       {
         mode: "cors",
         headers: {
@@ -91,7 +92,7 @@ function Issue() {
 
   const [nextIssue, setNextIssue] = createSignal(false);
   const getNextIssue = async () => {
-    var v = parseInt(params.issueNumber) + 1;
+    var v = parseInt(searchParams.issue) + 1;
     const response = await fetch(VITE_API_URL + "/open/issue/" + v, {
       mode: "cors",
       headers: {
@@ -108,7 +109,7 @@ function Issue() {
 
   const [prevIssue, setPrevIssue] = createSignal(false);
   const getPrevIssue = async () => {
-    var v = parseInt(params.issueNumber) - 1;
+    var v = parseInt(searchParams.issue) - 1;
     const response = await fetch(VITE_API_URL + "/open/issue/" + v, {
       mode: "cors",
       headers: {
@@ -309,7 +310,7 @@ function Issue() {
               onClick={() => {
                 window.location.replace(
                   "/issue/" +
-                    (parseInt(params.issueNumber) - 1) +
+                    (parseInt(searchParams.issue) - 1) +
                     "/" +
                     params.more
                 );

@@ -23,26 +23,50 @@
       type="image/ico"
       href="/src/assets/favicon.ico"
     >
-    <title>techINJos Newsletter | www.techinjos.com.ng</title>
-    <meta property="og:title" content="Your eye-catching title here" />
-    <meta property="og:url" content="http://www.yourdomain.com" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="here heree goes" />
-    <meta property="og:image" content="https://indiepa.ge/api/og?username=dan" />
-
+    <title>techINJos Newsletter | www.techinjos.com.ng</title>
+    
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
     <script src="/src/index.jsx" type="module"></script>
-    <script type="">
+    <script>
       const queryString = window.location.search;
-      console.log(queryString);
       const urlParams = new URLSearchParams(queryString);
-      const color = urlParams.get('color')
-      console.log(color);
-      document.title = color;
+
+
+      const useIssueNo = urlParams.get('issue')
+      const useTitle = urlParams.get('title')
+      const useUrl = window.location.href;
+      const useDesc = urlParams.get('title') + "and more stories.";
+      const useImg = urlParams.get('img')
+
+      console.log(useUrl)
+
+      document.title = useTitle;
+      
+      var ogTitle = document.createElement('meta');
+      ogTitle.setAttribute('property', 'og:title');
+      ogTitle.content = useTitle
+      document.getElementsByTagName('head')[0].appendChild(ogTitle);
+      
+      var ogUrl = document.createElement('meta');
+      ogUrl.setAttribute('property', 'og:url');
+      ogUrl.content = useUrl
+      document.getElementsByTagName('head')[0].appendChild(ogUrl);
+      
+      var ogDesc = document.createElement('meta');
+      ogDesc.setAttribute('property', 'og:description');
+      ogDesc.content = useDesc
+      document.getElementsByTagName('head')[0].appendChild(ogDesc);
+      
+      var ogImg = document.createElement('meta');
+      ogImg.setAttribute('property', 'og:image');
+      ogImg.content = useImg
+      document.getElementsByTagName('head')[0].appendChild(ogImg);
+
     </script>
   </body>
 </html>

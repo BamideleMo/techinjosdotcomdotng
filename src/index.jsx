@@ -25,7 +25,7 @@ render(
       <Route path="/" component={App} />
       <Route path="/about" component={About} />
       <Route path="/advertise" component={Advertise} />
-      <Route path="/issue/:issueNumber/:more" component={Issue} />
+      <Route path="/issue" component={Issue} />
       <Route path="/a/login" component={Login} />
       <Route path="/a/post" component={Post} />
       <Route path="/a/post-image" component={PostMetaImage} />
