@@ -239,10 +239,7 @@ function Issue() {
                       <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                         <span class="bg-orange-300 p-1">Share techINJos</span>
                       </h2>
-                      <h1 class="my-2 text-xl md:text-2xl leading-tight font-bold">
-                        Like what we do?
-                      </h1>
-                      <div class="space-y-6 text-base">
+                      <div class="mt-2 space-y-6 text-base">
                         <p>
                           Help us grow: Let a friend know about techINJos - send
                           them a WhatsApp message today!{" "}
