@@ -37,7 +37,7 @@ function App() {
   });
   return (
     <MetaProvider>
-      <Title>techInJos Newsletter - www.techinjos.com.ng</Title>
+      <Title>techInJos Newsletter | www.techinjos.com.ng</Title>
       <Link rel="canonical" href="https://techinjos.com.ng/"></Link>
       <Meta
         name="description"
