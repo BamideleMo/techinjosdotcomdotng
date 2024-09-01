@@ -139,12 +139,7 @@ function Issue() {
   const [resource] = createResource(issueDetails);
   return (
     <MetaProvider>
-      <Title>
-        {issueNumber()
-          ? "Issue #" + issueNumber() + " - techINJos Newsletter "
-          : "techINJos Newsletter "}
-        | www.techinjos.com.ng
-      </Title>
+      <Title>My title</Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
       <Meta
         name="robots"
