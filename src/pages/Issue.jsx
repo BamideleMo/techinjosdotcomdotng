@@ -150,23 +150,17 @@ function Issue() {
         name="robots"
         content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
       />
-      <Meta name="description" content={metaDesc()} />
+      <Meta name="description" content="description text 1" />
       <Meta property="og:locale" content="en_US" />
       <Meta property="og:type" content="article" />
-      <Meta
-        property="og:title"
-        content={"Issue #" + issueNumber() + " - techINJos Newsletter"}
-      />
-      <Meta property="og:description" content="og driscription" />
+      <Meta property="og:title" content="techINJos Newsletter" />
+      <Meta property="og:description" content="driscription text 2" />
       <Meta property="og:url" content={window.location.href} />
       <Meta property="og:site_name" content="techINJos" />
       <Meta
         property="og:image"
         content="https://indiepa.ge/api/og?username=dan"
       />
-      <Meta property="og:image:width" content="1920" />
-      <Meta property="og:image:height" content="1080" />
-      <Meta property="og:image:type" content="image/png" />
       <Meta
         property="article:publisher"
         content="https://www.facebook.com/techINJos"
