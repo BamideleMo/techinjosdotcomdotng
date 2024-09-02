@@ -11,7 +11,7 @@ function About() {
       <Link rel="canonical" href="https://techinjos.com.ng/" />
       <Meta
         name="description"
-        content="About techINJos, the #1 Weekly and Quick Brief for Jos' Tech Ecosystem!"
+        content="Your #1 Weekly Newsletter focused on the Tech Ecosystem in Jos-Plateau state!"
       />
       <div>
         <Header />
@@ -23,7 +23,8 @@ function About() {
                   <span class="bg-violet-300 p-1">About</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-bold">
-                  Your #1 Weekly Brief For and About Jos' Tech Ecosystem!
+                  Your #1 Weekly Newsletter focused on the Tech Ecosystem in
+                  Jos-Plateau state!
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
