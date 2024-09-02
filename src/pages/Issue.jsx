@@ -184,6 +184,7 @@ function Issue() {
                           >
                             Share
                           </a>
+                          .
                         </p>
                         <p>
                           Post techINJos on your X (formerly Twitter):{" "}
