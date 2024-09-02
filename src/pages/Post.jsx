@@ -70,7 +70,7 @@ function Post() {
                             "https://twitter.com/intent/tweet?text=" +
                             encodeURI(
                               post.shareable +
-                                " 😍 https://techinjos.com.ng/post/" +
+                                " 🤖 https://techinjos.com.ng/post/" +
                                 post.id
                             )
                           }
@@ -87,7 +87,7 @@ function Post() {
                             "https://wa.me/?text=" +
                             encodeURI(
                               post.shareable +
-                                " 😍 https://techinjos.com.ng/post/" +
+                                " 🤖 https://techinjos.com.ng/post/" +
                                 post.id
                             )
                           }

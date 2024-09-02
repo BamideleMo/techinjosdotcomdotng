@@ -119,7 +119,7 @@ function Issue() {
                                   "https://twitter.com/intent/tweet?text=" +
                                   encodeURI(
                                     post.shareable +
-                                      " 😍 https://techinjos.com.ng/post/" +
+                                      " 🤖 https://techinjos.com.ng/post/" +
                                       post.id
                                   )
                                 }
@@ -136,7 +136,7 @@ function Issue() {
                                   "https://wa.me/?text=" +
                                   encodeURI(
                                     post.shareable +
-                                      " 😍 https://techinjos.com.ng/post/" +
+                                      " 🤖 https://techinjos.com.ng/post/" +
                                       post.id
                                   )
                                 }
@@ -192,7 +192,7 @@ function Issue() {
                             href={
                               "https://twitter.com/intent/tweet?text=" +
                               encodeURI(
-                                "Check out the techINJos Newsletter @techINJos for relevant updates on tech focused on Jos-Plateau state. 😍 https://techinjos.com.ng"
+                                "Check out the techINJos Newsletter @techINJos for relevant updates on tech focused on Jos-Plateau state. 🤖 https://techinjos.com.ng"
                               )
                             }
                           >
