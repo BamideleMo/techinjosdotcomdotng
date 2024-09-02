@@ -30,6 +30,7 @@ const schema = z.object({
   post_highlight: z.string().min(1, "*Invalid"),
   post_bg: z.string().min(1, "*Invalid"),
   post_topic: z.string().min(1, "*Invalid"),
+  shareable: z.string().min(1, "*Invalid"),
 });
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
@@ -57,6 +58,7 @@ function Post() {
       post_highlight: formData().post_highlight,
       post_bg: formData().post_bg,
       post_topic: formData().post_topic,
+      shareable: formData().shareable,
       conversation_text: editorData,
     };
 
@@ -244,6 +246,15 @@ function Post() {
                       <TextInput
                         label="Post Topic:"
                         name="post_topic"
+                        required={true}
+                        type="text"
+                        formHandler={formHandler}
+                      />
+                    </div>
+                    <div>
+                      <TextInput
+                        label="Shareable Text:"
+                        name="shareable"
                         required={true}
                         type="text"
                         formHandler={formHandler}

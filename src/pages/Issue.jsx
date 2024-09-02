@@ -19,7 +19,7 @@ function Issue() {
 
   const issueDetails = async () => {
     const response = await fetch(
-      VITE_API_URL + "/open/issue/" + params.issueNumber,
+      VITE_API_URL + "/open/view-posts/" + params.issueNumber,
       {
         mode: "cors",
         headers: {
@@ -33,7 +33,6 @@ function Issue() {
     if (result.success) {
       await getPrevIssue();
       await getNextIssue();
-      await getThank();
       setIssueNumber(result.response[0].issue_number);
       setIssue(result.response);
     }
@@ -43,48 +42,10 @@ function Issue() {
     };
   };
 
-  const [thankCompany, setThankCompany] = createSignal(false);
-  const [thankURL, setThankURL] = createSignal(false);
-  const getThank = async () => {
-    const response = await fetch(
-      VITE_API_URL + "/open/thank/" + params.issueNumber,
-      {
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        method: "GET",
-      }
-    );
-    const result = await response.json();
-    setThankCompany(result.response.company);
-    setThankURL(result.response.url);
-  };
-
-  const [metaImg, setMetaImg] = createSignal(".");
-  const [metaDesc, setMetaDesc] = createSignal(".");
-  const getMeta = async () => {
-    const response = await fetch(
-      VITE_API_URL + "/open/meta/" + params.issueNumber,
-      {
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        method: "GET",
-      }
-    );
-    const result = await response.json();
-    setMetaImg(result.response.url);
-    setMetaDesc(result.response.description);
-  };
-
   const [nextIssue, setNextIssue] = createSignal(false);
   const getNextIssue = async () => {
     var v = parseInt(params.issueNumber) + 1;
-    const response = await fetch(VITE_API_URL + "/open/issue/" + v, {
+    const response = await fetch(VITE_API_URL + "/open/view-posts/" + v, {
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
@@ -93,6 +54,7 @@ function Issue() {
       method: "GET",
     });
     const result = await response.json();
+    console.log(result.response);
     if (result.response.length > 0) {
       setNextIssue(true);
     }
@@ -101,7 +63,7 @@ function Issue() {
   const [prevIssue, setPrevIssue] = createSignal(false);
   const getPrevIssue = async () => {
     var v = parseInt(params.issueNumber) - 1;
-    const response = await fetch(VITE_API_URL + "/open/issue/" + v, {
+    const response = await fetch(VITE_API_URL + "/open/view-posts/" + v, {
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
@@ -113,19 +75,6 @@ function Issue() {
     if (result.response.length > 0) {
       setPrevIssue(true);
     }
-  };
-
-  const getIP = async () => {
-    fetch("https://api.ipify.org?format=json")
-      .then((response) => response.json())
-      .then((data) => {
-        // Display the IP address on the screen
-        // document.getElementById("ip-address").textContent = data.ip;
-        console.log(data.ip);
-      })
-      .catch((error) => {
-        console.error("Error fetching IP address:", error);
-      });
   };
 
   const [resource] = createResource(issueDetails);
@@ -144,33 +93,6 @@ function Issue() {
                 when={resource.loading}
                 fallback={
                   <>
-                    {/* <div
-                      class="bg-white px-2 py-6 md:p-6 flex justify-between 
-                    space-x-4 md:space-x-6"
-                    >
-                      <div
-                        class="text-base md:text-base flex space-x-1 
-                      w-64 md:w-80"
-                      >
-                        <div class="w-16 md:w-16">
-                          <img src={clap} class="w-full" />
-                        </div>
-                        <div class="leading-tight pt-0.5 md:pt-0.5">
-                          Big thanks to{" "}
-                          <a
-                            target="_blank"
-                            href={thankURL()}
-                            class="text-red-600 font-semibold hover:border-b border-dashed border-gray-300"
-                          >
-                            {thankCompany()}
-                          </a>{" "}
-                          for making this issue possible.
-                        </div>
-                      </div>
-                      <div class="pt-2 md:pt-3 flex space-x-1">
-                        <ShareButton />
-                      </div>
-                    </div> */}
                     <For each={resource().issue}>
                       {(post, i) => (
                         <>
@@ -188,26 +110,42 @@ function Issue() {
                               innerHTML={post.conversation_text}
                             ></div>
                           </div>
-                          <div class="mb-8 border-t border-gray-100 bg-white px-6 py-3 text-xs flex justify-between">
+                          <div class="mb-8 border-t border-gray-200 bg-white px-2 md:px-6 py-3 text-xs flex justify-between">
                             <div></div>
-                            <div class="flex space-x-3">
+                            <div class="flex space-x-4">
                               <a
-                                href="/"
+                                target="_blank"
+                                href={
+                                  "https://twitter.com/intent/tweet?text=" +
+                                  encodeURI(
+                                    post.shareable +
+                                      " 📰 https://techinjos.com/post/" +
+                                      post.id
+                                  )
+                                }
                                 class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
                               >
                                 <div>
                                   <img src={twitter} class="w-7" />
                                 </div>
-                                <div class="pt-1.5">Share on X</div>
+                                <div class="pt-1.5">Share Post on X</div>
                               </a>
                               <a
-                                href="/"
+                                target="_blank"
+                                href={
+                                  "https://wa.me/?text=" +
+                                  encodeURI(
+                                    post.shareable +
+                                      " 📰 https://techinjos.com/post/" +
+                                      post.id
+                                  )
+                                }
                                 class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
                               >
                                 <div class="pt-0.5">
                                   <img src={whatsapp} class="w-6" />
                                 </div>
-                                <div class="pt-1.5">Share on WhatsApp</div>
+                                <div class="pt-1.5">Share Post on WhatsApp</div>
                               </a>
                             </div>
                           </div>
@@ -229,7 +167,7 @@ function Issue() {
                             href={
                               "https://wa.me/?text=" +
                               encodeURI(
-                                "I've been reading techINJos Newsletter, and I think you'd also enjoy it. It's an online tech newsletter focused on the tech ecosystem in Jos-Plateau state. Check it out: https://techinjos.com.ng"
+                                "I've enjoyed reading techINJos Newsletter, & I think you'd enjoy it too. It's a newsletter focused on the tech ecosystem in Jos-Plateau state. Check it out: https://techinjos.com.ng"
                               )
                             }
                           >
