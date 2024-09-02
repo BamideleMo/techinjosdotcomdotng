@@ -1,4 +1,6 @@
 import { A } from "@solidjs/router";
+import facebook from "../assets/techINJos-facebook.png";
+import twitter from "../assets/techINJos-x.png";
 
 function Menu() {
   return (
@@ -23,6 +25,22 @@ function Menu() {
           class="p-2 border border-black rounded-full hover:bg-black hover:text-white"
         >
           Join WhatsApp Channel
+        </a>
+      </li>
+      <li class="flex lg:hidden justify-center space-x-6">
+        <a
+          href="https://www.facebook.com/techINJos"
+          class="hover:opacity-60"
+          target="_blank"
+        >
+          <img src={facebook} class="rounded-full h-12" />
+        </a>
+        <a
+          href="https://www.x.com/techINJos"
+          class="hover:opacity-60"
+          target="_blank"
+        >
+          <img src={twitter} class="rounded-full h-12" />
         </a>
       </li>
     </ul>
