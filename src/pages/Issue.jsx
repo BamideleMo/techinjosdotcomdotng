@@ -167,7 +167,7 @@ function Issue() {
                             href={
                               "https://wa.me/?text=" +
                               encodeURI(
-                                "I've enjoyed reading techINJos Newsletter, & I think you'd enjoy it too. It's a newsletter focused on the tech ecosystem in Jos-Plateau state. Check it out: https://techinjos.com.ng"
+                                "I've enjoyed reading techINJos Newsletter, and I think you'd enjoy it too. It's a newsletter focused on the tech ecosystem in Jos-Plateau state. Check it out: https://techinjos.com.ng"
                               )
                             }
                           >
