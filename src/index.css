@@ -11,8 +11,8 @@ body {
   padding: 0;
 }
 .name, .content p a, .content p a span, .content li a span{
-  color: #0786e8 !important;
-  border-bottom: #ff0000 dotted 1px;
+  color: #000000 !important;
+  border-bottom: #ff0000 solid 1px;
 }
 
 .content .green{
