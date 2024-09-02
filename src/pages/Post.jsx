@@ -103,12 +103,14 @@ function Post() {
                         </a>
                       </div>
                     </div>
-                    <div class="bg-green-100 border border-green-200 p-6 rounded shadow-lg">
-                      <p>
-                        This post is from <b>Issue #{post.issue_number}</b> of
-                        the techINJos Weekly Newsletter. See the newsletter:{" "}
-                        <A href={"/issue/" + post.issue_number}>Click here</A>
-                      </p>
+                    <div class="p-2">
+                      <div class="bg-blue-100 border border-blue-200 p-6 rounded shadow-lg">
+                        <p>
+                          This post is from <b>Issue #{post.issue_number}</b> of
+                          the techINJos Weekly Newsletter. See the newsletter:{" "}
+                          <A href={"/issue/" + post.issue_number}>Click here</A>
+                        </p>
+                      </div>
                     </div>
                   </>
                 }
