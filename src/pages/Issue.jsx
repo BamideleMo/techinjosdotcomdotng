@@ -246,14 +246,14 @@ function Issue() {
                     class="hover:opacity-60"
                     target="_blank"
                   >
-                    <img src={facebook} class="rounded-full h-12" />
+                    <img src={facebook} class="rounded-full h-10" />
                   </a>
                   <a
                     href="https://www.x.com/techINJos"
                     class="hover:opacity-60"
                     target="_blank"
                   >
-                    <img src={twitter} class="rounded-full h-12" />
+                    <img src={twitter} class="rounded-full h-10" />
                   </a>
                 </div>
                 <div class="p-4 text-base">
