@@ -11,7 +11,7 @@ function App() {
   const navigate = useNavigate();
   const latestIssue = async () => {
     try {
-      const response = await fetch(VITE_API_URL + "/open/latest-issue", {
+      const response = await fetch(VITE_API_URL + "/open/latest-post", {
         mode: "cors",
         headers: {
           "Content-Type": "application/json",
