@@ -2,7 +2,6 @@ import { A, useParams, useSearchParams } from "@solidjs/router";
 import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import { createSignal, createEffect, createResource } from "solid-js";
 import { createStore } from "solid-js/store";
-import facebook from "../../src/assets/techINJos-facebook.png";
 import twitter from "../../src/assets/techINJos-x.png";
 import whatsapp from "../../src/assets/whatsapp.png";
 import Header from "../components/Header";
@@ -14,6 +13,7 @@ const VITE_API_URL = import.meta.env["VITE_API_URL"];
 function Post() {
   const params = useParams();
   const [post, setPost] = createStore([]);
+  const [topic, setTopic] = createSignal();
 
   const postDetails = async () => {
     const response = await fetch(VITE_API_URL + "/open/post/" + params.id, {
@@ -26,7 +26,7 @@ function Post() {
     });
     const result = await response.json();
     if (result.success) {
-      setPost(result.response);
+      setTopic(result.response.post_topic);
     }
 
     return {
@@ -37,10 +37,7 @@ function Post() {
   const [resource] = createResource(postDetails);
   return (
     <MetaProvider>
-      <Title>
-        {params.issueNumber ? "Issue #" + params.issueNumber + " -" : "Read "}{" "}
-        techINJos Newsletter
-      </Title>
+      <Title>{topic() ? topic() : "Loading"} - techINJos Newsletter</Title>
       <div>
         <Header />
         <div class="pt-20 md:pt-24">
