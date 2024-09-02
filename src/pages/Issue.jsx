@@ -119,7 +119,7 @@ function Issue() {
                                   "https://twitter.com/intent/tweet?text=" +
                                   encodeURI(
                                     post.shareable +
-                                      " 📰 https://techinjos.com/post/" +
+                                      " 😍 https://techinjos.com/post/" +
                                       post.id
                                   )
                                 }
@@ -136,7 +136,7 @@ function Issue() {
                                   "https://wa.me/?text=" +
                                   encodeURI(
                                     post.shareable +
-                                      " 📰 https://techinjos.com/post/" +
+                                      " 😍 https://techinjos.com/post/" +
                                       post.id
                                   )
                                 }
