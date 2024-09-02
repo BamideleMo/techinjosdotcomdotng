@@ -26,7 +26,6 @@ function Post() {
     });
     const result = await response.json();
     if (result.success) {
-      console.log(result.response);
       setPost(result.response);
     }
 
@@ -74,7 +73,7 @@ function Post() {
                             "https://twitter.com/intent/tweet?text=" +
                             encodeURI(
                               post.shareable +
-                                " 😍 https://techinjos.com/post/" +
+                                " 😍 https://techinjos.com.ng/post/" +
                                 post.id
                             )
                           }
@@ -91,7 +90,7 @@ function Post() {
                             "https://wa.me/?text=" +
                             encodeURI(
                               post.shareable +
-                                " 😍 https://techinjos.com/post/" +
+                                " 😍 https://techinjos.com.ng/post/" +
                                 post.id
                             )
                           }
