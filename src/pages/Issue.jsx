@@ -18,6 +18,7 @@ function Issue() {
   const [issueNumber, setIssueNumber] = createSignal();
 
   const issueDetails = async () => {
+    console.log(params.issueNumber);
     const response = await fetch(
       VITE_API_URL + "/open/view-posts/" + params.issueNumber,
       {
@@ -54,7 +55,6 @@ function Issue() {
       method: "GET",
     });
     const result = await response.json();
-    console.log(result.response);
     if (result.response.length > 0) {
       setNextIssue(true);
     }
@@ -110,7 +110,7 @@ function Issue() {
                               innerHTML={post.conversation_text}
                             ></div>
                           </div>
-                          <div class="mb-8 border-t border-gray-200 bg-white px-2 md:px-6 py-3 text-xs flex justify-between">
+                          <div class="mb-12 border-t border-gray-200 bg-white px-2 md:px-6 py-4 text-xs flex justify-between">
                             <div></div>
                             <div class="flex space-x-4">
                               <a
@@ -153,7 +153,7 @@ function Issue() {
                       )}
                     </For>
 
-                    <div class="mb-8 bg-white p-2 md:p-6">
+                    <div class="mb-12 bg-white p-2 md:p-6">
                       <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                         <span class="bg-orange-300 p-1">Share techINJos</span>
                       </h2>

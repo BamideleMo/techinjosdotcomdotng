@@ -27,6 +27,7 @@ function Post() {
     const result = await response.json();
     if (result.success) {
       console.log(result.response);
+      setPost(result.response);
     }
 
     return {
@@ -46,7 +47,73 @@ function Post() {
         <div class="pt-20 md:pt-24">
           <div class="w-full md:w-11/12 mx-auto backgound-color pt-4 md:p-12 lg:p-12">
             <div class="content md:w-10/12 lg:w-6/12 2xl:w-5/12 mx-auto">
-              <Show when={resource.loading} fallback={<>x</>}>
+              <Show
+                when={resource.loading}
+                fallback={
+                  <>
+                    <div class=" bg-white p-2 md:p-6">
+                      <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
+                        <span class={post.post_bg + " " + "p-1"}>
+                          {post.post_highlight}
+                        </span>
+                      </h2>
+                      <h1 class="my-4 text-xl md:text-2xl !leading-tight font-bold">
+                        {post.post_topic}
+                      </h1>
+                      <div
+                        class="space-y-6 text-base"
+                        innerHTML={post.conversation_text}
+                      ></div>
+                    </div>
+                    <div class="mb-12 border-t border-gray-200 bg-white px-2 md:px-6 py-4 text-xs flex justify-between">
+                      <div></div>
+                      <div class="flex space-x-4">
+                        <a
+                          target="_blank"
+                          href={
+                            "https://twitter.com/intent/tweet?text=" +
+                            encodeURI(
+                              post.shareable +
+                                " 📰 https://techinjos.com/post/" +
+                                post.id
+                            )
+                          }
+                          class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
+                        >
+                          <div>
+                            <img src={twitter} class="w-7" />
+                          </div>
+                          <div class="pt-1.5">Share Post on X</div>
+                        </a>
+                        <a
+                          target="_blank"
+                          href={
+                            "https://wa.me/?text=" +
+                            encodeURI(
+                              post.shareable +
+                                " 📰 https://techinjos.com/post/" +
+                                post.id
+                            )
+                          }
+                          class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
+                        >
+                          <div class="pt-0.5">
+                            <img src={whatsapp} class="w-6" />
+                          </div>
+                          <div class="pt-1.5">Share Post on WhatsApp</div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="bg-green-100 border border-green-200 p-6 rounded shadow-lg">
+                      <p>
+                        This post is from <b>Issue #{post.issue_number}</b> of
+                        the techINJos Weekly Newsletter. See the newsletter:{" "}
+                        <A href={"/issue/" + post.issue_number}>Click here</A>
+                      </p>
+                    </div>
+                  </>
+                }
+              >
                 {/* loading */}
                 <Skeleton />
                 {/* loading */}
