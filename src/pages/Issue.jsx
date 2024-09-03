@@ -130,7 +130,7 @@ function Issue() {
                                 class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
                               >
                                 <div>
-                                  <img src={twitter} class="w-7" />
+                                  <img src={twitter} alt="share on twitter" class="w-7" />
                                 </div>
                                 <div class="pt-1.5">Share Post on X</div>
                               </a>
@@ -147,7 +147,7 @@ function Issue() {
                                 class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
                               >
                                 <div class="pt-0.5">
-                                  <img src={whatsapp} class="w-6" />
+                                  <img src={whatsapp} alt="share on WhatsApp" class="w-6" />
                                 </div>
                                 <div class="pt-1.5">Share Post on WhatsApp</div>
                               </a>
@@ -248,14 +248,22 @@ function Issue() {
                     class="hover:opacity-60"
                     target="_blank"
                   >
-                    <img src={facebook} class="rounded-full h-10" />
+                    <img
+                      src={facebook}
+                      alt="techINJos Facebook page"
+                      class="rounded-full h-10"
+                    />
                   </a>
                   <a
                     href="https://www.x.com/techINJos"
                     class="hover:opacity-60"
                     target="_blank"
                   >
-                    <img src={twitter} class="rounded-full h-10" />
+                    <img
+                      src={twitter}
+                      alt="techINJos X page"
+                      class="rounded-full h-10"
+                    />
                   </a>
                 </div>
                 <div class="p-4 text-base">

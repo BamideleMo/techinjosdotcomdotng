@@ -33,14 +33,18 @@ function Menu() {
           class="hover:opacity-60"
           target="_blank"
         >
-          <img src={facebook} class="rounded-full h-10" />
+          <img
+            src={facebook}
+            alt="techINJos Facebook page"
+            class="rounded-full h-10"
+          />
         </a>
         <a
           href="https://www.x.com/techINJos"
           class="hover:opacity-60"
           target="_blank"
         >
-          <img src={twitter} class="rounded-full h-10" />
+          <img src={twitter} alt="techINJos X page" class="rounded-full h-10" />
         </a>
       </li>
     </ul>
