@@ -281,7 +281,7 @@ function Issue() {
           <Show
             when={prevIssue()}
             fallback={
-              <span class="flex space-x-1 cursor-not-allowed text-gray-200">
+              <span class="flex space-x-1 cursor-not-allowed text-gray-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -328,7 +328,7 @@ function Issue() {
           <Show
             when={nextIssue()}
             fallback={
-              <span class="flex space-x-1 cursor-not-allowed text-gray-200">
+              <span class="flex space-x-1 cursor-not-allowed text-gray-600">
                 <span>NEXT</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
