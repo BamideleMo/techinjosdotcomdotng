@@ -164,8 +164,7 @@ function Issue() {
                       <div class="mt-2 space-y-6 text-base">
                         <p> 🙏🏾 Please. Help us grow.</p>{" "}
                         <p>
-                          Tell a friend about techINJos Newsletter - send
-                          him/her a WhatsApp message now!{" "}
+                          Tell a friend about techINJos Newsletter -{" "}
                           <a
                             target="_blank"
                             href={
@@ -175,23 +174,21 @@ function Issue() {
                               )
                             }
                           >
-                            Click here
+                            send him/her a WhatsApp message now
                           </a>
-                          .
+                          !
                         </p>
                         <p>
-                          Share techINJos Newsletter on Facebook.{" "}
                           <a
                             target="_blank"
                             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftechinjos.com.ng%2F&amp;src=sdkpreparse"
                             class="fb-xfbml-parse-ignore"
                           >
-                            Share
-                          </a>
-                          .
+                            Share techINJos Newsletter
+                          </a>{" "}
+                          on Facebook.
                         </p>
                         <p>
-                          Post techINJos on your X (formerly Twitter):{" "}
                           <a
                             target="_blank"
                             href={
@@ -201,9 +198,9 @@ function Issue() {
                               )
                             }
                           >
-                            Click here
-                          </a>
-                          .
+                            Post techINJos
+                          </a>{" "}
+                          on your X (formerly Twitter).
                         </p>
                       </div>
                     </div>
