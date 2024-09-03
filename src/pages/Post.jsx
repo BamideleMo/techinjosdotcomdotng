@@ -27,6 +27,7 @@ function Post() {
     const result = await response.json();
     if (result.success) {
       setTopic(result.response.post_topic);
+      setPost(result.response);
     }
 
     return {
