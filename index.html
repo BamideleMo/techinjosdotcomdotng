@@ -28,6 +28,8 @@
       type="image/ico"
       href="/src/assets/favicon.ico"
     >
+    <link rel="canonical" href="https://www.techinjos.com/post" id="link">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta data-sm="" property="og:type" content="article" />
     <meta data-sm="" property="og:title" content="🗞️ techINJos Newsletter." />
     <meta data-sm="" property="og:url" content="https://techinjos.com.ng" />
@@ -49,5 +51,8 @@
     <div id="root"></div>
 
     <script src="/src/index.jsx" type="module"></script>
+    <script>
+      document.getElementById("link").href = window.location.href
+    </script>
   </body>
 </html>
