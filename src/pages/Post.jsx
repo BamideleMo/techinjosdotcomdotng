@@ -102,7 +102,7 @@ function Post() {
                         </a>
                       </div>
                     </div>
-                    <div class="p-2">
+                    <div class="p-2 lg:p-0">
                       <div class="bg-blue-100 border border-blue-200 p-6 rounded shadow-lg">
                         <p>
                           This post is a section of{" "}
