@@ -38,6 +38,7 @@ function Post() {
   return (
     <MetaProvider>
       <Title>{topic() ? topic() : "Loading"} - techINJos Newsletter</Title>
+      <Meta name="description" content="Post on techINJos Newsletter" />
       <div>
         <Header />
         <div class="pt-20 md:pt-24">

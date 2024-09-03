@@ -84,6 +84,10 @@ function Issue() {
         {params.issueNumber ? "Issue #" + params.issueNumber + " -" : "Read "}{" "}
         techINJos Newsletter
       </Title>
+      <Meta
+        name="description"
+        content="Your #1 Weekly Newsletter focused on the Tech Ecosystem in Jos-Plateau state!"
+      />
       <div>
         <Header />
         <div class="pt-20 md:pt-24">
