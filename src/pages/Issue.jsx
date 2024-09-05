@@ -114,7 +114,8 @@ function Issue() {
                               innerHTML={post.conversation_text}
                             ></div>
                           </div>
-                          <div class="mb-12 border-t border-gray-200 bg-white px-2 md:px-6 py-4 text-xs flex justify-between">
+                          <div class="mb-12 border-t border-gray-200 bg-white 
+                          px-2 md:px-6 py-4 text-xs flex justify-between">
                             <div></div>
                             <div class="flex space-x-4">
                               <a
@@ -130,9 +131,13 @@ function Issue() {
                                 class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
                               >
                                 <div>
-                                  <img src={twitter} alt="share on twitter" class="w-7" />
+                                  <img
+                                    src={twitter}
+                                    alt="share on twitter"
+                                    class="w-7"
+                                  />
                                 </div>
-                                <div class="pt-1.5">Share Post on X</div>
+                                <div class="pt-1.5">Share on X</div>
                               </a>
                               <a
                                 target="_blank"
@@ -147,9 +152,13 @@ function Issue() {
                                 class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
                               >
                                 <div class="pt-0.5">
-                                  <img src={whatsapp} alt="share on WhatsApp" class="w-6" />
+                                  <img
+                                    src={whatsapp}
+                                    alt="share on WhatsApp"
+                                    class="w-6"
+                                  />
                                 </div>
-                                <div class="pt-1.5">Share Post on WhatsApp</div>
+                                <div class="pt-1.5">Share on WhatsApp</div>
                               </a>
                             </div>
                           </div>
@@ -278,28 +287,7 @@ function Issue() {
           </div>
         </div>
         <div class="w-11/12 mx-auto my-10 py-4 flex justify-between border-t border-black">
-          <Show
-            when={prevIssue()}
-            fallback={
-              <span class="flex space-x-1 cursor-not-allowed text-gray-600">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  />
-                </svg>
-                <span>PREVIOUS</span>
-              </span>
-            }
-          >
+          <Show when={prevIssue()}>
             <span
               onClick={() => {
                 window.location.replace(
@@ -325,28 +313,7 @@ function Issue() {
               <span>PREVIOUS</span>
             </span>
           </Show>
-          <Show
-            when={nextIssue()}
-            fallback={
-              <span class="flex space-x-1 cursor-not-allowed text-gray-600">
-                <span>NEXT</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  />
-                </svg>
-              </span>
-            }
-          >
+          <Show when={nextIssue()}>
             <span
               onClick={() => {
                 window.location.replace(
