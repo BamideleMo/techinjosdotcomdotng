@@ -7,7 +7,7 @@ import techINJos from "../assets/about-techINJos.png";
 function About() {
   return (
     <MetaProvider>
-      <Title>About techINJos Newsletter | www.techinjos.com.ng</Title>
+      <Title>About Tech in Jos Newsletter | www.techinjos.com.ng</Title>
       <Link rel="canonical" href="https://techinjos.com.ng/" />
       <Meta
         name="description"

@@ -83,11 +83,11 @@ function Issue() {
     <MetaProvider>
       <Title>
         {params.issueNumber ? "Issue #" + params.issueNumber + " -" : "Read "}{" "}
-        techINJos Newsletter
+        Tech in Jos Newsletter
       </Title>
       <Meta
         name="description"
-        content="Your #1 Weekly Newsletter focused on the Tech Ecosystem in Jos-Plateau state!"
+        content="Your #1 Weekly Newsletter focused on the Tech Ecosystem in Jos, Plateau state!"
       />
       <div>
         <Header />

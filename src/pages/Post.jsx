@@ -38,8 +38,8 @@ function Post() {
   const [resource] = createResource(postDetails);
   return (
     <MetaProvider>
-      <Title>{topic() ? topic() : "Loading"} - techINJos Newsletter</Title>
-      <Meta name="description" content="Post on techINJos Newsletter" />
+      <Title>{topic() ? topic() : "Loading"} - Tech in Jos Newsletter</Title>
+      <Meta name="description" content="Post on Tech in Jos Newsletter" />
       <div>
         <Header />
         <div class="pt-20 md:pt-24">
