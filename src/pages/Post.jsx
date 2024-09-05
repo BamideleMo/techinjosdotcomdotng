@@ -2,8 +2,8 @@ import { A, useParams, useSearchParams } from "@solidjs/router";
 import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import { createSignal, createEffect, createResource } from "solid-js";
 import { createStore } from "solid-js/store";
-import twitter from "../../src/assets/techINJos-x.png";
-import whatsapp from "../../src/assets/whatsapp.png";
+import whatsappShare from "../../src/assets/whatsapp.png";
+import twitterShare from "../../src/assets/x.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Skeleton from "../components/Skeleton";
@@ -79,9 +79,9 @@ function Post() {
                           class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
                         >
                           <div>
-                            <img src={twitter} class="w-7" />
+                            <img src={twitterShare} class="w-7" />
                           </div>
-                          <div class="pt-1.5">Share Post on X</div>
+                          <div class="pt-1.5">Share on X</div>
                         </a>
                         <a
                           target="_blank"
@@ -96,9 +96,9 @@ function Post() {
                           class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
                         >
                           <div class="pt-0.5">
-                            <img src={whatsapp} class="w-6" />
+                            <img src={whatsappShare} class="w-6" />
                           </div>
-                          <div class="pt-1.5">Share Post on WhatsApp</div>
+                          <div class="pt-1.5">Share on WhatsApp</div>
                         </a>
                       </div>
                     </div>

@@ -2,9 +2,10 @@ import { A, useParams, useSearchParams } from "@solidjs/router";
 import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import { createSignal, createEffect, createResource } from "solid-js";
 import { createStore } from "solid-js/store";
-import facebook from "../../src/assets/techINJos-facebook.png";
-import twitter from "../../src/assets/techINJos-x.png";
-import whatsapp from "../../src/assets/whatsapp.png";
+import facebook from "../../src/assets/facebook.png";
+import twitter from "../../src/assets/twitterx.png";
+import whatsappShare from "../../src/assets/whatsapp.png";
+import twitterShare from "../../src/assets/x.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Skeleton from "../components/Skeleton";
@@ -114,8 +115,10 @@ function Issue() {
                               innerHTML={post.conversation_text}
                             ></div>
                           </div>
-                          <div class="mb-12 border-t border-gray-200 bg-white 
-                          px-2 md:px-6 py-4 text-xs flex justify-between">
+                          <div
+                            class="mb-12 border-t border-gray-200 bg-white 
+                          px-2 md:px-6 py-4 text-xs flex justify-between"
+                          >
                             <div></div>
                             <div class="flex space-x-4">
                               <a
@@ -132,7 +135,7 @@ function Issue() {
                               >
                                 <div>
                                   <img
-                                    src={twitter}
+                                    src={twitterShare}
                                     alt="share on twitter"
                                     class="w-7"
                                   />
@@ -153,7 +156,7 @@ function Issue() {
                               >
                                 <div class="pt-0.5">
                                   <img
-                                    src={whatsapp}
+                                    src={whatsappShare}
                                     alt="share on WhatsApp"
                                     class="w-6"
                                   />
