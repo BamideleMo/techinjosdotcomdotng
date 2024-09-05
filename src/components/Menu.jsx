@@ -1,6 +1,6 @@
 import { A } from "@solidjs/router";
 import facebook from "../assets/facebook.png";
-import twitter from "../assets/x.png";
+import twitter from "../assets/twitterx.png";
 
 function Menu() {
   return (

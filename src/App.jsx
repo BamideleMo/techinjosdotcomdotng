@@ -34,7 +34,7 @@ function App() {
   });
   return (
     <MetaProvider>
-      <Title>techInJos Newsletter | www.techinjos.com.ng</Title>
+      <Title>Tech in Jos Newsletter | www.techinjos.com.ng</Title>
       <Meta
         name="description"
         content="Tech newsletter focused on Jos, Plateau state!"
@@ -43,8 +43,8 @@ function App() {
         <Header />
         <div class="pt-20 md:pt-24">
           <div class="w-full md:w-11/12 mx-auto bg-white pt-4 md:pt-12 ">
-            <div class="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2">
-              <div class="text-center md:text-left">
+            <div class="w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-2">
+              <div class="text-center lg:text-left">
                 <h1 class="uppercase">Weekly Newsletter</h1>
                 <h1 class="text-3xl md:text-4xl lg:text-5xl font-normal drop-shadow-lg">
                   Focused on the tech ecosystem in Jos-Plateau state.
@@ -53,7 +53,7 @@ function App() {
                   The most impactful stories of the week, distilled to keep you
                   informed of happenings in the tech scene in Jos-Plateau state.
                 </div>
-                <div class="my-12 md:my-4 space-x-3">
+                <div class="my-12 lg:my-4 space-x-3">
                   <A
                     href={"/issue/" + issue()}
                     class="bg-red-600 text-white py-4 px-4 rounded hover:opacity-60"
@@ -62,11 +62,11 @@ function App() {
                   </A>
                 </div>
               </div>
-              <div class="overflow-hidden max-h-96 -mb-10">
+              <div class="overflow-hidden max-h-48 md:max-h-72 lg:max-h-96 -mb-10">
                 <img
                   src={screen}
                   alt="tech in Jos mobile display"
-                  class="w-48 md:w-80 float-right"
+                  class="w-60 mx-auto md:w-72 lg:w-80 lg:float-right"
                 />
               </div>
             </div>
