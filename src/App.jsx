@@ -22,7 +22,10 @@ function App() {
       });
       const result = await response.json();
       if (result.success) {
-        setIssue(result.response[0].issue_number);
+        // setIssue(result.response[0].issue_number);
+        navigate("/issue/" + result.response[0].issue_number, {
+          replace: true,
+        });
       }
     } catch (error) {
       console.error(error);
@@ -55,7 +58,8 @@ function App() {
                 </div>
                 <div class="my-12 lg:my-4 space-x-3">
                   <A
-                    href={"/issue/" + issue()}
+                    // href={"/issue/3" + issue()}
+                    href={"/issue/3"}
                     class="bg-red-600 text-white py-4 px-4 rounded hover:opacity-60"
                   >
                     Read the Latest Issue
