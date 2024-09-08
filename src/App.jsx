@@ -67,7 +67,7 @@ function App() {
                           href={"/issue/" + issue()}
                           class="bg-red-600 text-white py-4 px-4 rounded hover:opacity-60"
                         >
-                          Read the Latest Issue
+                          Read Latest Issue
                         </A>
                       </div>
                     </div>
