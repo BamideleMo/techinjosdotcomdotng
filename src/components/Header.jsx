@@ -90,7 +90,7 @@ function Header() {
               </svg>
             </div>
             <div>
-              <b>Please check your internet connection.</b>
+              <b>Please check your internet connection & refresh this page.</b>
             </div>
           </div>
         </div>
