@@ -47,7 +47,7 @@ function App() {
         <Header />
         <div class="pt-20 md:pt-24">
           <div class="w-full md:w-11/12 mx-auto bg-white pt-4 md:pt-12">
-            <div class="w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-2">
+            <div class="w-10/12 md:w-8/12 lg:w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-2">
               <Show
                 when={!issue()}
                 fallback={
@@ -55,7 +55,7 @@ function App() {
                     <div class="text-center lg:text-left">
                       <h1 class="uppercase">Weekly Newsletter</h1>
                       <h1 class="text-3xl md:text-4xl lg:text-5xl font-normal drop-shadow-lg">
-                        Focused on the tech ecosystem in Jos-Plateau state.
+                        Focused on the Tech Ecosystem in Jos-Plateau state.
                       </h1>
                       <div class="my-6 text-lg">
                         The most impactful stories of the week, distilled to
@@ -75,7 +75,7 @@ function App() {
                       <img
                         src={screen}
                         alt="tech in Jos mobile display"
-                        class="w-60 mx-auto md:w-72 lg:w-80 lg:float-right"
+                        class="max-w-60 mx-auto md:w-96 lg:w-80 lg:float-right"
                       />
                     </div>
                   </>

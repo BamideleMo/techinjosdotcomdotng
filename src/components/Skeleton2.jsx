@@ -2,7 +2,7 @@ import "css-skeletons";
 
 function Skeleton2() {
   return (
-    <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="grid grid-cols-1 gap-y-10 lg:gap-0 lg:grid-cols-2">
       <div>
         <div
           class="skeleton skeleton-line"

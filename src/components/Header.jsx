@@ -2,8 +2,10 @@ import { A } from "@solidjs/router";
 import Menu from "./Menu";
 import { createSignal } from "solid-js";
 import Logo from "./Logo";
+import network from "../assets/no-network.webp";
 
 function Header() {
+  console.log(navigator.onLine);
   const [menu, setMenu] = createSignal(false);
   const [block, setBlock] = createSignal(false);
   return (
@@ -70,6 +72,16 @@ function Header() {
           </div>
         </div>
       </div>
+      <Show when={!navigator.onLine}>
+        <div class="fixed w-full mx-auto z-50">
+          <div class="w-60 mx-auto bg-yellow-100 border border-yellow-300 p-3 mt-6 space-x-3 rounded-md text-xs flex">
+            <div class="w-7">
+              <img src={network} class="w-full" />
+            </div>
+            <div>Please check your internet connection.</div>
+          </div>
+        </div>
+      </Show>
     </>
   );
 }
