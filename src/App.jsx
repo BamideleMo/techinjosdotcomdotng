@@ -4,6 +4,7 @@ import { createSignal, createEffect, createResource } from "solid-js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import screen from "./assets/techINJos-mobile-screen.png";
+import Skeleton2 from "./components/Skeleton2";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -22,10 +23,10 @@ function App() {
       });
       const result = await response.json();
       if (result.success) {
-        // setIssue(result.response[0].issue_number);
-        navigate("/issue/" + result.response[0].issue_number, {
-          replace: true,
-        });
+        setIssue(result.response[0].issue_number);
+        // navigate("/issue/" + result.response[0].issue_number, {
+        //   replace: true,
+        // });
       }
     } catch (error) {
       console.error(error);
@@ -45,34 +46,47 @@ function App() {
       <div>
         <Header />
         <div class="pt-20 md:pt-24">
-          <div class="w-full md:w-11/12 mx-auto bg-white pt-4 md:pt-12 ">
+          <div class="w-full md:w-11/12 mx-auto bg-white pt-4 md:pt-12">
             <div class="w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-2">
-              <div class="text-center lg:text-left">
-                <h1 class="uppercase">Weekly Newsletter</h1>
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-normal drop-shadow-lg">
-                  Focused on the tech ecosystem in Jos-Plateau state.
-                </h1>
-                <div class="my-6 text-lg">
-                  The most impactful stories of the week, distilled to keep you
-                  informed of happenings in the tech scene in Jos-Plateau state.
+              <Show
+                when={!issue()}
+                fallback={
+                  <>
+                    <div class="text-center lg:text-left">
+                      <h1 class="uppercase">Weekly Newsletter</h1>
+                      <h1 class="text-3xl md:text-4xl lg:text-5xl font-normal drop-shadow-lg">
+                        Focused on the tech ecosystem in Jos-Plateau state.
+                      </h1>
+                      <div class="my-6 text-lg">
+                        The most impactful stories of the week, distilled to
+                        keep you informed of happenings in the tech scene in
+                        Jos-Plateau state.
+                      </div>
+                      <div class="my-12 lg:my-4 space-x-3">
+                        <A
+                          href={"/issue/" + issue()}
+                          class="bg-red-600 text-white py-4 px-4 rounded hover:opacity-60"
+                        >
+                          Read the Latest Issue
+                        </A>
+                      </div>
+                    </div>
+                    <div class="overflow-hidden max-h-48 md:max-h-72 lg:max-h-96 -mb-10">
+                      <img
+                        src={screen}
+                        alt="tech in Jos mobile display"
+                        class="w-60 mx-auto md:w-72 lg:w-80 lg:float-right"
+                      />
+                    </div>
+                  </>
+                }
+              >
+                {/* loading */}
+                <div class="lg:col-span-2">
+                  <Skeleton2 />
                 </div>
-                <div class="my-12 lg:my-4 space-x-3">
-                  <A
-                    // href={"/issue/3" + issue()}
-                    href={"/issue/3"}
-                    class="bg-red-600 text-white py-4 px-4 rounded hover:opacity-60"
-                  >
-                    Read the Latest Issue
-                  </A>
-                </div>
-              </div>
-              <div class="overflow-hidden max-h-48 md:max-h-72 lg:max-h-96 -mb-10">
-                <img
-                  src={screen}
-                  alt="tech in Jos mobile display"
-                  class="w-60 mx-auto md:w-72 lg:w-80 lg:float-right"
-                />
-              </div>
+                {/* loading */}
+              </Show>
             </div>
           </div>
         </div>
