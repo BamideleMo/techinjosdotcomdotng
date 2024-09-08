@@ -74,8 +74,11 @@ function Header() {
       </div>
       <Show when={!navigator.onLine}>
         <div class="fixed w-full mx-auto z-50">
-          <div class="w-60 mx-auto bg-yellow-100 border border-yellow-300 p-3 mt-6 space-x-3 rounded-md text-xs flex">
-            <div class="w-7">
+          <div
+            class="w-60 mx-auto bg-yellow-100 border border-yellow-300 p-3 
+          mt-6 space-x-1 rounded-md text-xs flex"
+          >
+            <div class="pt-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
