@@ -4,7 +4,6 @@ import { createSignal } from "solid-js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import screen from "./assets/techINJos-mobile-screen.png";
-import loading from "./assets/loading.gif";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
