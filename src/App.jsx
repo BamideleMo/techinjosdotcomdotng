@@ -73,7 +73,7 @@ function App() {
                     </span>
                   }
                 >
-                  <span class="mx-auto lg:mx-0 w-40 cursor-not-allowed bg-gray-900 text-white h-12 items-center flex px-4 rounded opacity-60">
+                  <span class="mx-auto lg:mx-0 w-40 cursor-not-allowed bg-black text-white h-12 items-center flex px-4 rounded">
                     <span class="animate-pulse mx-auto">Fetching.. .</span>
                   </span>
                 </Show>
