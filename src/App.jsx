@@ -71,11 +71,11 @@ function App() {
                       </A>
                     </div>
                   </div>
-                  <div class="overflow-hidden max-h-48 md:max-h-72 lg:max-h-96 -mb-10">
+                  <div class="overflow-hidden -mb-10">
                     <img
                       src={screen}
                       alt="tech in Jos mobile display"
-                      class="max-w-60 mx-auto md:w-96 lg:w-80 lg:float-right"
+                      class="w-60 mx-auto md:w-96 lg:w-80 lg:float-right"
                     />
                   </div>
                 </div>
