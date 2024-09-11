@@ -53,7 +53,7 @@ function App() {
                 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 
                drop-shadow-lg font-bold"
               >
-                Focused on the Tech Ecosystem in Jos-Plateau state.
+                Focused on the Tech Ecosystem in Jos, <br/>Plateau State.
               </h1>
               <div class="my-6 text-lg">
                 The most impactful stories of the week, distilled to keep you
@@ -74,7 +74,7 @@ function App() {
                   }
                 >
                   <span class="mx-auto lg:mx-0 w-40 cursor-not-allowed bg-black text-white h-12 items-center flex px-4 rounded">
-                    <span class="animate-pulse mx-auto">Fetching.. .</span>
+                    <span class="animate-pulse mx-auto">Wait.. .</span>
                   </span>
                 </Show>
               </div>
