@@ -1,11 +1,9 @@
-import { A, useNavigate, useParams, useSearchParams } from "@solidjs/router";
-import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
-import { createSignal, createEffect, createResource } from "solid-js";
+import { A, useNavigate } from "@solidjs/router";
+import { MetaProvider, Title, Meta } from "@solidjs/meta";
+import { createSignal, createEffect } from "solid-js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import screen from "./assets/techINJos-mobile-screen.png";
-import Skeleton2 from "./components/Skeleton2";
-import Logo from "./components/Logo";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
