@@ -51,7 +51,7 @@ function App() {
               <h1 class="uppercase">Weekly Newsletter</h1>
               <h1
                 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 
-              font-normal drop-shadow-lg leading-tight"
+               drop-shadow-lg font-bold"
               >
                 Focused on the Tech Ecosystem in Jos-Plateau state.
               </h1>
