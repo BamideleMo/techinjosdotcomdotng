@@ -56,7 +56,7 @@ function App() {
                 class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl 
                drop-shadow-lg font-bold"
               >
-                Focused on the Tech Ecosystem in Jos, <br />
+                Focused on the Tech Ecosystem in Jos, <br class="lg:hidden" />
                 Plateau State.
               </h1>
               <div class="my-6 text-lg">
