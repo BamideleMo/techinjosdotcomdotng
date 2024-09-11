@@ -62,7 +62,7 @@ function App() {
               </div>
               <div class="my-12 lg:my-4 space-x-3">
                 <Show
-                  when={!fetching()}
+                  when={fetching()}
                   fallback={
                     <span
                       onClick={() => {
