@@ -65,13 +65,13 @@ function App() {
                       onClick={() => {
                         latestIssue();
                       }}
-                      class="mx-auto lg:mx-0 w-44 text-center cursor-pointer bg-red-600 text-white h-12 items-center flex px-4 rounded hover:opacity-60"
+                      class="mx-auto lg:mx-0 w-40 text-center cursor-pointer bg-red-600 text-white h-12 items-center flex px-4 rounded hover:opacity-60"
                     >
                       Read Latest Issue
                     </span>
                   }
                 >
-                  <span class="mx-auto lg:mx-0 w-44 text-center cursor-not-allowed bg-red-600 text-white h-12 items-center flex px-4 rounded opacity-60">
+                  <span class="mx-auto lg:mx-0 w-40 text-center cursor-not-allowed bg-red-600 text-white h-12 items-center flex px-4 rounded opacity-60">
                     <img src={loading} class="w-6 mx-auto rounded-full" />
                   </span>
                 </Show>
