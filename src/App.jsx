@@ -71,7 +71,7 @@ function App() {
                       onClick={() => {
                         latestIssue();
                       }}
-                      class="mx-auto lg:mx-0 w-40 cursor-pointer bg-red-600 text-white h-12 items-center flex px-4 rounded hover:opacity-60"
+                      class="mx-auto lg:mx-0 w-40 cursor-pointer bg-red-600 text-white h-12 items-center flex px-4 rounded hover:opacity-60 text-sm"
                     >
                       Read Latest Issue
                     </span>
