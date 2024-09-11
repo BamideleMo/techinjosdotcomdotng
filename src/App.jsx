@@ -50,7 +50,10 @@ function App() {
           <div class="w-10/12 md:w-8/12 lg:w-10/12 mx-auto grid grid-cols-1 lg:grid-cols-2">
             <div class="text-center lg:text-left">
               <h1 class="uppercase">Weekly Newsletter</h1>
-              <h1 class="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-normal drop-shadow-lg">
+              <h1
+                class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl 
+              font-normal drop-shadow-lg leading-tight"
+              >
                 Focused on the Tech Ecosystem in Jos-Plateau state.
               </h1>
               <div class="my-6 text-lg">
@@ -59,20 +62,20 @@ function App() {
               </div>
               <div class="my-12 lg:my-4 space-x-3">
                 <Show
-                  when={fetching()}
+                  when={!fetching()}
                   fallback={
                     <span
                       onClick={() => {
                         latestIssue();
                       }}
-                      class="mx-auto lg:mx-0 w-40 text-center cursor-pointer bg-red-600 text-white h-12 items-center flex px-4 rounded hover:opacity-60"
+                      class="mx-auto lg:mx-0 w-40 cursor-pointer bg-red-600 text-white h-12 items-center flex px-4 rounded hover:opacity-60"
                     >
                       Read Latest Issue
                     </span>
                   }
                 >
-                  <span class="mx-auto lg:mx-0 w-40 text-center cursor-not-allowed bg-red-600 text-white h-12 items-center flex px-4 rounded opacity-60">
-                    <img src={loading} class="w-6 mx-auto rounded-full" />
+                  <span class="mx-auto lg:mx-0 w-40 cursor-not-allowed bg-gray-900 text-white h-12 items-center flex px-4 rounded opacity-60">
+                    <span class="animate-pulse mx-auto">Fetching.. .</span>
                   </span>
                 </Show>
               </div>
