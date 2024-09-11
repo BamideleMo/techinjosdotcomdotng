@@ -1,8 +1,7 @@
-import { A } from "@solidjs/router";
+
 import Menu from "./Menu";
 import { createSignal } from "solid-js";
 import Logo from "./Logo";
-import network from "../assets/no-network.webp";
 
 function Header() {
   console.log(navigator.onLine);
