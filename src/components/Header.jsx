@@ -64,7 +64,7 @@ function Header() {
         <div class="w-full md:w-11/12 mx-auto px-2 md:px-0 py-1 lg:py-4 flex justify-between border-b border-black">
           <Logo />
           <div class="flex space-x-6">
-            <div class="pt-3 lg:pt-0.5 text-sm">
+            <div class="pt-1.5 md:pt-1.5 lg:pt-0.5 text-sm">
               <Show
                 when={fetching()}
                 fallback={
