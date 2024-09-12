@@ -3,6 +3,8 @@ import { createSignal } from "solid-js";
 import Logo from "./Logo";
 import { useNavigate } from "@solidjs/router";
 
+const VITE_API_URL = import.meta.env["VITE_API_URL"];
+
 function Header() {
   const [menu, setMenu] = createSignal(false);
   const navigate = useNavigate();
