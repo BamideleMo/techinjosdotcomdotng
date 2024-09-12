@@ -56,14 +56,14 @@ function App() {
                 class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl 
                drop-shadow-lg font-bold"
               >
-                Focused on the Tech Ecosystem in Jos, <br class="lg:hidden" />
+                Focused on the Tech Ecosystem in Jos, <br class="md:hidden" />
                 Plateau State.
               </h1>
-              <div class="my-6 text-lg">
+              <div class="my-6 md:px-8 lg:px-0 text-lg">
                 The most impactful stories of the week, distilled to keep you
                 informed of happenings in the tech scene in Jos-Plateau state.
               </div>
-              <div class="my-12 lg:my-4 space-x-3">
+              <div class="mb-12 lg:my-4 space-x-3 text-sm">
                 <Show
                   when={fetching()}
                   fallback={
@@ -71,14 +71,17 @@ function App() {
                       onClick={() => {
                         latestIssue();
                       }}
-                      class="mx-auto lg:mx-0 w-40 cursor-pointer bg-red-600 text-white h-12 items-center flex px-4 rounded hover:opacity-60 text-sm"
+                      class="mx-auto lg:mx-0 w-fit md:w-40 cursor-pointer bg-red-600 text-white h-12 border border-red-600 text-center items-center flex px-4 rounded hover:bg-white hover:text-red-600 text-sm"
                     >
                       Read Latest Issue
                     </span>
                   }
                 >
-                  <span class="mx-auto lg:mx-0 w-40 cursor-not-allowed bg-black text-white h-12 items-center flex px-4 rounded">
-                    <span class="animate-pulse mx-auto">Wait.. .</span>
+                  <span class="mx-auto lg:mx-0 w-40 cursor-wait border border-red-600 bg-red-600 opacity-60 text-white h-12 items-center flex px-4 rounded">
+                    <span>Fetching..</span>
+                    <span class="animate-spin mx-auto w-4 h-4 bg-transparent border-2 border-white rounded">
+                      &nbsp;
+                    </span>
                   </span>
                 </Show>
               </div>

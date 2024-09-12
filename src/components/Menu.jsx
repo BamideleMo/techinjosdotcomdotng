@@ -22,7 +22,7 @@ function Menu() {
         <a
           target="_blank"
           href="https://whatsapp.com/channel/0029VaEVLBHBfxoG5GZxz72v"
-          class="p-2 border border-black rounded-full hover:bg-black hover:text-white"
+          class="p-2 border border-black rounded hover:bg-black hover:text-white"
         >
           Join WhatsApp Channel
         </a>
