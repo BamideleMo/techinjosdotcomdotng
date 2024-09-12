@@ -23,9 +23,7 @@ function Header() {
       });
       const result = await response.json();
       if (result.success) {
-        navigate("/issue/" + result.response[0].issue_number, {
-          replace: true,
-        });
+        window.location.replace("/issue/" + result.response[0].issue_number);
       }
     } catch (error) {
       console.error(error);
@@ -111,7 +109,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <Show when={!navigator.onLine}>
+      <Show when={navigator.onLine}>
         <div class="fixed w-full mx-auto z-50">
           <div
             class="w-60 mx-auto bg-yellow-100 border border-yellow-300 p-3 
