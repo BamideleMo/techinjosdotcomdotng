@@ -77,7 +77,7 @@ function Header() {
                 }
               >
                 <span
-                  class="w-fit flex space-x-2 text-red-600 opacity-60 
+                  class="w-fit flex space-x-1 text-red-600 opacity-60 
                 cursor-wait"
                 >
                   <span>Fetching..</span>
