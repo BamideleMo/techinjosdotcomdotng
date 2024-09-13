@@ -78,7 +78,7 @@ function Header() {
               >
                 <span class="w-fit flex space-x-2 text-sm text-white opacity-60 cursor-wait p-2 border border-red-600 bg-red-600 rounded">
                   <span>Fetching..</span>
-                  <span class="animate-spin w-3 h-3 bg-white mt-1 rounded border-2 border-white bg-transparent">
+                  <span class="animate-spin w-3 h-3 mt-1 rounded border-2 border-white bg-transparent">
                     &nbsp;
                   </span>
                 </span>
