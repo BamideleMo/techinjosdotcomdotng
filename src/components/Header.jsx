@@ -62,7 +62,7 @@ function Header() {
         <div class="w-full md:w-11/12 mx-auto px-2 md:px-0 py-1 lg:py-4 flex justify-between border-b border-black">
           <Logo />
           <div class="flex space-x-6">
-            <div class="pt-1.5 md:pt-1.5 lg:pt-0.5 text-sm">
+            <div class="text-base lg:text-sm pt-3">
               <Show
                 when={fetching()}
                 fallback={
@@ -70,15 +70,18 @@ function Header() {
                     onClick={() => {
                       latestIssue();
                     }}
-                    class="text-sm flex text-white cursor-pointer p-2 border border-red-600 bg-red-600 rounded hover:bg-white hover:text-red-600"
+                    class="text-red-600 cursor-pointer hover:opacity-60"
                   >
                     Latest Issue
                   </span>
                 }
               >
-                <span class="w-fit flex space-x-2 text-sm text-white opacity-60 cursor-wait p-2 border border-red-600 bg-red-600 rounded">
+                <span
+                  class="w-fit flex space-x-2 text-red-600 opacity-60 
+                cursor-wait"
+                >
                   <span>Fetching..</span>
-                  <span class="animate-spin w-3 h-3 mt-1 rounded border-2 border-white bg-transparent">
+                  <span class="animate-spin w-3 h-3 mt-2 lg:mt-1 rounded border-2 border-red-600 bg-transparent">
                     &nbsp;
                   </span>
                 </span>
