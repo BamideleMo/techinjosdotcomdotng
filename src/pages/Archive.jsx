@@ -76,7 +76,7 @@ function Archive() {
                                 <div class="md:my-1 font-semibold text-blue-600 text-sm">
                                   Issue #{post.issue_number}
                                 </div>
-                                <div class="text-sm leading-tight">
+                                <div class="text-sm leading-tight font-bold">
                                   <A
                                     href={"/issue/" + post.issue_number}
                                     class="text-gray-800 hover:border-b border-red-600"
