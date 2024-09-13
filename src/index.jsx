@@ -12,6 +12,7 @@ import Issue from "./pages/Issue";
 import ReadPost from "./pages/Post";
 import PostMetaImage from "./pages/admin/PostMetaImage";
 import NotFound from "./pages/NotFound";
+import Archive from "./pages/Archive";
 
 const root = document.getElementById("root");
 
@@ -27,6 +28,7 @@ render(
       <Route path="/" component={App} />
       <Route path="/about" component={About} />
       <Route path="/advertise" component={Advertise} />
+      <Route path="/archive" component={Archive} />
       <Route path="/issue/:issueNumber" component={Issue} />
       <Route path="/post/:id" component={ReadPost} />
       <Route path="/a/login" component={Login} />
