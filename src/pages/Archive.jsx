@@ -51,9 +51,9 @@ function Archive() {
                   Explore Our Archives
                 </h2>
                 <p class="text-sm">
-                  Browse our collection of past issues to discover valuable
-                  insights, trends, and information. Our archives contain a
-                  wealth of knowledge and experiences, for your convenience.
+                  Browse past issues to discover valuable insights, trends, and
+                  information. Our archives contain a wealth of knowledge and
+                  experiences, for your convenience.
                 </p>
               </div>
               <div class="my-6 pb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -66,7 +66,7 @@ function Archive() {
                           <div class=" bg-white p-2 md:p-6">
                             <div class="grid grid-cols-2 md:grid-cols-1 gap-1">
                               <div>
-                                <img src={post.url} />
+                                <img src={post.url} class="border border-black" />
                               </div>
                               <div>
                                 <div class="md:my-1 font-semibold text-blue-600 text-sm">
