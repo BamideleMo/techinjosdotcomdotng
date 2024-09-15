@@ -3,7 +3,7 @@ import { MetaProvider, Title, Meta } from "@solidjs/meta";
 import { createSignal } from "solid-js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import screen from "./assets/techINJos-mobile-screen.png";
+import screen from "./assets/techINJos-mobile-screen.webp";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -86,11 +86,11 @@ function App() {
                 </Show>
               </div>
             </div>
-            <div class="overflow-hidden border-b border-yellow-300 h-96 bg-white">
+            <div class="overflow-hidden border-b border-yellow-300 md:h-96 bg-white">
               <img
                 src={screen}
                 alt="tech in Jos mobile display"
-                class="mx-auto lg:float-right"
+                class="w-60 md:w-fit mx-auto lg:float-right"
               />
             </div>
           </div>
