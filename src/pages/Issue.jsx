@@ -119,7 +119,7 @@ function Issue() {
                           px-2 md:px-6 py-4 text-xs flex justify-between"
                           >
                             <div></div>
-                            <div class="flex space-x-4">
+                            <div class="shares flex space-x-4">
                               <a
                                 target="_blank"
                                 href={
