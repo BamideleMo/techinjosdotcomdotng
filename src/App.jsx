@@ -86,7 +86,7 @@ function App() {
                 </Show>
               </div>
             </div>
-            <div class="overflow-hidden border-b border-yellow-300 h-80 md:h-96 bg-white">
+            <div class="overflow-hidden border-b border-yellow-300 h-72 md:h-96 bg-white">
               <img
                 src={screen}
                 alt="tech in Jos mobile display"
