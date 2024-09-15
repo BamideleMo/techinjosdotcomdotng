@@ -175,7 +175,7 @@ function Issue() {
                             Stay tuned!
                           </span>
                         </p>
-                        <p class="text-xl">
+                        <p class="">
                           Join the techINJos Newsletter WhatsApp Channel so you
                           never get to miss any issue & for Quick Access to more
                           Updates from Jos' Tech Ecosystem.
