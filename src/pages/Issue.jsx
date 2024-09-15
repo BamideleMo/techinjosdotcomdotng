@@ -169,6 +169,29 @@ function Issue() {
                     </For>
 
                     <div class="mb-12 bg-white p-2 md:p-6">
+                      <div class="rounded-lg border-2 border-dashed border-violet-600 p-4 space-y-6">
+                        <p>
+                          <span class="bg-violet-600 text-white p-2">
+                            Stay tuned!
+                          </span>
+                        </p>
+                        <p class="text-xl">
+                          Join the techINJos Newsletter WhatsApp Channel so you
+                          never get to miss any issue & for Quick Access to more
+                          Updates from Jos' Tech Ecosystem.
+                        </p>
+                        <p>
+                          <a
+                            href="https://whatsapp.com/channel/0029VaEVLBHBfxoG5GZxz72v"
+                            target="_blank"
+                          >
+                            Click here to join
+                          </a>
+                          .
+                        </p>
+                      </div>
+                    </div>
+                    <div class="mb-12 bg-white p-2 md:p-6">
                       <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                         <span class="bg-orange-300 p-1">Share techINJos</span>
                       </h2>

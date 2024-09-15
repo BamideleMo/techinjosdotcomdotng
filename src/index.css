@@ -14,8 +14,7 @@ body {
   font-style: normal;
 }
 .name, .content p a, .content p a span, .content li a span{
-  color: #000000 !important;
-  border-bottom: #ff0000 solid 1px;
+  color: #0158bb !important;
 }
 
 .content .green{
