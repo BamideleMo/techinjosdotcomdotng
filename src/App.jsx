@@ -3,7 +3,7 @@ import { MetaProvider, Title, Meta } from "@solidjs/meta";
 import { createSignal } from "solid-js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import screen from "./assets/techINJos-mobile-screen.webp";
+import screen from "./assets/techINJos-mobile-screen.svg";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
