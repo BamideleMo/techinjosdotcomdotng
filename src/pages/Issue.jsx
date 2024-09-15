@@ -176,9 +176,9 @@ function Issue() {
                           </span>
                         </p>
                         <p class="">
-                          Join the techINJos Newsletter WhatsApp Channel so you
-                          never get to miss any issue & for Quick Access to more
-                          Updates from Jos' Tech Ecosystem.
+                          Join our WhatsApp Channel so you never get to miss any
+                          issue & for Quick Access to more Updates from Jos'
+                          Tech Ecosystem.
                         </p>
                         <p>
                           <a
