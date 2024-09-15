@@ -171,7 +171,7 @@ function Issue() {
                     <div class="mb-12 bg-white p-2 md:p-6">
                       <div class="rounded-lg border-2 border-dashed border-violet-600 p-4 space-y-6">
                         <p>
-                          <span class="bg-violet-600 text-white p-2">
+                          <span class="bg-violet-600 text-white p-1">
                             Stay tuned!
                           </span>
                         </p>
