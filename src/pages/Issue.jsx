@@ -15,7 +15,6 @@ const VITE_API_URL = import.meta.env["VITE_API_URL"];
 function Issue() {
   const params = useParams();
   const [issue, setIssue] = createStore([]);
-  const [issueNumber, setIssueNumber] = createSignal();
 
   const issueDetails = async () => {
     console.log(params.issueNumber);
@@ -34,7 +33,6 @@ function Issue() {
     if (result.success) {
       await getPrevIssue();
       await getNextIssue();
-      setIssueNumber(result.response[0].issue_number);
       setIssue(result.response);
     }
 
