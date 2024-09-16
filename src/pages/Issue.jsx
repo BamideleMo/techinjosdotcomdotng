@@ -167,15 +167,15 @@ function Issue() {
                     </For>
 
                     <div class="mb-12 bg-white p-2 md:p-6">
-                      <div class="rounded-lg border-2 border-dashed border-violet-600 p-4 space-y-6">
+                      <div class="rounded-lg border-2 border-dashed bg-violet-200 drop-shadow-lg border-violet-600 p-4 space-y-6">
                         <p>
-                          <span class="bg-violet-600 text-white p-1">
-                            Stay tuned!
+                          <span class="text-base md:text-xl text-violet-700 border border-violet-700 bg-white p-1">
+                            📺 Stay Tuned!
                           </span>
                         </p>
                         <p class="">
                           Join our WhatsApp Channel so you never get to miss any
-                          issue & for Quick Access to more Updates from Jos'
+                          Issue & for Quick Access to more Updates from Jos'
                           Tech Ecosystem.
                         </p>
                         <p>
