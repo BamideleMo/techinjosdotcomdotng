@@ -167,7 +167,7 @@ function Issue() {
                     </For>
 
                     <div class="mb-12 bg-white p-2 md:p-6">
-                      <div class="rounded-lg border-2 border-dashed bg-violet-200 drop-shadow-lg border-violet-600 p-4 space-y-6">
+                      <div class="rounded-lg border-2 border-dashed bg-violet-100 drop-shadow-lg border-violet-600 p-4 space-y-6">
                         <p>
                           <span class="text-base md:text-xl text-violet-700 border border-violet-700 bg-white p-1">
                             📺 Stay Tuned!
