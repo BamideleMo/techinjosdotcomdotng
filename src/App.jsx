@@ -1,5 +1,5 @@
 import { A, useNavigate } from "@solidjs/router";
-import { MetaProvider, Title, Meta } from "@solidjs/meta";
+import { MetaProvider, Title, Meta, Link } from "@solidjs/meta";
 import { createSignal } from "solid-js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -43,6 +43,7 @@ function App() {
         name="description"
         content="Tech newsletter focused on Jos, Plateau state!"
       ></Meta>
+      <Link rel="preload" as="image" href={screen}></Link>
       <Header />
       <div class="pt-20 md:pt-24">
         <div class="w-full md:w-11/12 mx-auto bg-white pt-4 md:pt-12">
@@ -92,13 +93,6 @@ function App() {
                 alt="tech in Jos mobile display"
                 class="w-fit mx-auto lg:float-right"
               />
-              {/* <img
-                src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcGjgZsNEhCiKtB02wJcMOwTH36-XEcIdu9GPk2byC1LG6A9sEuOAoUQz_PiyL3khzUsLZkByFZEJ-fAcmAO6nE9egq9pCIvkWZ6gmcjTEr7YO7_4pclVnjzPuK8r3ro8GToDoqZaW1LIO4t4H8qq1gsMg?key=yH42z1VQJJP_mSjoo6nvvw"
-                alt="tech in Jos mobile display"
-                width="344"
-                height="494"
-                class="mx-auto lg:float-right"
-              /> */}
             </div>
           </div>
         </div>
