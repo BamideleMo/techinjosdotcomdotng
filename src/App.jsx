@@ -94,6 +94,7 @@ function App() {
               /> */}
               <img
                 src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcGjgZsNEhCiKtB02wJcMOwTH36-XEcIdu9GPk2byC1LG6A9sEuOAoUQz_PiyL3khzUsLZkByFZEJ-fAcmAO6nE9egq9pCIvkWZ6gmcjTEr7YO7_4pclVnjzPuK8r3ro8GToDoqZaW1LIO4t4H8qq1gsMg?key=yH42z1VQJJP_mSjoo6nvvw"
+                alt="tech in Jos mobile display"
                 width="344"
                 height="494"
                 class="mx-auto lg:float-right"
