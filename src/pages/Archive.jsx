@@ -73,7 +73,7 @@ function Archive() {
                                 />
                               </div>
                               <div>
-                                <div class="md:my-1 font-semibold text-text-600 text-sm">
+                                <div class="md:my-1 font-semibold text-red-600 text-sm">
                                   Issue #{post.issue_number}
                                 </div>
                                 <div class="text-sm leading-tight font-bold">
