@@ -69,7 +69,7 @@ function Archive() {
                                 <img
                                   src={post.url}
                                   alt={"Image: Issue # " + post.issue_number}
-                                  class="border border-black"
+                                  class="rounded-lg"
                                 />
                               </div>
                               <div>
