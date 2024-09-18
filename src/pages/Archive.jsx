@@ -45,7 +45,7 @@ function Archive() {
             <div class="content md:w-10/12 lg:w-6/12 2xl:w-5/12 mx-auto">
               <div class="bg-white p-2 md:p-6">
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-red-300 p-1">Archive</span>
+                  <span class="bg-blue-300 p-1">Archive</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-bold">
                   Explore Our Archives
