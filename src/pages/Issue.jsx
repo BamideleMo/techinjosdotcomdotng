@@ -16,7 +16,6 @@ function Issue() {
   const params = useParams();
   const [issue, setIssue] = createStore([]);
 
-
   const issueDetails = async () => {
     const response = await fetch(
       VITE_API_URL + "/open/view-posts/" + params.issueNumber,
@@ -56,7 +55,7 @@ function Issue() {
     const result = await response.json();
     if (result.response.length > 0) {
       setNextIssue(true);
-      setNextSlug(result.response[0].slug)
+      setNextSlug(result.response[0].slug);
     }
   };
 
@@ -175,9 +174,11 @@ function Issue() {
                     <div class="mb-12 bg-white p-2 md:p-6">
                       <div class="rounded-lg border-2 border-dashed border-blue-600 p-4 space-y-6">
                         <p>
-                          <span class="text-base md:text-xl 
-                          text-blue-700 bg-white p-1">
-                          👋🏾 Are you on WhatsApp?
+                          <span
+                            class="text-base md:text-xl 
+                          text-blue-700 bg-white p-1"
+                          >
+                            👋🏾 Are you on WhatsApp?
                           </span>
                         </p>
                         <p class="">
@@ -340,19 +341,20 @@ function Issue() {
                   d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
-              <span>PREVIOUS NEWSLETTER</span>
+              <span>PREVIOUS</span>
             </span>
           </Show>
           <Show when={nextIssue()} fallback={<div>.</div>}>
             <span
               onClick={() => {
                 window.location.replace(
-                  "/newsletter/" + (parseInt(params.issueNumber) + 1+"/"+nextSlug())
+                  "/newsletter/" +
+                    (parseInt(params.issueNumber) + 1 + "/" + nextSlug())
                 );
               }}
               class="flex space-x-1 cursor-pointer hover:text-red-600"
             >
-              <span>NEXT NEWSLETTER</span>
+              <span>NEXT</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
