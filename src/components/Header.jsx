@@ -86,7 +86,7 @@ function Header() {
                 cursor-wait"
                 >
                   <span>Fetching Latest</span>
-                  <span class="animate-spin w-3 h-3 mt-1 md:mt-1 rounded border-2 border-red-600 bg-transparent">
+                  <span class="animate-spin w-3 h-3 mt-1.5 md:mt-1 rounded border-2 border-red-600 bg-transparent">
                     &nbsp;
                   </span>
                 </span>
