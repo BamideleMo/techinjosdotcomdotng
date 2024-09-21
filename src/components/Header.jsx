@@ -66,8 +66,8 @@ function Header() {
       <div class="fixed z-40 w-full bg-white">
         <div class="w-full md:w-11/12 mx-auto px-2 md:px-0 py-1 lg:py-4 flex justify-between border-b border-black">
           <Logo />
-          <div class="flex space-x-6">
-            <div class="text-base lg:text-sm pt-3">
+          <div class="flex space-x-2 md:space-x-6">
+            <div class="text-base lg:text-sm pt-3 font-semibold">
               <Show
                 when={fetching()}
                 fallback={
@@ -86,7 +86,7 @@ function Header() {
                 cursor-wait"
                 >
                   <span>Fetching Latest</span>
-                  <span class="animate-spin w-3 h-3 mt-2 md:mt-1 rounded border-2 border-red-600 bg-transparent">
+                  <span class="animate-spin w-3 h-3 mt-1 md:mt-1 rounded border-2 border-red-600 bg-transparent">
                     &nbsp;
                   </span>
                 </span>
