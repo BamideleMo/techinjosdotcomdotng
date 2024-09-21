@@ -27,12 +27,6 @@ function Menu() {
           Join WhatsApp Channel
         </a>
       </li>
-
-      <li>
-        <A href="/archive" class="hover:opacity-60">
-          Archive
-        </A>
-      </li>
       <li class="flex lg:hidden justify-center space-x-6">
         <a
           href="https://www.facebook.com/techINJos"

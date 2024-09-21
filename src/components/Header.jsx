@@ -23,7 +23,12 @@ function Header() {
       });
       const result = await response.json();
       if (result.success) {
-        window.location.replace("/issue/" + result.response[0].issue_number);
+        window.location.replace(
+          "/newsletter/" +
+            result.response[0].issue_number +
+            "/" +
+            result.response[0].slug
+        );
       }
     } catch (error) {
       console.error(error);
@@ -62,7 +67,7 @@ function Header() {
         <div class="w-full md:w-11/12 mx-auto px-2 md:px-0 py-1 lg:py-4 flex justify-between border-b border-black">
           <Logo />
           <div class="flex space-x-6">
-            <div class="text-base font-bold lg:text-sm pt-3">
+            <div class="text-base lg:text-sm pt-3">
               <Show
                 when={fetching()}
                 fallback={
@@ -72,7 +77,7 @@ function Header() {
                     }}
                     class="text-red-600 cursor-pointer hover:opacity-60"
                   >
-                    Latest Issue
+                    Latest Newsletter
                   </span>
                 }
               >
@@ -80,8 +85,8 @@ function Header() {
                   class="w-fit flex space-x-1 text-red-600 opacity-60 
                 cursor-wait"
                 >
-                  <span>Fetching..</span>
-                  <span class="animate-spin w-3 h-3 mt-2 lg:mt-1 rounded border-2 border-red-600 bg-transparent">
+                  <span>Fetching Latest</span>
+                  <span class="animate-spin w-3 h-3 mt-2 md:mt-1 rounded border-2 border-red-600 bg-transparent">
                     &nbsp;
                   </span>
                 </span>

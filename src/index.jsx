@@ -29,8 +29,8 @@ render(
       <Route path="/about" component={About} />
       <Route path="/advertise" component={Advertise} />
       <Route path="/archive" component={Archive} />
-      <Route path="/issue/:issueNumber" component={Issue} />
-      <Route path="/post/:id" component={ReadPost} />
+      <Route path="/newsletter/:issueNumber/:slug" component={Issue} />
+      <Route path="/:slug" component={ReadPost} />
       <Route path="/a/login" component={Login} />
       <Route path="/a/post" component={Post} />
       <Route path="/a/post-image" component={PostMetaImage} />

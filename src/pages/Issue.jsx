@@ -16,8 +16,8 @@ function Issue() {
   const params = useParams();
   const [issue, setIssue] = createStore([]);
 
+
   const issueDetails = async () => {
-    console.log(params.issueNumber);
     const response = await fetch(
       VITE_API_URL + "/open/view-posts/" + params.issueNumber,
       {
@@ -42,6 +42,7 @@ function Issue() {
   };
 
   const [nextIssue, setNextIssue] = createSignal(false);
+  const [nextSlug, setNextSlug] = createSignal(false);
   const getNextIssue = async () => {
     var v = parseInt(params.issueNumber) + 1;
     const response = await fetch(VITE_API_URL + "/open/view-posts/" + v, {
@@ -55,10 +56,12 @@ function Issue() {
     const result = await response.json();
     if (result.response.length > 0) {
       setNextIssue(true);
+      setNextSlug(result.response[0].slug)
     }
   };
 
   const [prevIssue, setPrevIssue] = createSignal(false);
+  const [prevSlug, setPrevSlug] = createSignal(false);
   const getPrevIssue = async () => {
     var v = parseInt(params.issueNumber) - 1;
     const response = await fetch(VITE_API_URL + "/open/view-posts/" + v, {
@@ -72,6 +75,7 @@ function Issue() {
     const result = await response.json();
     if (result.response.length > 0) {
       setPrevIssue(true);
+      setPrevSlug(result.response[0].slug);
     }
   };
 
@@ -79,7 +83,9 @@ function Issue() {
   return (
     <MetaProvider>
       <Title>
-        {params.issueNumber ? "Issue #" + params.issueNumber + " -" : "Read "}{" "}
+        {params.issueNumber
+          ? "Newsletter #" + params.issueNumber + " -"
+          : "Read "}{" "}
         Tech in Jos Newsletter
       </Title>
       <Meta
@@ -124,8 +130,8 @@ function Issue() {
                                   "https://twitter.com/intent/tweet?text=" +
                                   encodeURI(
                                     post.shareable +
-                                      " 🤖 https://techinjos.com.ng/post/" +
-                                      post.id
+                                      " 🤖 https://techinjos.com.ng/" +
+                                      post.slug
                                   )
                                 }
                                 class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
@@ -145,8 +151,8 @@ function Issue() {
                                   "https://wa.me/?text=" +
                                   encodeURI(
                                     post.shareable +
-                                      " 🤖 https://techinjos.com.ng/post/" +
-                                      post.id
+                                      " 🤖 https://techinjos.com.ng/" +
+                                      post.slug
                                   )
                                 }
                                 class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
@@ -167,25 +173,25 @@ function Issue() {
                     </For>
 
                     <div class="mb-12 bg-white p-2 md:p-6">
-                      <div class="rounded-lg border-2 border-dashed bg-violet-100 drop-shadow-lg border-violet-600 p-4 space-y-6">
+                      <div class="rounded-lg border-2 border-dashed border-blue-600 p-4 space-y-6">
                         <p>
-                          <span class="text-base md:text-xl text-violet-700 border border-violet-700 bg-white p-1">
-                            📺 Stay Tuned!
+                          <span class="text-base md:text-xl 
+                          text-blue-700 bg-white p-1">
+                          👋🏾 Are you on WhatsApp?
                           </span>
                         </p>
                         <p class="">
                           Join our WhatsApp Channel so you never get to miss any
-                          Issue & for Quick Access to more Updates from Jos'
-                          Tech Ecosystem.
+                          Newsletter & for Quick Access to more Updates from
+                          Jos' Tech Ecosystem.
                         </p>
                         <p>
                           <a
                             href="https://whatsapp.com/channel/0029VaEVLBHBfxoG5GZxz72v"
                             target="_blank"
                           >
-                            Click here to join
+                            Join now
                           </a>
-                          .
                         </p>
                       </div>
                     </div>
@@ -206,7 +212,7 @@ function Issue() {
                               )
                             }
                           >
-                            send him/her a WhatsApp message now
+                            send a WhatsApp chat now
                           </a>
                           !
                         </p>
@@ -249,8 +255,8 @@ function Issue() {
                       <div class="space-y-6 text-base">
                         <p>
                           Whether you have news you'd like us to publish in the
-                          next issue, a suggestion, a comment, or a concern, we
-                          want to hear from you. Send email now to:{" "}
+                          next newsletter, a suggestion, a comment, or a
+                          concern, we want to hear from you. Send email now to:{" "}
                           <a
                             href="mailto:techinjosnewsletter@gmail.com"
                             class="name"
@@ -260,7 +266,7 @@ function Issue() {
                         </p>
                         <p>
                           <b>Remember:</b>
-                          <br /> We'll publish another issue{" "}
+                          <br /> We'll publish another newsletter{" "}
                           <b>next Sunday afternoon</b>. See you then!
                         </p>
                       </div>
@@ -310,11 +316,12 @@ function Issue() {
           </div>
         </div>
         <div class="w-11/12 mx-auto my-10 py-4 flex justify-between border-t border-black">
-          <Show when={prevIssue()}>
+          <Show when={prevIssue()} fallback={<div>.</div>}>
             <span
               onClick={() => {
                 window.location.replace(
-                  "/issue/" + (parseInt(params.issueNumber) - 1)
+                  "/newsletter/" +
+                    (parseInt(params.issueNumber) - 1 + "/" + prevSlug())
                 );
               }}
               class="flex space-x-1 cursor-pointer hover:text-red-600"
@@ -333,19 +340,19 @@ function Issue() {
                   d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                 />
               </svg>
-              <span>PREVIOUS</span>
+              <span>PREVIOUS NEWSLETTER</span>
             </span>
           </Show>
-          <Show when={nextIssue()}>
+          <Show when={nextIssue()} fallback={<div>.</div>}>
             <span
               onClick={() => {
                 window.location.replace(
-                  "/issue/" + (parseInt(params.issueNumber) + 1)
+                  "/newsletter/" + (parseInt(params.issueNumber) + 1+"/"+nextSlug())
                 );
               }}
               class="flex space-x-1 cursor-pointer hover:text-red-600"
             >
-              <span>NEXT</span>
+              <span>NEXT NEWSLETTER</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

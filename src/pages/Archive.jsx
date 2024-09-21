@@ -56,15 +56,15 @@ function Archive() {
                   experiences, for your convenience.
                 </p>
               </div>
-              <div class="my-6 pb-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="my-6 pb-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Show
                   when={resource.loading}
                   fallback={
                     <>
                       <For each={resource().issue}>
                         {(post, i) => (
-                          <div class=" bg-white p-2 md:p-6">
-                            <div class="grid grid-cols-2 md:grid-cols-1 gap-1">
+                          <div class=" bg-white p-2 sm:p-6">
+                            <div class="grid grid-cols-2 sm:grid-cols-1 gap-1">
                               <div>
                                 <img
                                   src={post.url}
@@ -73,12 +73,12 @@ function Archive() {
                                 />
                               </div>
                               <div>
-                                <div class="md:my-1 font-semibold text-red-600 text-sm">
-                                  Issue #{post.issue_number}
+                                <div class="sm:my-1 font-semibold text-red-600 text-sm">
+                                  Newsletter #{post.issue_number}
                                 </div>
-                                <div class="text-sm leading-tight font-bold">
+                                <div class="text-sm md:text-base leading-tight font-bold">
                                   <A
-                                    href={"/issue/" + post.issue_number}
+                                    href={"/newsletter/" + post.issue_number+"/"+ post.seo_link}
                                     class="text-gray-800 hover:border-b border-red-600"
                                   >
                                     {post.description}

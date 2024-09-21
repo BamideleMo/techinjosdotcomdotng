@@ -16,7 +16,7 @@ function Post() {
   const [topic, setTopic] = createSignal();
 
   const postDetails = async () => {
-    const response = await fetch(VITE_API_URL + "/open/post/" + params.id, {
+    const response = await fetch(VITE_API_URL + "/open/post/" + params.slug, {
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
@@ -100,16 +100,6 @@ function Post() {
                           </div>
                           <div class="pt-1.5">Share on WhatsApp</div>
                         </a>
-                      </div>
-                    </div>
-                    <div class="p-2 lg:p-0">
-                      <div class="bg-blue-100 border border-blue-200 p-6 rounded shadow-lg">
-                        <p>
-                          This post is a section of{" "}
-                          <b>Issue #{post.issue_number}</b> of the techINJos
-                          Weekly Newsletter. See the newsletter:{" "}
-                          <A href={"/issue/" + post.issue_number}>Click here</A>
-                        </p>
                       </div>
                     </div>
                   </>

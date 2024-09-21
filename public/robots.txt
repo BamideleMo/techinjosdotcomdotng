@@ -7,4 +7,3 @@ Allow: /post
 Allow: /issue
 Allow: /about
 Allow: /advertise
-Allow: /archive

@@ -59,6 +59,12 @@ function Post() {
       post_bg: formData().post_bg,
       post_topic: formData().post_topic,
       shareable: formData().shareable,
+      slug: formData()
+        .shareable.toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, "")
+        .replace(/[\s_-]+/g, "-")
+        .replace(/^-+|-+$/g, ""),
       conversation_text: editorData,
     };
 

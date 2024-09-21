@@ -24,9 +24,15 @@ function App() {
       });
       const result = await response.json();
       if (result.success) {
-        navigate("/issue/" + result.response[0].issue_number, {
-          replace: true,
-        });
+        navigate(
+          "/newsletter/" +
+            result.response[0].issue_number +
+            "/" +
+            result.response[0].slug,
+          {
+            replace: true,
+          }
+        );
       }
     } catch (error) {
       console.error(error);
@@ -64,7 +70,7 @@ function App() {
                 The most impactful stories of the week, distilled to keep you
                 informed of happenings in the tech scene in Jos-Plateau state.
               </div>
-              <div class="mb-12 lg:my-4 space-x-3 text-sm">
+              <div class="mb-12 lg:my-4 space-x-3">
                 <Show
                   when={fetching()}
                   fallback={
@@ -72,14 +78,14 @@ function App() {
                       onClick={() => {
                         latestIssue();
                       }}
-                      class="mx-auto font-bold lg:mx-0 w-fit cursor-pointer bg-red-600 text-white h-12 border border-red-600 text-center items-center flex px-4 rounded hover:bg-white hover:text-red-600 text-sm"
+                      class="mx-auto font-bold lg:mx-0 w-fit cursor-pointer bg-red-600 text-white h-12 border border-red-600 text-center items-center flex px-4 rounded hover:bg-white hover:text-red-600"
                     >
-                      Read Latest Issue
+                      Read Latest Newsletter
                     </span>
                   }
                 >
                   <span class="mx-auto lg:mx-0 w-fit space-x-6 cursor-wait border border-red-600 bg-red-600 opacity-60 text-white h-12 items-center flex px-4 rounded">
-                    <span>Fetching..</span>
+                    <span>Fetching Newsletter..</span>
                     <span class="animate-spin mx-auto w-4 h-4 bg-transparent border-2 border-white rounded">
                       &nbsp;
                     </span>
