@@ -97,7 +97,7 @@ function App() {
               <img
                 src={screen}
                 alt="tech in Jos mobile display"
-                class="w-11/12 mx-auto border-b border-yellow-300 lg:float-right"
+                class="w-fit py-2 mx-auto border-b border-yellow-300 lg:float-right"
               />
             </div>
           </div>
