@@ -93,11 +93,11 @@ function App() {
                 </Show>
               </div>
             </div>
-            <div class="overflow-hidden h-72 md:h-96 bg-white">
+            <div class="overflow-hidden h-72 md:h-96">
               <img
                 src={screen}
                 alt="tech in Jos mobile display"
-                class="w-fit py-2 mx-auto border-b border-yellow-300 lg:float-right"
+                class="w-fit mx-auto lg:float-right"
               />
             </div>
           </div>
