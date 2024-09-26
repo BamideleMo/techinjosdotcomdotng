@@ -94,11 +94,13 @@ function App() {
               </div>
             </div>
             <div class="overflow-hidden h-72 md:h-96">
-              <img
-                src={screen}
-                alt="tech in Jos mobile display"
-                class="w-fit mx-auto lg:float-right"
-              />
+              <div class="bg-white overflow-hidden w-72 mx-auto md:w-96 h-72 md:h-96 border-b border-red-600 px-2 lg:float-right">
+                <img
+                  src={screen}
+                  alt="tech in Jos mobile display"
+                  class="w-fit mx-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
