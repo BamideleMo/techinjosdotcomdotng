@@ -64,7 +64,7 @@ function Header() {
         </div>
       </Show>
       <div class="fixed z-40 w-full bg-white">
-        <div class="w-full md:w-11/12 2xl:w-6/12 mx-auto px-2 md:px-0 py-1 lg:py-4 flex justify-between border-b border-black">
+        <div class="w-full md:w-11/12 2xl:w-9/12 mx-auto px-2 md:px-0 py-1 lg:py-4 flex justify-between border-b border-black">
           <Logo />
           <div class="flex space-x-2 md:space-x-6">
             <div class="text-base lg:text-sm pt-3 font-semibold">

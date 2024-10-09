@@ -52,7 +52,7 @@ function App() {
       <Link rel="preload" as="image" href={screen}></Link>
       <Header />
       <div class="pt-20 md:pt-24">
-        <div class="w-full md:w-11/12 2xl:w-6/12 mx-auto bg-white pt-4 md:pt-12">
+        <div class="w-full md:w-11/12 2xl:w-9/12 mx-auto bg-white pt-4 md:pt-12">
           <div
             class="w-10/12 md:w-8/12 lg:w-10/12 mx-auto grid grid-cols-1 
           lg:grid-cols-2 lg:py-10"
