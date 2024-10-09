@@ -67,8 +67,8 @@ function App() {
                 Plateau State.
               </h1>
               <div class="my-6 md:px-8 lg:px-0 text-lg">
-                The most impactful stories of the week, distilled to keep you
-                informed of happenings in the tech scene in Jos-Plateau state.
+                The tech scene in Jos-Plateau state is growing fast. Don't be
+                left behind.
               </div>
               <div class="mb-12 lg:my-4 space-x-3">
                 <Show
