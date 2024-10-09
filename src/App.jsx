@@ -54,10 +54,10 @@ function App() {
       <div class="pt-20 md:pt-24">
         <div class="w-full md:w-11/12 2xl:w-9/12 mx-auto bg-white pt-4 md:pt-12">
           <div
-            class="w-10/12 md:w-8/12 lg:w-10/12 mx-auto grid grid-cols-1 
+            class="w-11/12 md:w-8/12 lg:w-10/12 mx-auto grid grid-cols-1 
           lg:grid-cols-2 lg:py-10"
           >
-            <div class="text-center lg:text-left lg:pt-10">
+            <div class="text-center lg:text-left lg:pt-0">
               <h1 class="uppercase">Weekly Newsletter</h1>
               <h1
                 class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl 
@@ -66,9 +66,11 @@ function App() {
                 Focused on the Tech Ecosystem in Jos, <br class="md:hidden" />
                 Plateau State.
               </h1>
-              <div class="my-6 md:px-8 lg:px-0 text-lg">
-                The tech scene in Jos-Plateau state is growing fast. Don't be
-                left behind.
+              <div class="my-6 md:px-8 lg:px-0 text-lg md:text-xl">
+                The tech scene in Jos-Plateau state is growing so fast. 🚀
+                <br class="hidden lg:block" />
+                Don't be left behind.
+                {/* Join 301 other tech enthusiasts. */}
               </div>
               <div class="mb-12 lg:my-4 space-x-3">
                 <Show
