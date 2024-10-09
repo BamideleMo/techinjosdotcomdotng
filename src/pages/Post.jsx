@@ -44,7 +44,7 @@ function Post() {
         <Header />
         <div class="pt-20 md:pt-24">
           <div class="w-full md:w-11/12 2xl:w-9/12 mx-auto backgound-color pt-0 md:p-12 lg:p-12">
-            <div class="content md:w-10/12 lg:w-6/12 2xl:w-5/12 mx-auto">
+            <div class="content md:w-10/12 mx-auto">
               <Show
                 when={resource.loading}
                 fallback={
