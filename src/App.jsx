@@ -4,6 +4,7 @@ import { createSignal } from "solid-js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import screen from "./assets/techINJos-mobile-screen.png";
+import Popup from "./components/Popup";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -11,31 +12,37 @@ function App() {
   const navigate = useNavigate();
 
   const [fetching, setFetching] = createSignal(false);
+  const [showPopup, setShowPopup] = createSignal(false);
+
   const latestIssue = async () => {
     setFetching(true);
-    try {
-      const response = await fetch(VITE_API_URL + "/open/latest-post", {
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        method: "GET",
-      });
-      const result = await response.json();
-      if (result.success) {
-        navigate(
-          "/newsletter/" +
-            result.response[0].issue_number +
-            "/" +
-            result.response[0].slug,
-          {
-            replace: true,
-          }
-        );
+    if (localStorage.getItem("TIJUser")) {
+      try {
+        const response = await fetch(VITE_API_URL + "/open/latest-post", {
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          method: "GET",
+        });
+        const result = await response.json();
+        if (result.success) {
+          navigate(
+            "/newsletter/" +
+              result.response[0].issue_number +
+              "/" +
+              result.response[0].slug,
+            {
+              replace: true,
+            }
+          );
+        }
+      } catch (error) {
+        console.error(error);
       }
-    } catch (error) {
-      console.error(error);
+    } else {
+      setShowPopup(true);
     }
   };
 
@@ -50,6 +57,9 @@ function App() {
         content="Tech newsletter focused on Jos, Plateau state!"
       ></Meta>
       <Link rel="preload" as="image" href={screen}></Link>
+      {/* <Show when={!showPopup()}>
+        <Popup />
+      </Show> */}
       <Header />
       <div class="pt-20 md:pt-24">
         <div class="w-full md:w-11/12 mx-auto bg-white pt-4 md:pt-12">

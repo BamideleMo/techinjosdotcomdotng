@@ -40,7 +40,7 @@ export default function TextInput(props) {
               "form-control": true,
             }}
             type={props.type}
-            class="text-slate-600 w-full block border border-black outline-none bg-white px-1 h-12 placeholder:text-blue-300"
+            class="text-yellow-200 w-full block border border-white outline-none bg-transparent mt-1 px-2 h-12 placeholder:text-slate-800"
           />
         </div>
       )}
