@@ -103,7 +103,7 @@ function App() {
                       }}
                       class="mx-auto font-bold lg:mx-0 w-fit cursor-pointer bg-red-600 text-white h-12 border border-red-600 text-center items-center flex px-4 rounded hover:bg-white hover:text-red-600"
                     >
-                      Read Latest Newsletter
+                      Read the Latest Newsletter
                     </span>
                   }
                 >
