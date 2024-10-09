@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 function Footer() {
   return (
-    <div class="bg-black p-10 mt-10 lg:p-20 text-white text-sm text-center space-y-6">
+    <div class="bg-black p-10 mt-0 lg:p-20 text-white text-sm text-center space-y-6">
       <div class="space-x-4 text-center text-gray-400">
         <A href="/about">About us</A>
         <b>.</b>

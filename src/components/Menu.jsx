@@ -24,7 +24,7 @@ function Menu() {
           href="https://whatsapp.com/channel/0029VaEVLBHBfxoG5GZxz72v"
           class="p-2 border border-black rounded hover:bg-black hover:text-white"
         >
-          Join WhatsApp Channel
+          WhatsApp Channel
         </a>
       </li>
       <li class="flex lg:hidden justify-center space-x-6">
