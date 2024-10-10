@@ -99,26 +99,31 @@ function App() {
                   </span>
                 </Show>
               </div>
-              <div class="mb-12 flex space-x-3">
+              <div class="mb-12 flex space-x-1">
                 <div class="flex -space-x-2">
                   <img
                     src={user1}
+                    alt="subscribers"
                     class="w-8 rounded-full border border-slate-400"
                   />
                   <img
                     src={user2}
+                    alt="subscribers"
                     class="w-8 rounded-full border border-slate-400"
                   />
                   <img
                     src={user3}
+                    alt="subscribers"
                     class="w-8 rounded-full border border-slate-400"
                   />
                   <img
                     src={user4}
+                    alt="subscribers"
                     class="w-8 rounded-full border border-slate-400"
                   />
                   <img
                     src={user5}
+                    alt="subscribers"
                     class="w-8 rounded-full border border-slate-400"
                   />
                 </div>
