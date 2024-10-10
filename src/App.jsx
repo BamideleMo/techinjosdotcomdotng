@@ -72,7 +72,7 @@ function App() {
                 Plateau State.
               </h1>
               <div class="my-6 md:px-8 lg:px-0 text-lg md:text-xl">
-                The tech scene in Jos-Plateau state is growing so fast. 🚀
+                The tech scene in Jos-Plateau state is growing rapidly. 🚀
                 <br class="hidden lg:block" />
                 <span class="lg:hidden">&nbsp;&nbsp;</span>
                 Don't be left behind.
