@@ -15,6 +15,7 @@ const VITE_API_URL = import.meta.env["VITE_API_URL"];
 function Issue() {
   const params = useParams();
   const [issue, setIssue] = createStore([]);
+  const [metaDesc, setMetaDesc] = createSignal("Loading...");
 
   const issueDetails = async () => {
     const response = await fetch(
@@ -33,6 +34,7 @@ function Issue() {
       await getPrevIssue();
       await getNextIssue();
       setIssue(result.response);
+      setMetaDesc(result.response[0].shareable);
     }
 
     return {
@@ -82,14 +84,14 @@ function Issue() {
   return (
     <MetaProvider>
       <Title>
+        Tech in Jos Newsletter{" "}
         {params.issueNumber
-          ? "Newsletter #" + params.issueNumber + " -"
-          : "Read "}{" "}
-        Tech in Jos Newsletter
+          ? "#" + params.issueNumber + " - www.techinjos.com.ng"
+          : "Loading... "}
       </Title>
       <Meta
         name="description"
-        content="Your #1 Weekly Newsletter focused on the Tech Ecosystem in Jos, Plateau state!"
+        content={metaDesc() ? metaDesc() : "Loading..."}
       />
       <div>
         <Header />

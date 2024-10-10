@@ -59,13 +59,13 @@ function App() {
       <div class="pt-20 md:pt-24">
         <div class="w-full md:w-11/12 2xl:w-9/12 mx-auto bg-white pt-4 md:pt-12">
           <div
-            class="w-11/12 md:w-8/12 lg:w-10/12 mx-auto grid grid-cols-1 
+            class="w-11/12 md:w-9/12 lg:w-10/12 mx-auto grid grid-cols-1 
           lg:grid-cols-2 lg:py-10"
           >
             <div class="text-center lg:text-left lg:pt-0">
               <h1 class="uppercase">Weekly Newsletter</h1>
               <h1
-                class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl 
+                class="text-3xl md:text-4xl lg:text-4xl xl:text-5xl 
                drop-shadow-lg font-bold"
               >
                 Focused on the Tech Ecosystem in Jos, <br class="md:hidden" />
@@ -99,7 +99,7 @@ function App() {
                   </span>
                 </Show>
               </div>
-              <div class="mb-12 flex space-x-1">
+              <div class="mb-12 w-fit mx-auto lg:mx-0 flex space-x-1">
                 <div class="flex -space-x-2">
                   <img
                     src={user1}
