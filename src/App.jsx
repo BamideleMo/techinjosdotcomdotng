@@ -4,6 +4,11 @@ import { createSignal } from "solid-js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import screen from "./assets/techINJos-mobile-screen.png";
+import user1 from "./assets/user1.png";
+import user2 from "./assets/user2.png";
+import user3 from "./assets/user3.png";
+import user4 from "./assets/user4.png";
+import user5 from "./assets/user5.png";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
@@ -71,9 +76,8 @@ function App() {
                 <br class="hidden lg:block" />
                 <span class="lg:hidden">&nbsp;&nbsp;</span>
                 Don't be left behind.
-                {/* Join 301 other tech enthusiasts. */}
               </div>
-              <div class="mb-12 lg:my-4 space-x-3">
+              <div class="my-4 space-x-3">
                 <Show
                   when={fetching()}
                   fallback={
@@ -94,6 +98,33 @@ function App() {
                     </span>
                   </span>
                 </Show>
+              </div>
+              <div class="mb-12 flex space-x-3">
+                <div class="flex -space-x-2">
+                  <img
+                    src={user1}
+                    class="w-8 rounded-full border border-slate-400"
+                  />
+                  <img
+                    src={user2}
+                    class="w-8 rounded-full border border-slate-400"
+                  />
+                  <img
+                    src={user3}
+                    class="w-8 rounded-full border border-slate-400"
+                  />
+                  <img
+                    src={user4}
+                    class="w-8 rounded-full border border-slate-400"
+                  />
+                  <img
+                    src={user5}
+                    class="w-8 rounded-full border border-slate-400"
+                  />
+                </div>
+                <div class="mt-1">
+                  <span class="bg-yellow-200 p-1">413+</span> smart subscribers.
+                </div>
               </div>
             </div>
             <div class="overflow-hidden h-72 md:h-96">
