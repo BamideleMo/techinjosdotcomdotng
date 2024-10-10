@@ -104,27 +104,27 @@ function App() {
                   <img
                     src={user1}
                     alt="subscribers"
-                    class="w-8 rounded-full border border-slate-400"
+                    class="w-8 rounded-full border-2 border-slate-400"
                   />
                   <img
                     src={user2}
                     alt="subscribers"
-                    class="w-8 rounded-full border border-slate-400"
+                    class="w-8 rounded-full border-2 border-slate-400"
                   />
                   <img
                     src={user3}
                     alt="subscribers"
-                    class="w-8 rounded-full border border-slate-400"
+                    class="w-8 rounded-full border-2 border-slate-400"
                   />
                   <img
                     src={user4}
                     alt="subscribers"
-                    class="w-8 rounded-full border border-slate-400"
+                    class="w-8 rounded-full border-2 border-slate-400"
                   />
                   <img
                     src={user5}
                     alt="subscribers"
-                    class="w-8 rounded-full border border-slate-400"
+                    class="w-8 rounded-full border-2 border-slate-400"
                   />
                 </div>
                 <div class="mt-1">
