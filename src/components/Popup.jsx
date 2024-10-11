@@ -69,7 +69,7 @@ function Popup(props) {
     <div class="z-50 bg-black w-screen h-screen bg-opacity-95 fixed flex items-center top-0 bottom-0 left-0 right-0">
       <div class="rounded w-11/12 md:w-96 mx-auto text-sm bg-white p-4 border-b-8 border-yellow-400">
         <h2 class="text-lg text-center text-slate-800 font-bold">
-          Sign in to keep reading
+          Sign in to continue
         </h2>
         <p class="text-center text-sm w-64 lg:w-72 mx-auto py-2 leading-tight">
           techINJos newsletter is free, but you must sign in to continue
