@@ -9,10 +9,16 @@ import twitterShare from "../../src/assets/x.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Skeleton from "../components/Skeleton";
+import Popup from "../components/Popup";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
 function Issue() {
+  const [popup, setPopup] = createSignal(true);
+  if (JSON.parse(localStorage.getItem("techINJosUser"))) {
+    setPopup(false);
+  }
+
   const params = useParams();
   const [issue, setIssue] = createStore([]);
   const [metaDesc, setMetaDesc] = createSignal("Loading...");
@@ -94,7 +100,11 @@ function Issue() {
         content={metaDesc() ? metaDesc() : "Loading..."}
       />
       <div>
+        <Show when={popup()}>
+          <Popup whichForm={"sign in"} whichIssue={params.issueNumber} />
+        </Show>
         <Header />
+
         <div class="pt-20 md:pt-24">
           <div class="w-full md:w-11/12 2xl:w-9/12 mx-auto backgound-color pt-0 md:p-12 lg:p-12">
             <div class="content md:w-10/12 lg:w-9/12 2xl:w-6/12 mx-auto">
@@ -131,20 +141,20 @@ function Issue() {
                                   "https://twitter.com/intent/tweet?text=" +
                                   encodeURI(
                                     post.shareable +
-                                      " 🤖 https://techinjos.com.ng/" +
+                                      " 🤖 https://techinjos.com.ng/post/" +
                                       post.slug
                                   )
                                 }
-                                class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
+                                class="flex items-center space-x-1 bg-gray-100 border border-gray-400 hover:opacity-60 text-black px-2 rounded"
                               >
-                                <div>
+                                <div class="-ml-1">
                                   <img
                                     src={twitterShare}
                                     alt="share on twitter"
-                                    class="w-7"
+                                    class="w-8 py-1.5"
                                   />
                                 </div>
-                                <div class="pt-1.5">Share on X</div>
+                                <div class="">Share on X</div>
                               </a>
                               <a
                                 target="_blank"
@@ -152,20 +162,20 @@ function Issue() {
                                   "https://wa.me/?text=" +
                                   encodeURI(
                                     post.shareable +
-                                      " 🤖 https://techinjos.com.ng/" +
+                                      " 🤖 https://techinjos.com.ng/post/" +
                                       post.slug
                                   )
                                 }
-                                class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
+                                class="flex items-center space-x-1 bg-gray-100 border border-gray-400 hover:opacity-60 text-black px-2 rounded"
                               >
-                                <div class="pt-0.5">
+                                <div class="">
                                   <img
                                     src={whatsappShare}
                                     alt="share on WhatsApp"
-                                    class="w-6"
+                                    class="w-6 py-1.5"
                                   />
                                 </div>
-                                <div class="pt-1.5">Share on WhatsApp</div>
+                                <div class="">Share on WhatsApp</div>
                               </a>
                             </div>
                           </div>
@@ -323,8 +333,7 @@ function Issue() {
             <span
               onClick={() => {
                 window.location.replace(
-                  "/newsletter/" +
-                    (parseInt(params.issueNumber) - 1 + "/" + prevSlug())
+                  "/newsletter/" + (parseInt(params.issueNumber) - 1)
                 );
               }}
               class="flex space-x-1 cursor-pointer hover:text-red-600"
@@ -350,8 +359,7 @@ function Issue() {
             <span
               onClick={() => {
                 window.location.replace(
-                  "/newsletter/" +
-                    (parseInt(params.issueNumber) + 1 + "/" + nextSlug())
+                  "/newsletter/" + (parseInt(params.issueNumber) + 1)
                 );
               }}
               class="flex space-x-1 cursor-pointer hover:text-red-600"

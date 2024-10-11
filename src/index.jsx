@@ -5,7 +5,7 @@ import { Router, Route } from "@solidjs/router";
 import "./index.css";
 import App from "./App";
 import About from "./pages/About";
-import Advertise from "./pages/Advertise";
+import Sponsorship from "./pages/Sponsorship";
 import Login from "./pages/admin/Login";
 import Post from "./pages/admin/Post";
 import Issue from "./pages/Issue";
@@ -13,6 +13,7 @@ import ReadPost from "./pages/Post";
 import PostMetaImage from "./pages/admin/PostMetaImage";
 import NotFound from "./pages/NotFound";
 import Archive from "./pages/Archive";
+import ConfirmEmail from "./pages/ConfirmEmail";
 
 const root = document.getElementById("root");
 
@@ -27,10 +28,11 @@ render(
     <Router>
       <Route path="/" component={App} />
       <Route path="/about" component={About} />
-      <Route path="/advertise" component={Advertise} />
+      <Route path="/sponsorship" component={Sponsorship} />
       <Route path="/archive" component={Archive} />
-      <Route path="/newsletter/:issueNumber/:slug" component={Issue} />
-      <Route path="/:slug" component={ReadPost} />
+      <Route path="/newsletter/:issueNumber" component={Issue} />
+      <Route path="/confirm-email" component={ConfirmEmail} />
+      <Route path="/post/:slug" component={ReadPost} />
       <Route path="/a/login" component={Login} />
       <Route path="/a/post" component={Post} />
       <Route path="/a/post-image" component={PostMetaImage} />

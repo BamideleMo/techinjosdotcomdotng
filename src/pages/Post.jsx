@@ -65,7 +65,8 @@ function Post() {
                     </div>
                     <div class="mb-12 border-t border-gray-200 bg-white px-2 md:px-6 py-4 text-xs flex justify-between">
                       <div></div>
-                      <div class="flex space-x-4">
+
+                      <div class="shares flex space-x-4">
                         <a
                           target="_blank"
                           href={
@@ -73,15 +74,19 @@ function Post() {
                             encodeURI(
                               post.shareable +
                                 " 🤖 https://techinjos.com.ng/post/" +
-                                post.id
+                                post.slug
                             )
                           }
-                          class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
+                          class="flex items-center space-x-1 bg-gray-100 border border-gray-400 hover:opacity-60 text-black px-2 rounded"
                         >
-                          <div>
-                            <img src={twitterShare} class="w-7" />
+                          <div class="-ml-1">
+                            <img
+                              src={twitterShare}
+                              alt="share on twitter"
+                              class="w-8 py-1.5"
+                            />
                           </div>
-                          <div class="pt-1.5">Share on X</div>
+                          <div class="">Share on X</div>
                         </a>
                         <a
                           target="_blank"
@@ -90,15 +95,19 @@ function Post() {
                             encodeURI(
                               post.shareable +
                                 " 🤖 https://techinjos.com.ng/post/" +
-                                post.id
+                                post.slug
                             )
                           }
-                          class="flex space-x-1 bg-gray-100 border border-gray-200 hover:opacity-60 text-black p-1 rounded"
+                          class="flex items-center space-x-1 bg-gray-100 border border-gray-400 hover:opacity-60 text-black px-2 rounded"
                         >
-                          <div class="pt-0.5">
-                            <img src={whatsappShare} class="w-6" />
+                          <div class="">
+                            <img
+                              src={whatsappShare}
+                              alt="share on WhatsApp"
+                              class="w-6 py-1.5"
+                            />
                           </div>
-                          <div class="pt-1.5">Share on WhatsApp</div>
+                          <div class="">Share on WhatsApp</div>
                         </a>
                       </div>
                     </div>

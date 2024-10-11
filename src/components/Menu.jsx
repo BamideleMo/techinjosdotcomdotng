@@ -14,8 +14,8 @@ function Menu() {
         </A>
       </li>
       <li>
-        <A href="/advertise" class="hover:opacity-60">
-          Advertise
+        <A href="/sponsorship" class="hover:opacity-60">
+          Sponsorship
         </A>
       </li>
       <li class="pt-3 lg:pt-0">

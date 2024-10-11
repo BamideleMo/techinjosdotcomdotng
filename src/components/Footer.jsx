@@ -4,10 +4,10 @@ import Logo from "./Logo";
 function Footer() {
   return (
     <div class="bg-black p-10 mt-10 lg:p-20 xl:py-28 text-white text-sm text-center space-y-6">
-      <div class="space-x-4 text-center text-gray-400">
+      <div class="space-x-4 text-center text-gray-400 text-base">
         <A href="/about">About us</A>
         <b>.</b>
-        <A href="/advertise">Advertise with us</A>
+        <A href="/sponsorship">Sponsorship</A>
       </div>
       <div>
         <Logo />

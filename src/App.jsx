@@ -9,12 +9,16 @@ import user2 from "./assets/user2.png";
 import user3 from "./assets/user3.png";
 import user4 from "./assets/user4.png";
 import user5 from "./assets/user5.png";
+import Popup from "./components/Popup";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
 function App() {
   const navigate = useNavigate();
 
+  const [popup, setPopup] = createSignal(false);
+  const [whichForm, setWhichForm] = createSignal("");
+  const [whichIssue, setWhichIssue] = createSignal("");
   const [fetching, setFetching] = createSignal(false);
   const latestIssue = async () => {
     setFetching(true);
@@ -29,19 +33,19 @@ function App() {
       });
       const result = await response.json();
       if (result.success) {
-        navigate(
-          "/newsletter/" +
-            result.response[0].issue_number +
-            "/" +
-            result.response[0].slug,
-          {
-            replace: true,
-          }
-        );
+        navigate("/newsletter/" + result.response[0].issue_number, {
+          replace: true,
+        });
       }
     } catch (error) {
       console.error(error);
     }
+  };
+
+  const doPopup = () => {
+    setPopup(true);
+    setWhichForm("sign in");
+    setWhichIssue("latest");
   };
 
   // createEffect(() => {
@@ -55,6 +59,9 @@ function App() {
         content="Tech newsletter focused on Jos, Plateau state!"
       ></Meta>
       <Link rel="preload" as="image" href={screen}></Link>
+      <Show when={popup()}>
+        <Popup whichForm={whichForm()} whichIssue={whichIssue()} />
+      </Show>
       <Header />
       <div class="pt-20 md:pt-24">
         <div class="w-full md:w-11/12 2xl:w-9/12 mx-auto bg-white pt-4 md:pt-12">
@@ -78,7 +85,7 @@ function App() {
                 Don't be left behind.
               </div>
               <div class="my-4 space-x-3">
-                <Show
+                {/* <Show
                   when={fetching()}
                   fallback={
                     <span
@@ -97,7 +104,18 @@ function App() {
                       &nbsp;
                     </span>
                   </span>
-                </Show>
+                </Show> */}
+
+                <span
+                  onClick={() => {
+                    JSON.parse(localStorage.getItem("techINJosUser"))
+                      ? latestIssue()
+                      : doPopup();
+                  }}
+                  class="mx-auto font-bold lg:mx-0 w-fit cursor-pointer bg-red-600 text-white h-12 border border-red-600 text-center items-center flex px-4 rounded hover:bg-white hover:text-red-600"
+                >
+                  Read the Latest Newsletter
+                </span>
               </div>
               <div class="mb-12 w-fit mx-auto lg:mx-0 flex space-x-1">
                 <div class="flex -space-x-2">

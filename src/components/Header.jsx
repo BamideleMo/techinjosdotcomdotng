@@ -2,12 +2,16 @@ import Menu from "./Menu";
 import { createSignal } from "solid-js";
 import Logo from "./Logo";
 import { useNavigate } from "@solidjs/router";
+import Popup from "./Popup";
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
 function Header() {
   const [menu, setMenu] = createSignal(false);
   const navigate = useNavigate();
+  const [popup, setPopup] = createSignal(false);
+  const [whichForm, setWhichForm] = createSignal("");
+  const [whichIssue, setWhichIssue] = createSignal("");
 
   const [fetching, setFetching] = createSignal(false);
   const latestIssue = async () => {
@@ -23,16 +27,22 @@ function Header() {
       });
       const result = await response.json();
       if (result.success) {
-        window.location.replace(
-          "/newsletter/" +
-            result.response[0].issue_number +
-            "/" +
-            result.response[0].slug
-        );
+        // window.location.replace(
+        //   "/newsletter/" + result.response[0].issue_number
+        // );
+        navigate("/newsletter/" + result.response[0].issue_number, {
+          replace: true,
+        });
       }
     } catch (error) {
       console.error(error);
     }
+  };
+
+  const doPopup = () => {
+    setPopup(true);
+    setWhichForm("sign in");
+    setWhichIssue("latest");
   };
   return (
     <>
@@ -63,34 +73,24 @@ function Header() {
           </div>
         </div>
       </Show>
+      <Show when={popup()}>
+        <Popup whichForm={whichForm()} whichIssue={whichIssue()} />
+      </Show>
       <div class="fixed z-40 w-full bg-white">
         <div class="w-full md:w-11/12 2xl:w-9/12 mx-auto px-2 md:px-0 py-1 lg:py-4 flex justify-between border-b border-black">
           <Logo />
           <div class="flex space-x-2 md:space-x-6">
             <div class="text-base lg:text-sm pt-3 font-semibold">
-              <Show
-                when={fetching()}
-                fallback={
-                  <span
-                    onClick={() => {
-                      latestIssue();
-                    }}
-                    class="text-red-600 cursor-pointer hover:opacity-60"
-                  >
-                    Latest Newsletter
-                  </span>
-                }
+              <span
+                onClick={() => {
+                  JSON.parse(localStorage.getItem("techINJosUser"))
+                    ? latestIssue()
+                    : doPopup();
+                }}
+                class="text-red-600 cursor-pointer hover:opacity-60"
               >
-                <span
-                  class="w-fit flex space-x-1 text-red-600 opacity-60 
-                cursor-wait"
-                >
-                  <span>Fetching Latest</span>
-                  <span class="animate-spin w-3 h-3 mt-1.5 md:mt-1 rounded border-2 border-red-600 bg-transparent">
-                    &nbsp;
-                  </span>
-                </span>
-              </Show>
+                Latest Newsletter
+              </span>
             </div>
             <div class="hidden lg:flex space-x-6">
               <Menu />
@@ -117,7 +117,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <Show when={!navigator.onLine}>
+      <Show when={navigator.onLine}>
         <div class="fixed w-full mx-auto z-50">
           <div
             class="w-60 mx-auto bg-yellow-100 border border-yellow-300 p-3 
