@@ -71,8 +71,8 @@ function Popup(props) {
         <h2 class="text-lg text-center text-slate-800 font-bold">
           Sign in to keep reading
         </h2>
-        <p class="text-center text-sm w-64 mx-auto py-2 leading-tight">
-          This techINJos newsletter is free, but you must sign in to continue
+        <p class="text-center text-sm w-64 lg:w-72 mx-auto py-2 leading-tight">
+          techINJos newsletter is free, but you must sign in to continue
           reading.
         </p>
         <Show when={theForm() === "sign in"}>
