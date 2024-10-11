@@ -42,8 +42,8 @@ function Sponsorship() {
                     <li>
                       <b>Credibility:</b>
                       <br />
-                      Associate your brand with the most trusted source of tech
-                      news and insights in Jos.
+                      Associate your brand with the number 1 source of tech news
+                      and insights in Jos.
                     </li>
                   </ul>
                   <p>
