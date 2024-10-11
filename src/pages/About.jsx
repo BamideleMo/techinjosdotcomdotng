@@ -42,8 +42,8 @@ function About() {
                   </p>
                   <p>
                     <b>Our mission</b>: is to inspire love for the growing tech
-                    ecosystem in Jos by amplifing stories for and about Jos tech
-                    community, showcasing the diverse perspectives, and
+                    ecosystem in Jos by amplifying stories for and about Jos
+                    tech community, showcasing the diverse perspectives, and
                     celebrating the community's wins.
                   </p>
                   <p>
