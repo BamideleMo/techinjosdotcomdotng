@@ -25,42 +25,42 @@ function Popup(props) {
   const [message, setMessage] = createSignal("");
   const [theForm, setTheForm] = createSignal("");
 
-  const submit = async (event) => {
-    event.preventDefault();
-    setIsProcessing(true);
-    try {
-      //Call API here:
-      const response = await fetch(VITE_API_URL + "/auth/login", {
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({
-          username: formData().username,
-          password: "1234",
-        }),
-      });
-      const result = await response.json();
-      if (!result.success) {
-        setMessage(result.response);
-        setIsProcessing(false);
-      } else {
-        var store = {
-          custom_id: result.response.custom_id,
-          user_role: result.response.role,
-          token: result.response.token,
-          expiry: now.getTime() + 10800000,
-        };
-        setData(store);
-        localStorage.setItem("TIJUser", JSON.stringify(data()));
-        navigate("/u/profile");
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const submit = async (event) => {
+  //   event.preventDefault();
+  //   setIsProcessing(true);
+  //   try {
+  //     //Call API here:
+  //     const response = await fetch(VITE_API_URL + "/auth/login", {
+  //       mode: "cors",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Accept: "application/json",
+  //       },
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         username: formData().username,
+  //         password: "1234",
+  //       }),
+  //     });
+  //     const result = await response.json();
+  //     if (!result.success) {
+  //       setMessage(result.response);
+  //       setIsProcessing(false);
+  //     } else {
+  //       var store = {
+  //         custom_id: result.response.custom_id,
+  //         user_role: result.response.role,
+  //         token: result.response.token,
+  //         expiry: now.getTime() + 10800000,
+  //       };
+  //       setData(store);
+  //       localStorage.setItem("TIJUser", JSON.stringify(data()));
+  //       navigate("/u/profile");
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   createEffect(() => {
     setTheForm(props.whichForm);
@@ -78,7 +78,6 @@ function Popup(props) {
         <Show when={theForm() === "sign in"}>
           <LoginForm whichIssue={props.whichIssue} />
         </Show>
-        <Show when={theForm() === "subscribe"}>ccc</Show>
       </div>
     </div>
   );

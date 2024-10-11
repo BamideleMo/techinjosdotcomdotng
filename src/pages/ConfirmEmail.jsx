@@ -3,9 +3,35 @@ import { MetaProvider, Title, Link, Meta } from "@solidjs/meta";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CodeVerificationForm from "../components/CodeVerificationForm";
+import { createSignal } from "solid-js";
+
+const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
 function ConfirmEmail() {
   const [searchParams, setSearchParams] = useSearchParams();
+
+  const [emailSent, setEmailSent] = createSignal(false);
+  const sendEmail = async () => {
+    try {
+      const response = await fetch(VITE_API_URL + "/auth/send-email", {
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          username: searchParams.e,
+        }),
+      });
+      const result = await response.json();
+      if (result.success) {
+        setEmailSent(true);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <MetaProvider>
@@ -19,6 +45,29 @@ function ConfirmEmail() {
       />
       <div>
         <Header />
+        <Show when={emailSent()}>
+          <div class="z-50 bg-black w-screen h-screen bg-opacity-95 fixed flex items-center top-0 bottom-0 left-0 right-0">
+            <div class="rounded w-11/12 md:w-96 mx-auto text-sm bg-white p-4 border-b-8 border-yellow-400">
+              <h2 class="text-lg text-center text-slate-800 font-bold">
+                Email Resent Successfully
+              </h2>
+              <p class="py-3 border-y-2 my-3">
+                The Verification Code has been resent to <b>{searchParams.e}</b>{" "}
+                successfully. Check your Inbox or Spam folder please.
+              </p>
+              <div class="text-center">
+                <button
+                  onClick={() => {
+                    setEmailSent(!emailSent());
+                  }}
+                  class="bg-blue-800 text-white text-xs p-3 rounded-md"
+                >
+                  Okay
+                </button>
+              </div>
+            </div>
+          </div>
+        </Show>
         <div class="pt-24 md:pt-28">
           <div class="w-full md:w-11/12 2xl:w-9/12 mx-auto backgound-color md:p-12 lg:p-12">
             <div class="content md:w-10/12 lg:w-9/12 2xl:w-6/12 mx-auto space-y-3">
@@ -41,7 +90,21 @@ function ConfirmEmail() {
                     We need you to prove that you're human by entering the
                     confirmation code sent to the email in the box below:
                   </p>
-                  <CodeVerificationForm />
+                  <CodeVerificationForm whichIssue={searchParams.i} />
+                  <p>
+                    <span class="text-xs block">
+                      Didn't get the email? Check your SPAM folder or click link
+                      below to resend.
+                    </span>
+                    <span
+                      onClick={() => {
+                        sendEmail();
+                      }}
+                      class="font-semibold text-red-600 hover:opacity-60 cursor-pointer"
+                    >
+                      Resend Verification Code
+                    </span>
+                  </p>
                 </div>
               </div>
             </div>

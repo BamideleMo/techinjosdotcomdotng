@@ -1,4 +1,4 @@
-import { A, useParams } from "@solidjs/router";
+import { A, useParams, useNavigate } from "@solidjs/router";
 import { MetaProvider, Title, Meta } from "@solidjs/meta";
 import { createSignal, createResource } from "solid-js";
 import { createStore } from "solid-js/store";
@@ -15,15 +15,20 @@ const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
 function Issue() {
   const [popup, setPopup] = createSignal(true);
-  if (JSON.parse(localStorage.getItem("techINJosUser"))) {
-    setPopup(false);
-  }
+
+  const navigate = useNavigate();
 
   const params = useParams();
   const [issue, setIssue] = createStore([]);
   const [metaDesc, setMetaDesc] = createSignal("Loading...");
 
   const issueDetails = async () => {
+    if (JSON.parse(localStorage.getItem("techINJosUser"))) {
+      setPopup(false);
+    }
+
+    await getUser();
+
     const response = await fetch(
       VITE_API_URL + "/open/view-posts/" + params.issueNumber,
       {
@@ -83,6 +88,33 @@ function Issue() {
     if (result.response.length > 0) {
       setPrevIssue(true);
       setPrevSlug(result.response[0].slug);
+    }
+  };
+
+  const getUser = async () => {
+    const response = await fetch(
+      VITE_API_URL +
+        "/api/user/" +
+        JSON.parse(localStorage.getItem("techINJosUser")).custom_id,
+      {
+        mode: "cors",
+        headers: {
+          Authorization: `Bearer ${
+            JSON.parse(localStorage.getItem("techINJosUser")).token
+          }`,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        method: "GET",
+      }
+    );
+    const result = await response.json();
+    if (result.response.status === "unconfirmed") {
+      navigate(
+        "/confirm-email?e=" +
+          JSON.parse(localStorage.getItem("techINJosUser")).email+"&i=",
+        { replace: true }
+      );
     }
   };
 

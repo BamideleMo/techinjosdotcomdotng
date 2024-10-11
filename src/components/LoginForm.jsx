@@ -53,6 +53,7 @@ function LoginForm(props) {
         }
       } else {
         var store = {
+          email: result.response.email,
           custom_id: result.response.custom_id,
           user_role: result.response.role,
           token: result.response.token,
@@ -61,10 +62,12 @@ function LoginForm(props) {
         setData(store);
         localStorage.setItem("techINJosUser", JSON.stringify(data()));
         if (result.response.status === "unconfirmed") {
-          await sendEmail(uname);
-          navigate("/confirm-email?e=" + uname + "&i=" + props.whichIssue, {
-            replace: true,
-          });
+          window.location.replace(
+            "/confirm-email?e=" + uname + "&i=" + props.whichIssue,
+            {
+              replace: true,
+            }
+          );
         } else {
           if (props.whichIssue === "latest") {
             const response = await fetch(VITE_API_URL + "/open/latest-post", {
@@ -110,8 +113,8 @@ function LoginForm(props) {
       const result = await response.json();
       console.log(result.success);
       if (result.success) {
-        await doLogin(uname, pword);
         await sendEmail(uname);
+        await doLogin(uname, pword);
       }
     } catch (error) {
       console.error(error);

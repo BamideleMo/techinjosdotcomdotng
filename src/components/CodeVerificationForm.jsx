@@ -15,7 +15,7 @@ const schema = z.object({
 
 const VITE_API_URL = import.meta.env["VITE_API_URL"];
 
-function CodeVerificationForm() {
+function CodeVerificationForm(props) {
   const formHandler = useFormHandler(zodSchema(schema));
   const { formData } = formHandler;
 
@@ -24,36 +24,64 @@ function CodeVerificationForm() {
   const [data, setData] = createSignal("");
   const [message, setMessage] = createSignal("");
   const [isProcessing, setIsProcessing] = createSignal(false);
+  const [invalidCode, setInvalidCode] = createSignal(false);
 
   const submit = async (event) => {
     event.preventDefault();
     setIsProcessing(true);
     const now = new Date();
 
-    try {
-      const response = await fetch(
-        VITE_API_URL +
-          "/api/edit-user/" +
-          JSON.parse(localStorage.getItem("techINJosUser")).custom_id,
-        {
-          mode: "cors",
-          headers: {
-            Authorization: `Bearer ${
-              JSON.parse(localStorage.getItem("techINJosUser")).token
-            }`,
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          method: "PATCH",
-          body: JSON.stringify({
-            status: "confirmed",
-          }),
+    if (
+      formData().code ===
+      JSON.parse(localStorage.getItem("techINJosUser")).custom_id
+    ) {
+      try {
+        const response = await fetch(
+          VITE_API_URL +
+            "/api/edit-user/" +
+            JSON.parse(localStorage.getItem("techINJosUser")).custom_id,
+          {
+            mode: "cors",
+            headers: {
+              Authorization: `Bearer ${
+                JSON.parse(localStorage.getItem("techINJosUser")).token
+              }`,
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            method: "PATCH",
+            body: JSON.stringify({
+              status: "confirmed",
+            }),
+          }
+        );
+        const result = await response.json();
+        if (props.whichIssue === "latest") {
+          const response = await fetch(VITE_API_URL + "/open/latest-post", {
+            mode: "cors",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            method: "GET",
+          });
+          const result = await response.json();
+          if (result.success) {
+            window.location.replace(
+              "/newsletter/" + result.response[0].issue_number
+            );
+          }
+        } else {
+          window.location.replace("/newsletter/" + props.whichIssue, {
+            replace: true,
+          });
         }
-      );
-      const result = await response.json();
-      navigate("/a/post", { replace: true });
-    } catch (error) {
-      console.error(error);
+      } catch (error) {
+        console.error(error);
+      }
+    } else {
+      setInvalidCode(true);
+      setIsProcessing(false);
     }
   };
   return (
@@ -73,6 +101,11 @@ function CodeVerificationForm() {
         <Show when={message() !== ""}>
           <div class="bg-purple-200 text-purple-900 p-3 text-center animate-pulse border-l-2 border-black">
             {message()}
+          </div>
+        </Show>
+        <Show when={invalidCode()}>
+          <div class="bg-purple-200 text-purple-900 p-3 text-center animate-pulse border-l-2 border-black">
+            Wrong code.
           </div>
         </Show>
       </div>
@@ -96,7 +129,7 @@ function CodeVerificationForm() {
                   disabled
                   class="bg-gray-600 rounded-lg cursor-none w-full p-3 text-center animate-pulse"
                 >
-                  Processing.. .
+                  Wait.. .
                 </button>
               </Show>
             </>
