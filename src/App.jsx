@@ -85,12 +85,14 @@ function App() {
                 Don't be left behind.
               </div>
               <div class="my-4 space-x-3">
-                {/* <Show
+                <Show
                   when={fetching()}
                   fallback={
                     <span
                       onClick={() => {
-                        latestIssue();
+                        JSON.parse(localStorage.getItem("techINJosUser"))
+                          ? latestIssue()
+                          : doPopup();
                       }}
                       class="mx-auto font-bold lg:mx-0 w-fit cursor-pointer bg-red-600 text-white h-12 border border-red-600 text-center items-center flex px-4 rounded hover:bg-white hover:text-red-600"
                     >
@@ -104,9 +106,9 @@ function App() {
                       &nbsp;
                     </span>
                   </span>
-                </Show> */}
+                </Show>
 
-                <span
+                {/* <span
                   onClick={() => {
                     JSON.parse(localStorage.getItem("techINJosUser"))
                       ? latestIssue()
@@ -115,7 +117,7 @@ function App() {
                   class="mx-auto font-bold lg:mx-0 w-fit cursor-pointer bg-red-600 text-white h-12 border border-red-600 text-center items-center flex px-4 rounded hover:bg-white hover:text-red-600"
                 >
                   Read the Latest Newsletter
-                </span>
+                </span> */}
               </div>
               <div class="mb-12 w-fit mx-auto lg:mx-0 flex space-x-1">
                 <div class="flex -space-x-2">

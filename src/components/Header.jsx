@@ -81,7 +81,29 @@ function Header() {
           <Logo />
           <div class="flex space-x-2 md:space-x-6">
             <div class="text-base lg:text-sm pt-3 font-semibold">
-              <span
+              <Show
+                when={fetching()}
+                fallback={
+                  <span
+                    onClick={() => {
+                      JSON.parse(localStorage.getItem("techINJosUser"))
+                        ? latestIssue()
+                        : doPopup();
+                    }}
+                    class="text-red-600 cursor-pointer hover:opacity-60"
+                  >
+                    Latest Newsletter
+                  </span>
+                }
+              >
+                <span class="flex text-red-600 space-x-1 opacity-60 cursor-wait">
+                  <span>Fetching Newsletter..</span>
+                  <span class="mt-1 animate-spin mx-auto w-3 h-3 bg-transparent border-2 border-red-600 rounded">
+                    &nbsp;
+                  </span>
+                </span>
+              </Show>
+              {/* <span
                 onClick={() => {
                   JSON.parse(localStorage.getItem("techINJosUser"))
                     ? latestIssue()
@@ -90,7 +112,7 @@ function Header() {
                 class="text-red-600 cursor-pointer hover:opacity-60"
               >
                 Latest Newsletter
-              </span>
+              </span> */}
             </div>
             <div class="hidden lg:flex space-x-6">
               <Menu />
