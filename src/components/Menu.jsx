@@ -15,7 +15,7 @@ function Menu() {
       </li>
       <li>
         <A href="/sponsorship" class="hover:opacity-60">
-          Sponsorship
+          Sponsor us
         </A>
       </li>
       <li class="pt-3 lg:pt-0">

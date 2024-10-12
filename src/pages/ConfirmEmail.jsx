@@ -73,28 +73,25 @@ function ConfirmEmail() {
             <div class="content md:w-10/12 lg:w-9/12 2xl:w-6/12 mx-auto space-y-3">
               <div class="bg-white p-2 md:p-6">
                 <h2 class="text-lg md:text-xl border-b-2 border-black pb-2">
-                  <span class="bg-fuchsia-400 p-1">Glad to have you</span>
+                  <span class="bg-fuchsia-400 p-1">Welcome!</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-bold">
-                  Confirm your email.
+                  Please confirm your email.
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>Hi,</p>
                   <p>Thanks for your interest to read techINJos Newsletter.</p>
                   <p>
-                    I noticed this is the first time you're using your email{" "}
+                    Because this is the first time you're using your email{" "}
                     <a href={"mailto:" + searchParams.e}>{searchParams.e}</a> on
-                    this website.
-                  </p>
-                  <p>
-                    We need you to prove that you're human by entering the
+                    this website, we need to confirm it is yours. Enter the
                     confirmation code sent to the email in the box below:
                   </p>
                   <CodeVerificationForm whichIssue={searchParams.i} />
                   <p>
                     <span class="text-xs block">
-                      Didn't get the email? Check your SPAM folder or click link
-                      below to resend.
+                      Didn't get the email with a confirmation code? Check your
+                      SPAM folder or click link below to resend:
                     </span>
                     <span
                       onClick={() => {
@@ -102,7 +99,7 @@ function ConfirmEmail() {
                       }}
                       class="font-semibold text-red-600 hover:opacity-60 cursor-pointer"
                     >
-                      Resend Verification Code
+                      Resend Confirmation Code
                     </span>
                   </p>
                 </div>

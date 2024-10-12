@@ -146,7 +146,7 @@ function App() {
                   />
                 </div>
                 <div class="mt-1">
-                  <span class="bg-yellow-200 p-1">413+</span> smart subscribers.
+                  <span class="bg-yellow-200 p-1">413+</span> smart subscribers
                 </div>
               </div>
             </div>

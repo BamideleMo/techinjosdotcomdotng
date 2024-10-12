@@ -112,7 +112,8 @@ function Issue() {
     if (result.response.status === "unconfirmed") {
       navigate(
         "/confirm-email?e=" +
-          JSON.parse(localStorage.getItem("techINJosUser")).email+"&i=",
+          JSON.parse(localStorage.getItem("techINJosUser")).email +
+          "&i=",
         { replace: true }
       );
     }
@@ -226,16 +227,17 @@ function Issue() {
                           </span>
                         </p>
                         <p class="">
-                          Join our WhatsApp Channel so you never get to miss any
-                          Newsletter & for Quick Access to more Updates from
-                          Jos' Tech Ecosystem.
+                          <b>Join our WhatsApp Channel</b> & never get to miss
+                          any Newsletter. Also get Quick Access to more Updates
+                          from Jos' Tech Ecosystem.
                         </p>
-                        <p>
+                        <p class="pb-3">
                           <a
                             href="https://whatsapp.com/channel/0029VaEVLBHBfxoG5GZxz72v"
                             target="_blank"
+                            class="bg-blue-700 text-xs p-3 rounded hover:opacity-60"
                           >
-                            Join now
+                            <b class="text-white">Join now</b>
                           </a>
                         </p>
                       </div>
@@ -244,8 +246,10 @@ function Issue() {
                       <h2 class="text-base md:text-xl border-b-2 border-black pb-2">
                         <span class="bg-orange-300 p-1">Share techINJos</span>
                       </h2>
-                      <div class="mt-2 space-y-6 text-base">
-                        <p> 🙏🏾 Please. Help us grow.</p>{" "}
+                      <div class="mt-2 pt-3 space-y-6 text-base">
+                        <p>
+                          💪🏾 <b>Help us grow</b>.
+                        </p>
                         <p>
                           Tell a friend about techINJos Newsletter -{" "}
                           <a
@@ -257,9 +261,9 @@ function Issue() {
                               )
                             }
                           >
-                            send a WhatsApp chat now
+                            send him/her a WhatsApp chat
                           </a>
-                          !
+                          .
                         </p>
                         <p>
                           <a
@@ -281,9 +285,9 @@ function Issue() {
                               )
                             }
                           >
-                            Post techINJos
+                            Share techINJos
                           </a>{" "}
-                          on your X (formerly Twitter).
+                          on X (formerly Twitter).
                         </p>
                       </div>
                     </div>

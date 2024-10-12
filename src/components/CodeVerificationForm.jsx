@@ -89,11 +89,11 @@ function CodeVerificationForm(props) {
       <div class="space-y-2 grow">
         <div class="">
           <TextInput
-            label="Verification Code:"
+            label="Confirmation Code:"
             name="code"
             required={true}
             type="text"
-            placeholder="Enter verification code here.. ."
+            placeholder="Enter code here.. ."
             formHandler={formHandler}
           />
         </div>
@@ -121,7 +121,7 @@ function CodeVerificationForm(props) {
                     type="submit"
                     class="bg-red-600 rounded-lg w-full p-3 text-center hover:opacity-60"
                   >
-                    Verify
+                    Confirm
                   </button>
                 }
               >
@@ -139,7 +139,7 @@ function CodeVerificationForm(props) {
             disabled
             class="bg-gray-400 rounded-lg w-full p-3 text-center cursor-not-allowed"
           >
-            Verify
+            Confirm
           </button>
         </Show>
       </div>
