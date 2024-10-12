@@ -299,7 +299,7 @@ function Issue() {
                         </span>
                       </h2>
                       <h1 class="my-2 text-xl md:text-2xl leading-tight font-bold">
-                        It is invaluable.
+                        Your feedback is invaluable.
                       </h1>
                       <div class="space-y-6 text-base">
                         <p>
