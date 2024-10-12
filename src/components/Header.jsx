@@ -30,6 +30,7 @@ function Header() {
         // window.location.replace(
         //   "/newsletter/" + result.response[0].issue_number
         // );
+        setFetching(false);
         navigate("/newsletter/" + result.response[0].issue_number, {
           replace: true,
         });
