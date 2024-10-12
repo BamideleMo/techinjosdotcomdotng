@@ -22,7 +22,7 @@ function Sponsorship() {
                   <span class="bg-fuchsia-300 p-1">Sponsor us</span>
                 </h2>
                 <h2 class="my-2 text-xl md:text-2xl leading-tight font-bold">
-                  Reach the Heart of Jos' Tech Scene
+                  Reach the Heart of Jos' Tech Ecosystem
                 </h2>
                 <div class="space-y-6 text-base">
                   <p>
