@@ -305,13 +305,15 @@ function Issue() {
                         <p>
                           Whether you have news you'd like us to publish in the
                           next newsletter, a suggestion, a comment, or a
-                          concern, we want to hear from you. Send email now to:{" "}
+                          concern, we want to hear from you. Send email now to{" "}
                           <a
                             href="mailto:techinjosnewsletter@gmail.com"
                             class="name"
                           >
                             techinjosnewsletter@gmail.com
-                          </a>
+                          </a>{" "}
+                          or a WhatsApp chat to{" "}
+                          <a href="https://wa.me/23408092772909">08092772909</a>
                         </p>
                         <p>
                           <b>Remember:</b>
