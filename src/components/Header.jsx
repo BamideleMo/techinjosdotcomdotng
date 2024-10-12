@@ -97,7 +97,7 @@ function Header() {
                 }
               >
                 <span class="flex text-red-600 space-x-1 opacity-60 cursor-wait">
-                  <span>Fetching Newsletter..</span>
+                  <span>Fetching.. .</span>
                   <span class="mt-1 animate-spin mx-auto w-3 h-3 bg-transparent border-2 border-red-600 rounded">
                     &nbsp;
                   </span>

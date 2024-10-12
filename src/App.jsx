@@ -101,7 +101,7 @@ function App() {
                   }
                 >
                   <span class="mx-auto lg:mx-0 w-fit space-x-6 cursor-wait border border-red-600 bg-red-600 opacity-60 text-white h-12 items-center flex px-4 rounded">
-                    <span>Fetching Newsletter..</span>
+                    <span>Fetching Newsletter.. .</span>
                     <span class="animate-spin mx-auto w-4 h-4 bg-transparent border-2 border-white rounded">
                       &nbsp;
                     </span>
