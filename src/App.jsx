@@ -107,44 +107,33 @@ function App() {
                     </span>
                   </span>
                 </Show>
-
-                {/* <span
-                  onClick={() => {
-                    JSON.parse(localStorage.getItem("techINJosUser"))
-                      ? latestIssue()
-                      : doPopup();
-                  }}
-                  class="mx-auto font-bold lg:mx-0 w-fit cursor-pointer bg-red-600 text-white h-12 border border-red-600 text-center items-center flex px-4 rounded hover:bg-white hover:text-red-600"
-                >
-                  Read the Latest Newsletter
-                </span> */}
               </div>
               <div class="mb-12 w-fit mx-auto lg:mx-0 flex space-x-1">
                 <div class="flex -space-x-2">
                   <img
                     src={user1}
                     alt="subscribers"
-                    class="w-8 h-8 rounded-full border-2 border-slate-400"
+                    class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full border-2 border-slate-400"
                   />
                   <img
                     src={user2}
                     alt="subscribers"
-                    class="w-8 h-8 rounded-full border-2 border-slate-400"
+                    class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full border-2 border-slate-400"
                   />
                   <img
                     src={user3}
                     alt="subscribers"
-                    class="w-8 h-8 rounded-full border-2 border-slate-400"
+                    class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full border-2 border-slate-400"
                   />
                   <img
                     src={user4}
                     alt="subscribers"
-                    class="w-8 h-8 rounded-full border-2 border-slate-400"
+                    class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full border-2 border-slate-400"
                   />
                   <img
                     src={user5}
                     alt="subscribers"
-                    class="w-8 h-8 rounded-full border-2 border-slate-400"
+                    class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full border-2 border-slate-400"
                   />
                 </div>
                 <div class="mt-1">
