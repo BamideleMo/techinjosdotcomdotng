@@ -7,7 +7,7 @@ function Footer() {
       <div class="space-x-4 text-center text-gray-400 text-base">
         <A href="/about">About us</A>
         <b>.</b>
-        <A href="/sponsorship">Sponsor us</A>
+        <A href="/sponsorship">Sponsor this newsletter</A>
       </div>
       <div>
         <Logo />

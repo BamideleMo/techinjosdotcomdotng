@@ -70,7 +70,7 @@ function App() {
           lg:grid-cols-2 lg:py-10"
           >
             <div class="text-center lg:text-left lg:pt-0">
-              <h1 class="uppercase">Weekly Newsletter</h1>
+              <h1 class="uppercase text-xl">A Weekly Newsletter</h1>
               <h1
                 class="text-3xl md:text-4xl lg:text-4xl xl:text-5xl 
                drop-shadow-lg font-bold"
